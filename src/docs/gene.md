@@ -34,23 +34,6 @@ The Gene data type contains the information to represents a locus, the genomic r
   "alternative_names": [
     "Fanconi anemia, complementation group D1",
     "BRCA1/BRCA2-containing complex, subunit 2"
-  ]
-}
-{
-  "symbol": "BRCA2",
-  "name": "BRCA2 DNA repair associated",
-  "alternative_symbols": [
-    "BRCC2",
-    "FACD",
-    "FAD",
-    "FAD1",
-    "FANCD",
-    "FANCD1",
-    "XRCC11"
-  ],
-  "alternative_names": [
-    "Fanconi anemia, complementation group D1",
-    "BRCA1/BRCA2-containing complex, subunit 2"
   ],
   "stable_id": "ENSG00000139618",
   "version": "15",
