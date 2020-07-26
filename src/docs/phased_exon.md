@@ -33,4 +33,35 @@ In ascii art, with alternate codons represented by `###` and `+++`, ExonPhase ca
 Similarly to `Spliced Exon`, `Phased Exon` supports the separation of context-independent exon properties (through the `Exon` data type) and the properties that emerge within a context of mature messenger RNA.
 
 ## Notes
-1. `Phased Exons` are a property of `Product Generating Context`. Ordinarily, they all are children of the same parent transcript; but in cases of trans-splicing they will include exons from other transcripts. 
+1. `Phased Exons` are a property of `Product-Generating Context`. Ordinarily, they all are children of the same parent transcript; but in cases of trans-splicing they will include exons from other transcripts.
+
+## Example
+
+```json
+{
+  "start_phase": 0,
+  "end_phase": 0,
+  "index": 0,
+  "exon": {
+    "stable_id": "ENSE00003856928",
+    "version": 1,
+    "type": "Exon",
+    "slice": {
+      "location": {
+        "start": 32315086,
+        "end": 32315145,
+        "length": 60
+      },
+      "region": {
+        "name": "13",
+        "code": "chromosome"
+      },
+      "strand": {
+        "code": "forward",
+        "value": 1
+      }
+    },
+    "sequence": "AAGCTTTTGTAAGATCGGCTCGCTTTGGGGAACAGGTCTTGAGAGAACATCCCTTTTAAG"
+  }
+}
+```

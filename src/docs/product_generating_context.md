@@ -4,15 +4,15 @@ _provisional name; very much in search of a better one_
 
 The `Product-Generating Context` data type contains information about the specific arrangement of exons that results in a product. It has the following fields:
 
-| Field         | Type         | Description |
-|---------------|--------------|-------------|
-| product_type  | ProductType  | a string that denotes the type of the product that gets generated
-| default       | boolean      | a flag indicating whether to treat this context as default
-| cds           | CDS or null  | see `CDS`
-| 5_prime_utr   | UTR or null  | see `UTR`
-| 3_prime_utr   | UTR or null  | see `UTR`
-| product       | Product      | a protein or RNA product, see `Product`
-| phased_exons  | PhasedExon   | see `PhasedExon`
+| Field         | Type                | Description |
+|---------------|---------------------|-------------|
+| product_type  | ProductType         | a string that denotes the type of the product that gets generated
+| default       | boolean             | a flag indicating whether to treat this context as default
+| cds           | CDS or null         | see `CDS`
+| 5_prime_utr   | UTR or null         | see `UTR`
+| 3_prime_utr   | UTR or null         | see `UTR`
+| product       | Product             | a protein or RNA product, see `Product`
+| phased_exons  | array of PhasedExon | see `PhasedExon`
 
 ## ProductType
 `ProductType` is an enum of strings from a controlled vocabulary, such as `protein`, or `miRNA`.
@@ -24,3 +24,41 @@ Note that `Product-Generating Context` is not intended to represent alternative 
 
 ## Notes
 1. The purpose of the `product_type` field in `Product-Generating Context` is to signal which values in other fields to expect. For example, only if the `product_type` is `protein` will the `cds` field contain the `CDS` data; in all other cases it will be `null`.
+
+## Examples
+
+### In a coding transcript
+
+`Product-Generating Context` will have a non-empty `cds` field
+
+```json
+{
+  "product_type": "protein",
+  "default": true,
+  "cds": { ... },
+  "5_prime_utr": { ... },
+  "3_prime_utr": null,
+  "phased_exons": [
+    { ... }
+  ],
+  "product": { ... }
+}
+```
+
+### In a non-coding transcript
+
+The `cds`, `5_prime_utr`, and `3_prime_utr` fields will be empty.
+
+```json
+{
+  "product_type": "miRNA",
+  "default": true,
+  "cds": null,
+  "5_prime_utr": null,
+  "3_prime_utr": null,
+  "phased_exons": [
+    { ... }
+  ],
+  "product": { ... }
+}
+```

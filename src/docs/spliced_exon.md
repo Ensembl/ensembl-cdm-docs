@@ -15,3 +15,36 @@ An `Exon` with the same stable id may be included in different transcripts, wher
 
 ## Notes
 1. Hierarchically, `Spliced Exon` is direct child of a `Transcript`. It enriches the data contained within the `Exon` data type with the information about exon's position within a transcript and its order relative to other exons. It follows, therefore, that all `Spliced Exons` within a `Transcript` belong to the same transcript. Contrast this with `Phased Exon`.
+
+## Example
+
+```json
+{
+  "index": 0,
+  "relative_location": {
+    "start": 1,
+    "end": 60,
+    "length": 60
+  },
+  "exon": {
+    "stable_id": "ENSE00003856928",
+    "type": "Exon",
+    "slice": {
+      "location": {
+        "start": 32315086,
+        "end": 32315145,
+        "length": 60
+      },
+      "region": {
+        "name": "13",
+        "code": "chromosome"
+      },
+      "strand": {
+        "code": "forward",
+        "value": 1
+      }
+    },
+    "sequence": "AAGCTTTTGTAAGATCGGCTCGCTTTGGGGAACAGGTCTTGAGAGAACATCCCTTTTAAG"
+  }
+}
+```
