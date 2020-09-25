@@ -8,6 +8,7 @@ The `Product-Generating Context` data type contains information about the specif
 |---------------|---------------------|-------------|
 | product_type  | ProductType         | a string that denotes the type of the product that gets generated
 | default       | boolean             | a flag indicating whether to treat this context as default
+| cdna          | cDNA                | see `cDNA`
 | cds           | CDS or null         | see `CDS`
 | 5_prime_utr   | UTR or null         | see `UTR`
 | 3_prime_utr   | UTR or null         | see `UTR`
