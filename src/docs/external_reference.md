@@ -4,7 +4,7 @@ The `External Reference` data type represents a reference to a database outside 
 
 | Field             | Type             | Description |
 |-------------------|------------------|-------------|
-| accession_id      | string           | item's identifier in a foreign database
+| accession_id      | string           | item's identifier in an external database
 | name              | string           | item name
 | description       | string or null   | additional information about the item
 | url               | string or null   | url for accessing the item in another resource
