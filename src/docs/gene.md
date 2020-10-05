@@ -37,7 +37,7 @@ The Gene data type contains the information to represents a locus, the genomic r
     "Fanconi anemia, complementation group D1",
     "BRCA1/BRCA2-containing complex, subunit 2"
   ],
-  "stable_id": "ENSG00000139618",
+  "stable_id": "ENSG00000139618.15",
   "version": 15,
   "type": "Gene",
   "so_term": "SO:0000010",
