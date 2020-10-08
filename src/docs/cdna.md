@@ -19,9 +19,9 @@ The sequence of the spliced exons of a transcript expressed in DNA notation (T r
 ## Examples
 ```json
 {
-    "start": 32316461,
-    "end": 32316480,
-    "length": 20,
+    "start": 32379840,
+    "end": 32398272,
+    "length": 842,
     "sequence_checksum": "e8f2b6ffd919c3cd209cb68afe8872da",
     "sequence": "ACGGATCGACAGTAGTTAGA"
 }
