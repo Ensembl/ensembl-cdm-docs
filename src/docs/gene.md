@@ -12,7 +12,7 @@ The Gene data type contains the information to represents a locus, the genomic r
 | version               | integer             | Version of the gene
 | unversioned_stable_id | string              | Unversioned unique identifier for the gene
 | type                  | string              | This is always `Gene`
-| so_term               | string              | Sequence Ontology accession describing the gene
+| so_term               | string              | Sequence Ontology term describing the gene
 | sequence              | string              | Genomic sequence on the forward strand from the lowest 5' end coordinate to the highest 3' end coordinate
 | slice                 | Slice               | Slice describing the coordinates of the gene
 | transcripts           | array of Transcript | List of transcripts
@@ -42,7 +42,7 @@ The Gene data type contains the information to represents a locus, the genomic r
   "version": 15,
   "unversioned_stable_id": "ENSG00000139618",
   "type": "Gene",
-  "so_term": "SO:0000010",
+  "so_term": "protein_coding",
   "sequence": "AAGCTTTTGTAATTTTAAAAAATT",
   "slice": {},
   "transcripts": []
