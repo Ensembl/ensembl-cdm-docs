@@ -2,19 +2,20 @@
 
 The Gene data type contains the information to represents a locus, the genomic region where a gene is located. It will have at least one Transcript data type.
 `Gene` has the following fields:
-| Field               | Type                | Description                         |
-|---------------------|---------------------|-------------------------------------|
-| symbol              | string              | Short name
-| name                | string              | Name of the gene from a known nomenclature such as HGNC
-| alternative_symbols | array of string     | List of alternative symbols
-| alternative_names   | array of string     | List of alternative names
-| stable_id           | string              | A unique identifier for the gene
-| version             | integer             | Version of the gene
-| type                | string              | This is always `Gene`
-| so_term             | string              | Sequence Ontology accession describing the gene
-| sequence            | string              | Genomic sequence on the forward strand from the lowest 5' end coordinate to the highest 3' end coordinate
-| slice               | Slice               | Slice describing the coordinates of the gene
-| transcripts         | array of Transcript | List of transcripts
+| Field                 | Type                | Description                         |
+|-----------------------|---------------------|-------------------------------------|
+| symbol                | string              | Short name
+| name                  | string              | Name of the gene from a known nomenclature such as HGNC
+| alternative_symbols   | array of string     | List of alternative symbols
+| alternative_names     | array of string     | List of alternative names
+| stable_id             | string              | A unique identifier for the gene
+| version               | integer             | Version of the gene
+| unversioned_stable_id | string              | Unversioned unique identifier for the gene
+| type                  | string              | This is always `Gene`
+| so_term               | string              | Sequence Ontology accession describing the gene
+| sequence              | string              | Genomic sequence on the forward strand from the lowest 5' end coordinate to the highest 3' end coordinate
+| slice                 | Slice               | Slice describing the coordinates of the gene
+| transcripts           | array of Transcript | List of transcripts
 
 ## Notes
 1. alternative_symbols and alternative_names can be empty lists
@@ -39,6 +40,7 @@ The Gene data type contains the information to represents a locus, the genomic r
   ],
   "stable_id": "ENSG00000139618.15",
   "version": 15,
+  "unversioned_stable_id": "ENSG00000139618",
   "type": "Gene",
   "so_term": "SO:0000010",
   "sequence": "AAGCTTTTGTAATTTTAAAAAATT",
