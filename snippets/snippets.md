@@ -1,3 +1,39 @@
+## 2020-10-30
+
+### Product (realistic response from the graphql server)
+
+```json
+{
+  "product": {
+    "stable_id": "ENSP00000499625.1",
+    "unversioned_stable_id": "ENSP00000499625",
+    "version": 1,
+    "type": "Protein",
+    "so_term": "polypeptide",
+    "length": 22,
+    "external_references": [
+      {
+        "accession_id": "UPI00000747D7",
+        "name": "UPI00000747D7",
+        "description": null,
+        "assignment_method": {
+          "type": "CHECKSUM",
+          "description": "A reference inferred from a sequence checksum match, such as when the sequences are equal"
+        },
+        "url": "https://www.ebi.ac.uk/cgi-bin/dbfetch?db=uniparc&id=UPI00000747D7",
+        "source": {
+          "id": "UniParc",
+          "name": "UniParc",
+          "description": null,
+          "url": "https://www.ebi.ac.uk/uniparc/",
+          "release": null
+        }
+      }
+    ]
+  }
+}
+```
+
 ## 2020-10-23
 
 ### GeneFamily
