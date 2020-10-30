@@ -2,6 +2,8 @@
 
 ### Product (realistic response from the graphql server)
 
+**Note**: according to the CDM, the product is expected to also have a `sequence_checksum` field, which the server cannot resolve at the moment, so it is not included in the sample response below 
+
 ```json
 {
   "product": {
