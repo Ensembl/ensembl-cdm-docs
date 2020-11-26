@@ -4,11 +4,11 @@ A feature has various kinds of metadata associated with it. For different types 
 
 ## Gene metadata
 
-| Field          | Type             | Description |
-|----------------|------------------|-------------|
-| name           | GeneNameMetadata or null  | see below
-| function       | GeneFunctionMetadata or null      | see below
-| biotype        | GeneBiotypeMetadata   | see below
+| Field          | Type                         | Description |
+|----------------|------------------------------|-------------|
+| name           | GeneNameMetadata or null     | see below
+| function       | GeneFunctionMetadata or null | see below
+| biotype        | GeneBiotypeMetadata          | see below
 
 
 ### GeneNameMetadata
