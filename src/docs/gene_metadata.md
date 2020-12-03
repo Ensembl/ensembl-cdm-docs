@@ -12,7 +12,15 @@ A feature has various kinds of metadata associated with it. For different types 
 
 
 ### GeneNameMetadata
-Gene name metadata is, in essence, an `External Reference` (see) promoted to the metadata rank. One notable difference is that the instead of a `description` filed, it has a `value` field.
+Gene name metadata is, in essence, an `External Reference` (which see) promoted to the metadata rank. One notable difference is that it doesn't have a `name` field, and instead of the `description` filed, it has the `value` field.
+
+| Field             | Type             | Description |
+|-------------------|------------------|-------------|
+| accession_id      | string           | item's identifier in an external database
+| value             | string           | name of the gene
+| url               | string or null   | url for this record in the naming authority
+| assignment_method | AssignmentMethod | see AssignmentMethod
+| source            | ExternalDB       | see ExternalDB
 
 ```json
 {
@@ -59,28 +67,22 @@ Gene function information is provided by Uniprot.
 
 ### GeneBiotypeMetadata
 
-| Field       | Type       | Description |
-|-------------|------------|-------------|
-| id          | string     | identifier of the biotype
-| label       | string     | short, pretty-printed label ready for display
-| description | string     | brief definition of what is meant by this biotype
-| url         | string     | link to the page for this biotype in Ensembl Glossary
-| source      | ExternalDB | see ExternalDB
+The source of the biotype metadata is Ensembl value set
 
-The source of the biotype metadata is Ensembl Glossary
+| Field       | Type           | Description |
+|-------------|----------------|-------------|
+| id          | string         | accession id in Ensembl database of Value Sets
+| label       | string         | short, pretty-printed label ready for display
+| definition  | string         | succinct definition of the term
+| description | string or null | optional longer description that can contain nuances
 
 ```json
 {
   "biotype": {
-    "id": "protein_coding",
+    "id": "biotype.gene_protein_coding",
     "label": "Protein coding",
-    "description": "Gene/transcript that contains an open reading frame (ORF).",
-    "url": "https://www.ebi.ac.uk/ols/api/ontologies/ensemblglossary/terms?iri=http://ensembl.org/glossary/ENSGLOSSARY_0000026",
-    "source": {
-      "name": "...",
-      "url": "...",
-      "description": "..."
-    }
+    "definition": "Gene loci with at least one protein coding transcript.",
+    "description": "???"
   }
 }
 ```

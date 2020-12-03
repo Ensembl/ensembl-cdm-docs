@@ -2,43 +2,18 @@
 
 A feature has various kinds of metadata associated with it. For different types of features, the set of fields in the `Metadata` data type may be different.
 
-## Gene metadata
+## Transcript metadata
 
 | Field          | Type                                    | Description |
 |----------------|-----------------------------------------|-------------|
-| name           | TranscriptNameMetadata or null          | see below
 | function       | TranscriptFunctionMetadata or null      | see below
-| ccds           | TranscriptCCDSMetadata or null          | see below
-| genecode_basic | TranscriptGenecodeBasicMetadata or null | see below
+| gencode_basic  | TranscriptGencodeBasicMetadata or null  | see below
 | canonical      | TranscriptCanonicalMetadata             | see below
 | mane           | TranscriptManeMetadata or null          | see below
 | tsl            | TranscriptTSLMetadata                   | see below
 | appris         | TranscriptApprisMetadata                | see below
 | biotype        | TranscriptBiotypeMetadata               | see below
 
-
-### TranscriptNameMetadata
-Gene name metadata is, in essence, an `External Reference` (see) promoted to the metadata rank. One notable difference is that the instead of a `description` filed, it has a `value` field.
-
-
-```json
-{
-  "name": {
-    "accession_id": "...",
-    "value": "...",
-    "url": "...",
-    "source": {
-      "name": "...",
-      "url": "...",
-      "description": "..."
-    },
-    "assignment_method": {
-      "type": "...",
-      "description": "..."
-    },
-  }
-}
-```
 
 ### TranscriptFunctionMetadata
 
@@ -64,47 +39,21 @@ Transcript function information is provided by Uniprot.
 }
 ```
 
-### TranscriptCCDSMetadata
+### TranscriptGencodeBasicMetadata
 
 | Field  | Type       | Description |
 |--------|------------|-------------|
-| value  | string     | ???
-| url    | string     | ??? 
-| source | ExternalDB | see ExternalDB
-
-```json
-{
-  "ccds": {
-    "value": "...",
-    "url": "...",
-    "source": {
-      "name" : "...",
-      "url" : "...",
-      "description" : "..."
-    }
-  }
-}
-```
-
-### TranscriptGenecodeBasicMetadata
-
-| Field  | Type       | Description |
-|--------|------------|-------------|
-| value  | string     | ???
-| source | ExternalDB | see ExternalDB
+| value  | boolean    | indicates whether transcript belongs to the GENCODE Basic set
 
 ```json
 {
   "gencode_basic": {
     "value": true,
-    "source": {
-      "name": "...",
-      "url": "...",
-      "description": "..."
-    }
   }
 }
 ```
+
+Note: is only applicable for human and mouse genes.
 
 ### TranscriptCanonicalMetadata
 
@@ -114,18 +63,12 @@ There is always one — and only one — transcript among gene transcripts that
 |-----------|------------|-------------|
 | value     | boolean    | whether the current transcript is canonical
 | evidence  | string     | one of a closed set of dictionary terms
-| source    | ExternalDB | see ExternalDB
 
 ```json
 {
   "canonical": {
     "value": true,
-    "evidence": "...",
-    "source": {
-      "name": "...",
-      "url": "...", 
-      "description": "..."
-    }
+    "evidence": "..."
   }
 }
 ```
@@ -134,20 +77,14 @@ There is always one — and only one — transcript among gene transcripts that
 
 | Field     | Type       | Description |
 |-----------|------------|-------------|
-| value     | string     | accsession of refseq transcript
+| value     | string     | accession of refseq transcript
 | type      | string     | either "plus" or "select"
-| source    | ExternalDB | see ExternalDB
 
 ```json
 {
   "mane": {
     "value": "...",
-    "type": "plus",
-    "source": {
-      "name" : "...",
-      "url": "...", 
-      "description": "..."
-    }
+    "type": "plus"
   }
 }
 ```
@@ -156,18 +93,12 @@ There is always one — and only one — transcript among gene transcripts that
 
 | Field     | Type       | Description |
 |-----------|------------|-------------|
-| value     | integer    | ???
-| source    | ExternalDB | see ExternalDB
+| value     | integer    | transcript support level
 
 ```json
 {
   "tsl": {
-    "value": 1,
-    "source": {
-      "name" : "...",
-      "url" : "...",
-      "description": "..."
-    }
+    "value": 1
   }
 }
 ```
@@ -176,46 +107,34 @@ There is always one — and only one — transcript among gene transcripts that
  
 | Field     | Type       | Description |
 |-----------|------------|-------------|
-| value     | string     | ???
-| source    | ExternalDB | see ExternalDB
+| value     | string     | label according to the APPRIS system
 
 ```json
 {
   "appris": {
-    "value": "alternative1",
-    "source": {
-      "name" : "...",
-      "url": "...", 
-      "description": "..."
-    }
+    "value": "alternative1"
   }
 }
  ```
 
 ### TranscriptBiotypeMetadata
 
-| Field       | Type       | Description |
-|-------------|------------|-------------|
-| id          | string     | identifier of the biotype
-| label       | string     | short, pretty-printed label ready for display
-| description | string     | brief definition of what is meant by this biotype
-| url         | string     | link to the page for this biotype in Ensembl Glossary
-| source      | ExternalDB | see ExternalDB
+The source of the biotype metadata is Ensembl value set
 
-The source of the biotype metadata is Ensembl Glossary
+| Field       | Type           | Description |
+|-------------|----------------|-------------|
+| id          | string         | accession id in Ensembl database of Value Sets
+| label       | string         | short, pretty-printed label ready for display
+| definition  | string         | succinct definition of the term
+| description | string or null | optional longer description that can contain nuances
 
 ```json
 {
   "biotype": {
-    "id": "protein_coding",
+    "id": "biotype.transcript_protein_coding",
     "label": "Protein coding",
-    "description": "Gene/transcript that contains an open reading frame (ORF).",
-    "url": "https://www.ebi.ac.uk/ols/api/ontologies/ensemblglossary/terms?iri=http://ensembl.org/glossary/ENSGLOSSARY_0000026",
-    "source": {
-      "name": "...",
-      "url": "...",
-      "description": "..."
-    }
+    "definition": "An mRNA that can be translated into a protein.",
+    "description": "???"
   }
 }
 ```
