@@ -12,7 +12,7 @@ A feature has various kinds of metadata associated with it. For different types 
 
 
 ### GeneNameMetadata
-Gene name metadata is, in essence, an `External Reference` (which see) promoted to the metadata rank. One notable difference is that it doesn't have a `name` field, and instead of the `description` filed, it has the `value` field.
+Gene name metadata is, in essence, an `External Reference` (which see) promoted to the metadata rank. One notable difference is that it doesn't have a `name` field, and instead of the `description` field, it has the `value` field.
 
 | Field             | Type             | Description |
 |-------------------|------------------|-------------|
@@ -71,15 +71,17 @@ The source of the biotype metadata is Ensembl value set
 
 | Field       | Type           | Description |
 |-------------|----------------|-------------|
-| id          | string         | accession id in Ensembl database of Value Sets
+| accession_id| string         | accession id in Ensembl database of Value Sets
 | label       | string         | short, pretty-printed label ready for display
+| value       | string         | a string intended for programmatic use by consumer 
 | definition  | string         | succinct definition of the term
 | description | string or null | optional longer description that can contain nuances
 
 ```json
 {
   "biotype": {
-    "id": "biotype.gene_protein_coding",
+    "accession_id": "biotype.gene_protein_coding",
+    "value": "protein_coding",
     "label": "Protein coding",
     "definition": "Gene loci with at least one protein coding transcript.",
     "description": "???"
