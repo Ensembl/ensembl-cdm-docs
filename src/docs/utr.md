@@ -7,8 +7,7 @@
 | start              | integer | genomic start coordinate
 | end                | integer | genomic end coordinate
 | length             | integer | number of nucleotides comprising the UTR
-| sequence_checksum  | string  | a checksum digest of the sequence
-| sequence           | string  | raw sequence of the UTR
+| sequence           | Sequence| see Sequence
 
 ## Notes
 1. The stop codon, although not translated, is not included in 3' UTR, but rather is counted as a part of CDS.
@@ -24,7 +23,8 @@ _notice how the length of the UTR (99bp) cannot be derived from its genomic coor
   "start": 32315086,
   "end": 32316461,
   "length": 99,
-  "sequence_checksum": "truncatedsha512",
-  "sequence": "AAGCTTTTGTAAGATCGGCTCGCTTTGGGGAACAGGTCTTGAGAGAACATCCCTTTTAAGACTTATTTACCAAGCATTGGAGGAATATCGTAGGTAAAA"
+  "sequence": {
+      ...
+  }
 }
 ```
