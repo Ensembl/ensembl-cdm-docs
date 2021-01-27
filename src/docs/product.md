@@ -18,12 +18,14 @@ The `Product` data type contains information about the mature functioning molecu
 
 The `Protein Domain` data type has the following fields:
 
-| Field          | Type      | Description |
-|----------------|-----------|-------------|
-| id             | string    | Identifier for the protein domain
-| name           | string    | Name of the protein domain
-| resource_name  | string    | Name of the data provider for the protein domain
-| location       | Location  | Location of the domain on the protein chain (see `Location`)
-| hit_location   | Location  | ???  (see `Location`)
-| score          | float     | ???
+| Field            | Type           | Description |
+|------------------|----------------|-------------|
+| id               | string         | Identifier for the protein domain
+| name             | string         | Name of the protein domain
+| resource_name    | string         | Name of the analysis or data provider for the protein domain
+| location         | Location       | Location of the domain on the protein chain (see `Location`)
+| hit_location     | Location       | Location within the domain that is matched to the protein chain. Can be 0. (see `Location`)
+| score            | float or null  | Analysis score asserting the presence of this domain at this location
+| evalue           | float or null  | Expectation value for the presence of this domain at this location
+| hit_description  | string or null | Description of this protein domain hit 
 
