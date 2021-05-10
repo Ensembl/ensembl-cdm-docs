@@ -13,6 +13,7 @@ The `Product` data type contains information about the mature functioning molecu
 | external_references   | array of External Reference  | See `External Reference`
 | sequence              | Sequence                     | See `Sequence`
 | family_matches        | FamilyMatch array            | See `Family Match` below
+| mappings              | array of Mapping             | See `Mapping` below
 
 
 ## Family Match
@@ -20,14 +21,14 @@ The `Product` data type contains information about the mature functioning molecu
 `FamilyMatch` contains information about a match between the product sequence and a sequence from a known family recorded in an external database. It has the following fields:
 
 
-| Field           | Type                         | Description |
-|-----------------|------------------------------|-------------|
-| sequence_family | SequenceFamily               | See below
-| via             | ClosestDataProvider or null  | See below
-| location        | Location                     | Location of the match in the product sequence (see `Location`)
-| hit_location    | Location or null             | Location within the family sequence that is matched to the product sequence (see `Location`)
-| score           | float or null                | Analysis score asserting the presence of this match at this location
-| evalue          | float or null                | Expectation value for the presence of this match at this location
+| Field            | Type                         | Description |
+|------------------|------------------------------|-------------|
+| sequence_family  | SequenceFamily               | See below
+| via              | ClosestDataProvider or null  | See below
+| relative_location| Location                     | Location within the product where the hit lands (see `Location`)
+| hit_location     | Location or null             | Location within the family sequence that is matched to the product sequence (see `Location`)
+| score            | float or null                | Analysis score asserting the presence of this match at this location
+| evalue           | float or null                | Expectation value for the presence of this match at this location
 
 
 ### Sequence Family
@@ -49,6 +50,40 @@ For cases when a match was calculated using an aggregator database, such as Inte
 |--------------|----------------|-------------|
 | source       | string         | Name of the database
 | accession_id | string         | Unique identifier of the family in the database
+
+
+## Mapping
+The `Mapping` data structure describes a match between an Ensembl feature and a feature from an external database, e.g. Uniprot. It has the following fields:
+
+| Field             | Type                            | Description |
+|-------------------|---------------------------------|-------------|
+| source            | string                          | Name of the source database
+| accession_id      | string                          | Unique identifier of the feature in the source database
+| description       | string or null                  | Description of the feature
+| relative_location | Location                        | Location within the product where the hit lands (see `Location`)
+| hit_location      | Location                        | Location within the external feature that is matched to the product sequence (see `Location`)
+| genomic_locations | array of GenomicMappingLocation | Location within the genomic space corresponding to the product sequence that matches the external feature
+| score             | float or null                   | Analysis score asserting the presence of this match at this location
+| evalue            | float or null                   | Expectation value for the presence of this match at this location
+
+
+### GenomicMappingLocation
+`GenomicMappingLocation` provides the information about how the mapping between an Ensembl product and an external feature projects back onto the genomic space.
+
+| Field        | Type           | Description |
+|--------------|----------------|-------------|
+| slice        | Slice          | see Slice
+| cigar_string | string         | a string representing the alignment
+
+
+## Notes
+1. An RNA product is a mature RNA, which can be described by its cDNA. Since cDNAs don't have stable ids in Ensembl, RNA products are unlikely to have stable ids either.
+2. For a match between an Ensembl product and an external feature, the location of the matching sequence within the Ensembl product is referred to here as `relative_location`, the location of the matching sequence within the external feature, as `hit_location`, and the projection of Ensembl product's matching sequence onto genomic coordinates, as `genomic_location`.
+
+![diagram of a match](https://user-images.githubusercontent.com/6834224/117651701-2805bd00-b18a-11eb-9569-a1a27ebcdc5b.png)
+
+3. A `slice` associated with a single `genomic_location` can span multiple exons; and the exact match is described using a CIGAR string in the `cigar_string` field. Because trans-splicing is possible, the `genomic_locations` field of a `Mapping` is an array.
+4. A `relative_location` length may be the same as the `hit_location` length, or it may be different due to mismatches.
 
 
 ## Example
@@ -87,6 +122,33 @@ For cases when a match was calculated using an aggregator database, such as Inte
         "length": 33
       },
     }
+  ],
+  "mappings": [
+    {
+      "source": "Uniprot",
+      "accession_id": "(some Uniprot ID)",
+      "description": "Uniprot's description",
+      "genomic_locations": [
+        {
+          "slice": { ... },
+          "cigar_string": "..."
+        }
+      ],
+      "relative_location": {
+        "start": 25,
+        "end": 106,
+        "length": 82
+      },
+      "score": ???,
+      "evalue": ???,
+      "hit_location": {
+        "start": 2,
+        "end": 80,
+        "length": 79
+      },
+    }
   ]
 }
 ```
+
+(notice that in the example above, the mapping to Uniprot has different lengths of `relative_location` and `hit_location`)
