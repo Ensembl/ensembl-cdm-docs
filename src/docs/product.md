@@ -45,19 +45,22 @@ Reference to the sequence family record in the database that is the original pro
 
 | Field        | Type           | Description |
 |--------------|----------------|-------------|
-| source       | string         | Name of the source database
+| source       | ExternalDB     | See `ExternalDB` in the documentation of `ExternalReference`
 | accession_id | string         | Unique identifier of the family in the source database
+| name         | string         | Name of the family
 | description  | string or null | Description of the family
+| url          | string or null | Url for accessing the family in the source database
 
 
 ### Closest Data Provider
 
 For cases when a match was calculated using an aggregator database, such as Interpro, this is the reference to the record in such database.
 
-| Field        | Type           | Description |
-|--------------|----------------|-------------|
-| source       | string         | Name of the database
-| accession_id | string         | Unique identifier of the family in the database
+| Field        | Type       | Description |
+|--------------|------------|-------------|
+| source       | ExternalDB | See `ExternalDB` in the documentation of `ExternalReference`
+| accession_id | string     | Unique identifier of the family in the database
+| url          | string     | Url for accessing the family in the source database
 
 
 ## Mapping
@@ -65,9 +68,10 @@ The `Mapping` data structure describes a match between an Ensembl feature and a 
 
 | Field             | Type                            | Description |
 |-------------------|---------------------------------|-------------|
-| source            | string                          | Name of the source database
+| source            | ExternalDB                      | See `ExternalDB` in the documentation of `ExternalReference`
 | accession_id      | string                          | Unique identifier of the feature in the source database
-| description       | string or null                  | Description of the feature
+| url               | string                          | Url for accessing the feature in the source database
+| name              | string or null                  | Name of the feature
 | relative_location | Location                        | Location within the product where the hit lands (see `Location`)
 | hit_location      | Location                        | Location within the external feature that is matched to the product sequence (see `Location`)
 | genomic_locations | array of GenomicMappingLocation | Location within the genomic space corresponding to the product sequence that matches the external feature
@@ -108,13 +112,27 @@ The `Mapping` data structure describes a match between an Ensembl feature and a 
   "family_matches": [
     {
       "sequence_family": {
-        "source": "Pfam",
+        "source": {
+          "id": ???,
+          "name": "Pfam",
+          "description": null,
+          "url": "https://pfam.xfam.org",
+          "version": 34
+        },
         "accession_id": "PF00634",
-        "description": "BRCA2 repeat"
+        "name": "BRCA2 repeat",
+        "url": "https://pfam.xfam.org/family/PF00634"
       },
       "via": {
-        "source": "Interpro",
-        "accession_id": "IPR002093"
+        "source": {
+          "id": ???,
+          "name": "Interpro",
+          "description": null,
+          "url": "https://www.ebi.ac.uk/interpro",
+          "version": null
+        },
+        "accession_id": "IPR002093",
+        "url": "https://www.ebi.ac.uk/interpro/entry/InterPro/IPR002093/"
       },
       "location": {
         "start": 1003,
@@ -132,9 +150,16 @@ The `Mapping` data structure describes a match between an Ensembl feature and a 
   ],
   "mappings": [
     {
-      "source": "Uniprot",
-      "accession_id": "(some Uniprot ID)",
-      "description": "Uniprot's description",
+      "source": {
+        "id": ???,
+        "name": "Uniprot",
+        "description": null,
+        "url": "https://www.uniprot.org/",
+        "version": null
+      },
+      "accession_id": "P51587",
+      "url": "https://www.uniprot.org/uniprot/P51587",
+      "name": "Breast cancer type 2 susceptibility protein",
       "genomic_locations": [
         {
           "slice": { ... },
