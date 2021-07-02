@@ -117,7 +117,7 @@ The `Mapping` data structure describes a match between an Ensembl feature and a 
           "name": "Pfam",
           "description": null,
           "url": "https://pfam.xfam.org",
-          "version": 34
+          "release": 34
         },
         "accession_id": "PF00634",
         "name": "BRCA2 repeat",
@@ -129,7 +129,7 @@ The `Mapping` data structure describes a match between an Ensembl feature and a 
           "name": "Interpro",
           "description": null,
           "url": "https://www.ebi.ac.uk/interpro",
-          "version": null
+          "release": null
         },
         "accession_id": "IPR002093",
         "url": "https://www.ebi.ac.uk/interpro/entry/InterPro/IPR002093/"
@@ -155,7 +155,7 @@ The `Mapping` data structure describes a match between an Ensembl feature and a 
         "name": "Uniprot",
         "description": null,
         "url": "https://www.uniprot.org/",
-        "version": null
+        "release": null
       },
       "accession_id": "P51587",
       "url": "https://www.uniprot.org/uniprot/P51587",
