@@ -1,3 +1,52 @@
+## 2021-06-25
+
+### RNA products
+
+Discussed on the example of a miRNA, which has a premature stem-loop structure and mature RNAs. Agreed that the fact that the product gets split into multiple fragments is best represented as multiple product-generating contexts. Using such fields as `parent` and `children`, we could represent hierarchical relationships between the premature and the mature products; however, in order to do so, stable ids will be required on the RNA product.
+
+```js
+{
+  "product_generating_contexts": [
+     
+    // PGC for the stem-loop sequence:
+    {
+      "cdna": {...}
+      "cds": null,
+      "phased_exons": [...] // regular exon, with phases -1, -1
+      "product": {
+        "type": "RNA",
+        "length": 102,
+        "external_references": [],
+        "sequence": Sequence,
+        "mappings": [{
+          "source": "miRBase",
+          "accession_id": "MI0015835",
+          "description": "Stem-loop sequence hsa-mir-4305"
+        }]
+      }
+    },
+ 
+    // PGC for a mature miRNA
+    {
+      "cdna": {},
+      "cds": null,
+      "phased_exons": [...] // not sure; it is a fragment; what would its corresponding exon be?
+      "product": {
+        "type": "RNA",
+        "length": 18,
+        "external_references": [],
+        "sequence": Sequence,
+        "mappings": [{
+          "source": "miRBase",
+          "accession_id": "MIMAT0016857",
+          "description": "Mature sequence hsa-miR-4305"
+        }]
+      }
+    },
+  ]
+}
+```
+
 ## 2021-02-05
 
 ### Metadata

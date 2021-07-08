@@ -1,20 +1,28 @@
 # Product
 
-The `Product` data type contains information about the mature functioning molecule produced from a Gene. It includes the following fields:
+The `Product` data type contains information about the mature functioning molecule produced from a Gene. Depending on whether this molecule is a protein or an RNA, the `Product` is subdivided into a `ProteinProduct` and an `RNAProduct`.
+
+Both `ProteinProduct` and the `RNAProduct` will have the following fields in common:
 
 | Field                 | Type                         | Description |
 |-----------------------|------------------------------|-------------|
-| stable_id             | string                       | Unique identifier for the product (versioned)
-| unversioned_stable_id | string                       | Unversioned unique identifier for the product
-| version               | integer or null              | Version of the product
 | type                  | string                       | Type of the product (e.g. "Protein" or "RNA")
-| so_term               | string                       | Sequence Ontology term describing the product
 | length                | integer                      | Number of subunits (amino acids for proteins, nucleotides for RNA) comprising the product
 | external_references   | array of External Reference  | See `External Reference`
 | sequence              | Sequence                     | See `Sequence`
-| family_matches        | FamilyMatch array            | See `Family Match` below
-| mappings              | array of Mapping             | See `Mapping` below
 
+
+## ProteinProduct
+
+In addition to the fields common for all `Product`s, a `ProteinProduct` will have the following fields:
+
+| Field                 | Type                 | Description |
+|-----------------------|------------------------------|-------------|
+| stable_id             | string               | Unique identifier for the product (versioned)
+| unversioned_stable_id | string               | Unversioned unique identifier for the product
+| version               | integer or null      | Version of the product
+| family_matches        | `FamilyMatch` array  | See `Family Match` below
+| mappings              | array of `Mapping`s  | See `Mapping` below
 
 ## Family Match
 
@@ -94,7 +102,6 @@ The `Mapping` data structure describes a match between an Ensembl feature and a 
   "unversioned_stable_id": "ENSP00000369497",
   "version": 3,
   "type": "protein",
-  "so_term": "???",
   "length": 3418,
   "external_references": [],
   "sequence": { ... },
@@ -152,3 +159,8 @@ The `Mapping` data structure describes a match between an Ensembl feature and a 
 ```
 
 (notice that in the example above, the mapping to Uniprot has different lengths of `relative_location` and `hit_location`)
+
+
+## RNA Product
+
+To be completed in the future, when RNA products will receive identifiers in Ensembl databases.
