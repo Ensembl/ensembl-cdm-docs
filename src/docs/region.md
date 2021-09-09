@@ -7,7 +7,7 @@ The Region data type describes the coordinate system that contains Features. In 
 | name      | string         | region name
 | code      | RegionCode     | code of the region
 | topology  | RegionTopology | a string describing the topology of the region
-| so_term   | string         | accession code in Sequence Ontology
+| so_term   | string         | Sequence Ontology term describing the region
 | length    | integer        | length of the region, in nucleotides
 
 ## RegionCode

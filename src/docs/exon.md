@@ -4,7 +4,7 @@ The `Exon` data type represents a fragment of a gene that is present in the matu
 
 | Field     | Type    | Description |
 |-----------|---------|-------------|
-| so_term   | string  | accession code in Sequence Ontology
+| so_term   | string  | Sequence Ontology term describing the exon
 | version   | integer | version of exon's annotation
 | stable_id | string  | exon's stable id
 | type      | string  | the value is always "Exon"
@@ -25,7 +25,7 @@ The `Exon` data type represents a fragment of a gene that is present in the matu
   "stable_id": "ENSE00003856928",
   "version": 1,
   "type": "Exon",
-  "so_term": "???",
+  "so_term": "exon",
   "slice": {
     "location": {
       "start": 32315086,
