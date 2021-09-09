@@ -16,21 +16,23 @@ The Transcript data type describes a operational unit of a gene. In a genomic co
 | spliced_exons               | array of SplicedExon              | The ordered list of exons of the transcript
 | introns                     | array of Intron                   | The ordered list of introns of the transcript
 | product_generating_contexts | array of ProductGeneratingContext | see ProductGeneratingContext
+| gene                        | Gene                              | The parent gene of the transcript, see Gene
 
 ## Examples
 ```json
 {
   "symbol": "BRCA2",
-  "relative_location": {},
+  "relative_location": { ... },
   "stable_id": "ENST00000380152.7",
   "version": 7,
   "unversioned_stable_id":"ENST00000380152",
   "type": "Transcript",
   "so_term": "protein_coding",
   "sequence": "AAGCTTTTGTAATTTTAAAAAATT",
-  "slice": {},
+  "slice": { ... },
   "spliced_exons": [],
   "introns": [],
   "product_generating_contexts": [],
+  "gene": { ... }
 }
 ```
