@@ -23,7 +23,6 @@ The Slice data type contains the information sufficient to describe the position
     "name": "13",
     "code": "chromosome",
     "topology": "linear",
-    "so_term": "???",
     "length": 114364328
   },
   "strand": {
@@ -46,7 +45,6 @@ The Slice data type contains the information sufficient to describe the position
     "name": "Chromosome",
     "code": "chromosome",
     "topology": "circular",
-    "so_term": "???",
     "length": 5057142
   },
   "strand": {

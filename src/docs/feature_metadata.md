@@ -278,3 +278,23 @@ Transcript APPRIS metadata is an instance of `ValueSetMetadata`. Note the presen
   }
 }
 ```
+
+===
+
+## Other metadata
+
+### OntologyTermMetadata
+Ontology term metadata is common across different types of features and also exists on non-features, such as `Region`. It is an instance of `XrefMetadata`. An example would look as follows:
+
+```json
+{
+  "accession_id": "SO:0000147",
+  "value": "exon",
+  "url": "www.sequenceontology.org/browser/current_release/term/SO:0000147",
+  "source": {
+    "name": "Sequence Ontology",
+    "url": "www.sequenceontology.org",
+    "description": "The Sequence Ontology..."
+  }
+}
+```

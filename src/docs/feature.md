@@ -8,7 +8,7 @@ Feature is an abstract represetnation which other feature-like entities (e.g. Ge
 | version               | integer or Null     | Version of the feature
 | unversioned_stable_id | string              | Unversioned unique identifier for the feature
 | type                  | string              | This is the feature type (e.g. Gene, Transcript etc.)
-| so_term               | string              | Sequence Ontology term describing the feature type
+| metadata              | various             | See [feature_metadata](./feature_metadata.md)
 | localised             | boolean             | Flag for whether or not a feature has a slice 
 | slice                 | Slice or Null       | Slice describing the coordinates of the feature, if present
 

@@ -7,7 +7,6 @@ The `Intron` data type represents a fragment of a gene that is removed by RNA sp
 | index             | integer          | Index of Intron
 | sequence          | Sequence         | see Sequence
 | slice             | Slice            | see Slice
-| so_term           | string           | Sequence Ontology term describing the intron
 | relative_location | RelativeLocation | see RelativeLocation
 | type              | string           | type is Intron
 
@@ -34,12 +33,9 @@ The `Intron` data type represents a fragment of a gene that is removed by RNA sp
       "name": "13",
       "code": "chromosome",
       "topology": "linear",
-      "so_term": "???",
       "length": 114364328
     }
   },
-  "sequence": "ACTGCGTAGTT",
-  "so_term": "intron",
   "type": "Intron"
 }
 ```

@@ -4,12 +4,12 @@ The `Exon` data type represents a fragment of a gene that is present in the matu
 
 | Field     | Type    | Description |
 |-----------|---------|-------------|
-| so_term   | string  | Sequence Ontology term describing the exon
 | version   | integer | version of exon's annotation
 | stable_id | string  | exon's stable id
 | type      | string  | the value is always "Exon"
 | sequence  | string  | raw nucleotide sequence (see also Sequence, value)
 | slice     | Slice   | see Slice
+| metadata  | Metadata| See [feature_metadata](./feature_metadata.md)
 
 
 ## Notes
@@ -25,7 +25,20 @@ The `Exon` data type represents a fragment of a gene that is present in the matu
   "stable_id": "ENSE00003856928",
   "version": 1,
   "type": "Exon",
-  "so_term": "exon",
+  "metadata": {
+    "ontology_terms": [
+      {
+        "accession_id": "SO:0000147",
+        "value": "exon",
+        "url": "www.sequenceontology.org/browser/current_release/term/SO:0000147",
+        "source": {
+          "name": "Sequence Ontology",
+          "url": "www.sequenceontology.org",
+          "description": "The Sequence Ontology..."
+        }
+      }
+    ]
+  },
   "slice": {
     "location": {
       "start": 32315086,
@@ -40,7 +53,6 @@ The `Exon` data type represents a fragment of a gene that is present in the matu
       "code": "forward",
       "value": 1
     }
-  },
-  "sequence": "AAGCTTTTGTAAGATCGGCTCGCTTTGGGGAACAGGTCTTGAGAGAACATCCCTTTTAAG"
+  }
 }
 ```
