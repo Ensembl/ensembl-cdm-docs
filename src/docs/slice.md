@@ -2,11 +2,12 @@
 
 The Slice data type contains the information sufficient to describe the position of a Feature on a coordinate system. It consists of the following fields:
 
-| Field     | Type     | Description |
-|-------    |----------|-------------|
-| region    | Region   | see Region
-| location  | Location | see Location
-| strand    | Strand   | see Strand
+| Field     | Type              | Description |
+|-----------|-------------------|-------------|
+| region    | Region            | see Region  |
+| location  | Location          | see Location|
+| strand    | Strand            | see Strand  |
+| locus     | array of Feature  | see Feature |
 
 ## Examples
 
@@ -28,7 +29,8 @@ The Slice data type contains the information sufficient to describe the position
   "strand": {
     "code": "forward",
     "value": 1
-  }
+  },
+  "locus": [ ... ]
 }
 ```
 
@@ -50,6 +52,7 @@ The Slice data type contains the information sufficient to describe the position
   "strand": {
     "code": "reverse",
     "value": -1
-  }
+  },
+  "locus": [ ... ]
 }
 ```
