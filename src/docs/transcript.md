@@ -5,7 +5,7 @@ The Transcript data type describes a operational unit of a gene. In a genomic co
 | Field                       | Type                              | Description                         |
 |-----------------------------|-----------------------------------|-------------------------------------|
 | symbol                      | string                            | Short name
-| relative_location           | RelativeLocation                  | Location of the transcript in relation to the gene
+| relative_location           | Location                          | Location of the transcript in relation to the gene
 | stable_id                   | string                            | A unique identifier for the transcript
 | version                     | integer                           | Version of the transcript
 | unversioned_stable_id       | string                            | Unversioned unique identifier for the transcript
