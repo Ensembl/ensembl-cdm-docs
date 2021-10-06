@@ -2,14 +2,15 @@
 
 The `Exon` data type represents a fragment of a gene that is present in the mature messenger RNA molecule from that gene. It has the following fields:
 
-| Field     | Type    | Description |
-|-----------|---------|-------------|
-| version   | integer | version of exon's annotation
-| stable_id | string  | exon's stable id
-| type      | string  | the value is always "Exon"
-| sequence  | string  | raw nucleotide sequence (see also Sequence, value)
-| slice     | Slice   | see Slice
-| metadata  | Metadata| See [feature_metadata](./feature_metadata.md)
+| Field       | Type                  | Description                                         |
+|-------------|-----------------------|-----------------------------------------------------|
+| version     | integer               | version of exon's annotation                        |
+| stable_id   | string                | exon's stable id                                    |
+| type        | string                | the value is always "Exon"                          |
+| sequence    | string                | raw nucleotide sequence (see also Sequence, value)  |
+| slice       | Slice                 | see Slice                                           |
+| transcripts | array of Transcript   | see Transcript                                      |
+| metadata    | Metadata              | See [feature_metadata](./feature_metadata.md)       |
 
 
 ## Notes
@@ -39,6 +40,7 @@ The `Exon` data type represents a fragment of a gene that is present in the matu
       }
     ]
   },
+  "transcripts": [...],
   "slice": {
     "location": {
       "start": 32315086,
