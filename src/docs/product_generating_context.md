@@ -14,6 +14,7 @@ The `Product-Generating Context` data type contains information about the specif
 | 3_prime_utr   | UTR or null         | see `UTR`
 | product       | Product             | a protein or RNA product, see `Product`
 | phased_exons  | array of PhasedExon | see `PhasedExon`
+| transcripts   | array of Transcript | see `Transcript`
 
 ## ProductType
 `ProductType` is an enum of strings from a controlled vocabulary, such as `protein`, or `miRNA`.
@@ -37,9 +38,13 @@ Note that `Product-Generating Context` is not intended to represent alternative 
   "product_type": "protein",
   "default": true,
   "cds": { ... },
+  "cdna": { ... },
   "5_prime_utr": { ... },
   "3_prime_utr": null,
   "phased_exons": [
+    { ... }
+  ],
+  "transcripts": [
     { ... }
   ],
   "product": { ... }
@@ -55,9 +60,13 @@ The `cds`, `5_prime_utr`, and `3_prime_utr` fields will be empty.
   "product_type": "miRNA",
   "default": true,
   "cds": null,
+  "cdna": { ... },
   "5_prime_utr": null,
   "3_prime_utr": null,
   "phased_exons": [
+    { ... }
+  ],
+  "transcripts": [
     { ... }
   ],
   "product": { ... }
