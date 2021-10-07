@@ -10,6 +10,7 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
 | accession_id      | string          | Name provided by an accessioning body
 | accessioning_body | string          | The independent assigner of an identity to the assembly
 | species           | Species         | The species entity to which many assemblies may belong
+| regions           | array of Region | see Region
 | default           | boolean         | The "best" assembly for the species, for when the user does not want to choose
 
 ## Notes
@@ -24,6 +25,7 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
   "accession_id": "GCA_000001405.14",
   "accessioning_body": "EGA",
   "species": { ... }
+  "regions": [ ... ]
   "default": true
 }
 ```
