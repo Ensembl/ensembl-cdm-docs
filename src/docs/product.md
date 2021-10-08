@@ -8,7 +8,7 @@ Both `ProteinProduct` and the `RNAProduct` will have the following fields in com
 |-----------------------------|-------------------------------|-------------|
 | type                        | string                        | Type of the product (e.g. "Protein" or "RNA")
 | length                      | integer                       | Number of subunits (amino acids for proteins, nucleotides for RNA) comprising the product
-| external_references         | array of External Reference   | See `External Reference`
+| external_references         | array of ExternalReference    | See `ExternalReference`
 | sequence                    | Sequence                      | See `Sequence`
 | metadata                    | Metadata                      | See `Metadata`
 | product_generating_context  | ProductGeneratingContext      | See `ProductGeneratingContext`
@@ -23,10 +23,10 @@ In addition to the fields common for all `Product`s, a `ProteinProduct` will hav
 | stable_id             | string                        | Unique identifier for the product (versioned)
 | unversioned_stable_id | string                        | Unversioned unique identifier for the product
 | version               | integer or null               | Version of the product
-| family_matches        | array of `FamilyMatch`        | See `Family Match` below
+| family_matches        | array of `FamilyMatch`        | See `FamilyMatch` below
 | mappings              | array of `Mapping`            | See `Mapping` below
 
-## Family Match
+## FamilyMatch
 
 `FamilyMatch` contains information about a match between the product sequence and a sequence from a known family recorded in an external database. It has the following fields:
 
