@@ -67,6 +67,7 @@ Gene name metadata is an instance of `XrefMetadata`. Due to issues with data ava
     "value": "...",
     "url": "...",
     "source": {
+      "id": "...",
       "name": "...",
       "url": "...",
       "description": "..."
@@ -85,6 +86,7 @@ Gene function metadata is an instance of `XrefMetadata`. The information about g
     "value": "...",
     "url": "...",
     "source": {
+      "id": "...",
       "name" : "...",
       "url" : "...",
       "description" : "..."
@@ -133,6 +135,7 @@ Like gene function metadata, transcript function metadata is an instance of `Xre
     "value": "...",
     "url": "...",
     "source": {
+      "id": "...",
       "name" : "...",
       "url" : "...",
       "description" : "..."
@@ -299,6 +302,7 @@ Ontology term metadata is common across different types of features and also exi
   "value": "exon",
   "url": "www.sequenceontology.org/browser/current_release/term/SO:0000147",
   "source": {
+    "id": "...",
     "name": "Sequence Ontology",
     "url": "www.sequenceontology.org",
     "description": "The Sequence Ontology..."
