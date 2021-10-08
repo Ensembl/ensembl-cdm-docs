@@ -104,15 +104,15 @@ The `Mapping` data structure describes a match between an Ensembl feature and a 
 
 ```json
 {
-  "stable_id": "ENSP00000369497.3",
-  "unversioned_stable_id": "ENSP00000369497",
-  "version": 3,
   "type": "protein",
   "length": 3418,
   "external_references": [],
-  "metadata": { ... },
   "sequence": { ... },
+  "metadata": { ... },
   "product_generating_context": { ... },
+  "stable_id": "ENSP00000369497.3",
+  "unversioned_stable_id": "ENSP00000369497",
+  "version": 3,
   "family_matches": [
     {
       "sequence_family": {
@@ -138,18 +138,18 @@ The `Mapping` data structure describes a match between an Ensembl feature and a 
         "accession_id": "IPR002093",
         "url": "https://www.ebi.ac.uk/interpro/entry/InterPro/IPR002093/"
       },
-      "location": {
+      "relative_location": {
         "start": 1003,
         "end": 1035,
         "length": 33
       },
-      "score": ???,
-      "evalue": ???,
       "hit_location": {
         "start": 1,
         "end": 33,
         "length": 33
       },
+      "score": ???,
+      "evalue": ???
     }
   ],
   "mappings": [
@@ -164,24 +164,24 @@ The `Mapping` data structure describes a match between an Ensembl feature and a 
       "accession_id": "P51587",
       "url": "https://www.uniprot.org/uniprot/P51587",
       "name": "Breast cancer type 2 susceptibility protein",
+      "relative_location": {
+        "start": 25,
+        "end": 106,
+        "length": 82
+      },
+      "hit_location": {
+        "start": 2,
+        "end": 80,
+        "length": 79
+      },
       "genomic_locations": [
         {
           "slice": { ... },
           "cigar_string": "..."
         }
       ],
-      "relative_location": {
-        "start": 25,
-        "end": 106,
-        "length": 82
-      },
       "score": ???,
       "evalue": ???,
-      "hit_location": {
-        "start": 2,
-        "end": 80,
-        "length": 79
-      },
     }
   ]
 }
