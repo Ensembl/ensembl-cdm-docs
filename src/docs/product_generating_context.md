@@ -26,6 +26,8 @@ Note that `Product-Generating Context` is not intended to represent alternative 
 
 ## Notes
 1. The purpose of the `product_type` field in `Product-Generating Context` is to signal which values in other fields to expect. For example, only if the `product_type` is `protein` will the `cds` field contain the `CDS` data; in all other cases it will be `null`.
+2. To represent trans-splicing, a `product_generating_context` can be linked to multiple `transcript`s through `transcripts`.
+3. `phased_exon`s will be present for all `product_generating_context`s regardless of their product.
 
 ## Examples
 
@@ -37,38 +39,38 @@ Note that `Product-Generating Context` is not intended to represent alternative 
 {
   "product_type": "protein",
   "default": true,
-  "cds": { ... },
   "cdna": { ... },
+  "cds": { ... },
   "5_prime_utr": { ... },
   "3_prime_utr": null,
+  "product": { ... },
   "phased_exons": [
     { ... }
   ],
   "transcripts": [
     { ... }
-  ],
-  "product": { ... }
+  ]
 }
 ```
 
 ### In a non-coding transcript
 
-The `cds`, `5_prime_utr`, and `3_prime_utr` fields will be empty.
+The `cds`, `5_prime_utr`, and `3_prime_utr` fields will be null.
 
 ```json
 {
   "product_type": "miRNA",
   "default": true,
-  "cds": null,
   "cdna": { ... },
+  "cds": null,
   "5_prime_utr": null,
   "3_prime_utr": null,
+  "product": { ... },
   "phased_exons": [
     { ... }
   ],
   "transcripts": [
     { ... }
-  ],
-  "product": { ... }
+  ]
 }
 ```
