@@ -4,7 +4,6 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
 
 | Field             | Type            | Description
 |-------------------|-----------------|---------------------
-| type              | string          | Assembly
 | id                | string          | The accession provided by the assembly creator
 | name              | string          | The name provided by the assembly creator
 | accession_id      | string          | Name provided by an accessioning body
@@ -19,13 +18,12 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
 ## Example
 ```
 {
-  "type": "Assembly",
   "id": "GRCh38.p13",
   "name": "GRCh38",
   "accession_id": "GCA_000001405.14",
   "accessioning_body": "EGA",
-  "species": { ... }
-  "regions": [ ... ]
+  "species": { ... },
+  "regions": [ ... ],
   "default": true
 }
 ```
