@@ -4,10 +4,15 @@ The Slice data type contains the information sufficient to describe the position
 
 | Field     | Type              | Description |
 |-----------|-------------------|-------------|
-| region    | Region            | see Region  |
 | location  | Location          | see Location|
+| region    | Region            | see Region  |
 | strand    | Strand            | see Strand  |
-| locus     | array of Feature  | see Feature |
+| features  | array of Feature  | see Feature |
+
+## Notes
+1. `features` will include the "parent" feature (or self).
+2. `features` will include partially overlapping features.
+
 
 ## Examples
 
@@ -30,7 +35,7 @@ The Slice data type contains the information sufficient to describe the position
     "code": "forward",
     "value": 1
   },
-  "locus": [ ... ]
+  "features": [ ... ]
 }
 ```
 
@@ -53,6 +58,6 @@ The Slice data type contains the information sufficient to describe the position
     "code": "reverse",
     "value": -1
   },
-  "locus": [ ... ]
+  "features": [ ... ]
 }
 ```
