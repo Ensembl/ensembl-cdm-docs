@@ -1,3 +1,96 @@
+## 2021-11-12
+
+### Species, strains, etc.
+
+Discussed the relationship between species, sub-species groups, and supraspecies groupings. The proposal is to introduce a concept of a species group, which, hierarchically, can be either smaller or larger than a species, and thus can include strains, breeds, cultivars, divisions, populations, etc.
+
+The data structure representing such a group will have the following fields:
+
+```js
+{
+  id: string;
+  type: srting; // probably a closed set of possible types; is this a value set?
+  name: string; // human-readable name of this specific group
+}
+```
+
+A species thus will be associated with multiple groups. There is also a need to have a field indicating whether a given species (organism) is a reference for a given group; but it isn't yet clear where this field should go.
+
+Potential problems:
+- Production, which proposed this model, has a concept of `organism`, which is a much better fit for such a model. An organism can only belong to a group. In contrast, CDM uses the concept of `species`, and does not have an `organism`, so the relationship between a species and a group is not clear.
+
+
+Examples:
+
+```js
+
+// MOUSE
+
+{
+  species {
+    groups: [
+      {
+        id: "mouse_strain"
+        type: "strain",
+        name: "mouse strains",
+        is_reference_for_group: true
+      },
+      {
+        id: "vertebrates",
+        type: division,
+        name: "Vertebrates",
+        is_reference_for_group: false
+      }
+    ]
+  }
+}
+
+
+//  Something for Compara
+group: {
+  id: 'fish_reference_set',
+  type: 'compara',
+  name: 'Fish reference set',
+  is_reference_for_group: true // <-- we may only need it for compara groups
+}
+
+
+// WHEAT
+
+{
+  species: {
+    groups: [
+      {
+        id: "wheat_cultivars"
+        type: "cultivar",
+        name: "wheat cultivars",
+      },
+      {
+        id: "wheat_cultivars"
+        type: "population",
+        name: "Agricultural plants",
+      },
+      {
+        id: "european_plants"
+        type: "population",
+        name: "European plants",
+      },
+      {
+        id: "model_organisms"
+        type: "division",
+        name: "Model organisms",
+      },
+      {
+        id: "plants",
+        type: "division",
+        name: "Plants",
+      }
+    ]
+  }
+}
+```
+
+
 ## 2021-06-25
 
 ### RNA products
