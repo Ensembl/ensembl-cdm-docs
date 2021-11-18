@@ -7,8 +7,10 @@ The Region data type describes the coordinate system that contains Features. In 
 | name      | string         | region name
 | code      | RegionCode     | code of the region
 | topology  | RegionTopology | a string describing the topology of the region
-| metadata  | Metadata       | 
+| sequence  | Sequence       | see Sequence
+| assembly  | Assembly       | see Assembly
 | length    | integer        | length of the region, in nucleotides
+| metadata  | Metadata       | 
 
 ## RegionCode
 RegionCode is an enum of strings with the following possible values:
@@ -17,7 +19,7 @@ RegionCode is an enum of strings with the following possible values:
 - `scaffold`
 
 ## RegionTopology
-RegionCode is an enum of strings with the following possible values:
+RegionTopology is an enum of strings with the following possible values:
 - `linear`
 - `circular`
 
@@ -27,6 +29,8 @@ RegionCode is an enum of strings with the following possible values:
   "name": "13",
   "code": "chromosome",
   "topology": "linear",
+  "sequence": { ... },
+  "assembly": { ... },
   "length": 114364328,
   "metadata": {
     "ontology_terms": [
