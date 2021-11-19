@@ -8,7 +8,7 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
 | name              | string          | The name provided by the assembly creator
 | accession_id      | string          | Name provided by an accessioning body
 | accessioning_body | string          | The independent assigner of an identity to the assembly
-| species           | Species         | The species entity to which many assemblies may belong
+| organism          | Organism        | The species entity to which many assemblies may belong
 | regions           | array of Region | see Region
 | default           | boolean         | The "best" assembly for the species, for when the user does not want to choose
 
@@ -22,7 +22,7 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
   "name": "GRCh38",
   "accession_id": "GCA_000001405.14",
   "accessioning_body": "EGA",
-  "species": { ... },
+  "organism": { ... },
   "regions": [ ... ],
   "default": true
 }
