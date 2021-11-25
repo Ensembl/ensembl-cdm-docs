@@ -5,7 +5,7 @@ The Organism data type contains information sufficient to describe a given speci
 | Field                     | Type                    | Description                               | 
 |---------------------------|-------------------------|-------------------------------------------|
 | scientific_name           | string                  | Scientific name of the species.           
-| cureated_ common_name     | string or null          | Preferred name for display purposes, which can be the same as NCBI's common name
+| curated_common_name       | string or null          | Preferred name for display purposes, which can be the same as NCBI's common name
 | species                   | Species                 | The related species
 | groups                    | array of OrganismGroup  | An array of OrganismGroups to provide additional information about the organism       
 
