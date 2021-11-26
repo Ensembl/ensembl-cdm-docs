@@ -6,7 +6,7 @@ The Species data type contains information sufficient to describe a given specie
 |---------------------------|-----------------------|-------------------------------------------|
 | scientific_name           | string                | Scientific name of the species.           
 | ncbi_common_name          | string or null        | Common name of the species from NCBI.     
-| ensembl_name              | string                | Preferred name for display purposes, which can be the same as NCBI's common name       
+| ensembl_name              | string                | Ensembl's preferred name for the species.  This may be a common name (like dog); an abbreviated scientfic name (like E. coli); the full scientific name with additional information or anything else.       
 | alternative_names         | array of strings      | Alternative names (if any)                 
 | taxon_id                  | integer               | Taxonomic identifier. 
 | species_groups            | array of SpeciesGroup | Array of SpeciesGroup describing taxonomic groupings relating to the species
