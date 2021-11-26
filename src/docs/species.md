@@ -38,7 +38,7 @@ The SpeciesGroup data type contains information relating to taxonomy:
 }
 ```
 
-2. Escherichia coli — notice that the curated_common_name field can now contain Ensembl's preferred abbreviated name
+2. Escherichia coli — notice that the ensembl_name field can now contain Ensembl's preferred abbreviated name
 
 ```json
 {
