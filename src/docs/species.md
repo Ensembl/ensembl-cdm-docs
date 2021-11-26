@@ -6,7 +6,7 @@ The Species data type contains information sufficient to describe a given specie
 |---------------------------|-----------------------|-------------------------------------------|
 | scientific_name           | string                | Scientific name of the species.           
 | ncbi_common_name          | string or null        | Common name of the species from NCBI.     
-| curated_common_name       | string or null        | Preferred name for display purposes, which can be the same as NCBI's common name       
+| ensembl_name              | string                | Preferred name for display purposes, which can be the same as NCBI's common name       
 | alternative_names         | array of strings      | Alternative names (if any)                 
 | taxon_id                  | integer               | Taxonomic identifier. 
 | species_groups            | array of SpeciesGroup | Array of SpeciesGroup describing taxonomic groupings relating to the species
@@ -31,7 +31,7 @@ The SpeciesGroup data type contains information relating to taxonomy:
 {
   "scientific_name": "Bos taurus",
   "ncbi_common_name": "cattle",
-  "curated_common_name": "cow",
+  "ensembl_name": "cow",
   "alternative_names": ["bovine", "cow", "dairy cow", "domestic cattle", "domestic cow"],
   "taxon_id": 9913,
   "species_groups" : []
@@ -44,7 +44,7 @@ The SpeciesGroup data type contains information relating to taxonomy:
 {
   "scientific_name": "Escherichia coli str. K-12 substr. MG1655",
   "ncbi_common_name": null, 
-  "curated_common_name": "E. coli K-12",
+  "ensembl_name": "E. coli K-12",
   "alternative_names": [],
   "taxon_id": 511145,
   "species_groups": []
@@ -57,7 +57,7 @@ The SpeciesGroup data type contains information relating to taxonomy:
 {
   "scientific_name": "Mus musculus castaneus",
   "ncbi_common_name": "southeastern Asian house mouse", 
-  "curated_common_name": "SE Asian house mouse",
+  "ensembl_name": "SE Asian house mouse",
   "alternative_names": [],
   "taxon_id": 10091,
   "species_groups": [ 
