@@ -9,18 +9,6 @@ The Species data type contains information sufficient to describe a given specie
 | ensembl_name              | string                | Ensembl's preferred name for the species.  This may be a common name (like dog); an abbreviated scientfic name (like E. coli); the full scientific name with additional information or anything else.       
 | alternative_names         | array of strings      | Alternative names (if any)                 
 | taxon_id                  | integer               | Taxonomic identifier. 
-| species_groups            | array of SpeciesGroup | Array of SpeciesGroup describing taxonomic groupings relating to the species
-
-
-# SpeciesGroup
-
-The SpeciesGroup data type contains information relating to taxonomy:
-
-| Field         | Type                   | Description                               | 
-|---------------|------------------------|-------------------------------------------|
-| id            | string                 | ID for the species group           
-| type          | string                 | Type of the species group   
-| name          | string                 | Name of the species group     
 
 
 ## Examples
@@ -33,8 +21,7 @@ The SpeciesGroup data type contains information relating to taxonomy:
   "ncbi_common_name": "cattle",
   "ensembl_name": "cow",
   "alternative_names": ["bovine", "cow", "dairy cow", "domestic cattle", "domestic cow"],
-  "taxon_id": 9913,
-  "species_groups" : []
+  "taxon_id": 9913
 }
 ```
 
@@ -46,8 +33,7 @@ The SpeciesGroup data type contains information relating to taxonomy:
   "ncbi_common_name": null, 
   "ensembl_name": "E. coli K-12",
   "alternative_names": [],
-  "taxon_id": 511145,
-  "species_groups": []
+  "taxon_id": 511145
 }
 ```
 
@@ -59,13 +45,7 @@ The SpeciesGroup data type contains information relating to taxonomy:
   "ncbi_common_name": "southeastern Asian house mouse", 
   "ensembl_name": "SE Asian house mouse",
   "alternative_names": [],
-  "taxon_id": 10091,
-  "species_groups": [ 
-  {
-    "id": "subspecies",
-    "type": "subspecies",
-    "name": "subspecies"
-  }]
+  "taxon_id": 10091
 }
 ```
 
