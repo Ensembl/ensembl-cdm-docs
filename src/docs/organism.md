@@ -36,8 +36,7 @@ The OrganismGroup data type contains information relating to the organism, inclu
     "ncbi_common_name": "cattle",
     "ensembl_name": "cow",
     "alternative_names": ["bovine", "cow", "dairy cow", "domestic cattle", "domestic cow"],
-    "taxon_id": 9913,
-    "species_groups" : []
+    "taxon_id": 9913
   },
  "groups": [{
     "id": "hereford_breed",
