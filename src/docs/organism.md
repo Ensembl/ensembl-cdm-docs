@@ -5,7 +5,7 @@ The Organism data type contains information sufficient to describe a given speci
 | Field                     | Type                    | Description                               | 
 |---------------------------|-------------------------|-------------------------------------------|
 | scientific_name           | string                  | Scientific name of the species.           
-| curated_common_name       | string or null          | Preferred name for display purposes, which can be the same as NCBI's common name
+| ensembl_name              | string                  | Preferred name for display purposes, which can be the same as NCBI's common name
 | species                   | Species                 | The related species
 | groups                    | array of OrganismGroup  | An array of OrganismGroups to provide additional information about the organism       
 
@@ -30,11 +30,11 @@ The OrganismGroup data type contains information relating to the organism, inclu
 ```json
 {
   "scientific_name": "Bos taurus",
-  "curated_common_name": "cow",
+  "ensembl_name": "cow",
   "species": {
     "scientific_name": "Bos taurus",
     "ncbi_common_name": "cattle",
-    "curated_common_name": "cow",
+    "ensembl_name": "cow",
     "alternative_names": ["bovine", "cow", "dairy cow", "domestic cattle", "domestic cow"],
     "taxon_id": 9913,
     "species_groups" : []
