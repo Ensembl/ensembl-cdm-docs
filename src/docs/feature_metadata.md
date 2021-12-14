@@ -50,7 +50,14 @@ A `Gene` has the following metadata associated with it:
 
 
 ### GeneNameMetadata
-Gene name metadata is an instance of `XrefMetadata`. 
+Gene name metadata is an instance of `XrefMetadata`. Due to issues with data availability, the fields in gene name metadata have to be nullable.
+
+| Field          | Type                 | Description                                   |
+|----------------|----------------------|-----------------------------------------------|
+| accession_id   | string or null       | item's identifier in an external database     |
+| value          | string or null       | relevant information about the item           |
+| url            | string or null       | url for accessing the item in another resource|
+| source         | ExternalDB or null   | see ExternalDB                                |
 
 
 ```json
@@ -60,6 +67,7 @@ Gene name metadata is an instance of `XrefMetadata`.
     "value": "...",
     "url": "...",
     "source": {
+      "id": "...",
       "name": "...",
       "url": "...",
       "description": "..."
@@ -78,6 +86,7 @@ Gene function metadata is an instance of `XrefMetadata`. The information about g
     "value": "...",
     "url": "...",
     "source": {
+      "id": "...",
       "name" : "...",
       "url" : "...",
       "description" : "..."
@@ -126,6 +135,7 @@ Like gene function metadata, transcript function metadata is an instance of `Xre
     "value": "...",
     "url": "...",
     "source": {
+      "id": "...",
       "name" : "...",
       "url" : "...",
       "description" : "..."
@@ -292,6 +302,7 @@ Ontology term metadata is common across different types of features and also exi
   "value": "exon",
   "url": "www.sequenceontology.org/browser/current_release/term/SO:0000147",
   "source": {
+    "id": "...",
     "name": "Sequence Ontology",
     "url": "www.sequenceontology.org",
     "description": "The Sequence Ontology..."
