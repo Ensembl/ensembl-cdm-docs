@@ -23,7 +23,7 @@ The Species data type contains information sufficient to describe a given specie
 }
 ```
 
-2. Escherichia coli — notice that the ensembl_name field can now contain Ensembl's preferred abbreviated name
+2. Escherichia coli
 
 ```json
 {
