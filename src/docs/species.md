@@ -6,7 +6,7 @@ The Species data type contains information sufficient to describe a given specie
 |---------------------------|-----------------------|-------------------------------------------|
 | scientific_name           | string                | Scientific name of the species.           
 | ncbi_common_name          | string or null        | Common name of the species from NCBI.     
-| ensembl_name              | string                | Ensembl's preferred name for the species.  This may be a common name (like dog); an abbreviated scientfic name (like E. coli); the full scientific name with additional information or anything else.       
+| scientific_parlance_name  | string or null        | Preferred name for species within the scientific domain.  This may be a common name (like dog) or an abbreviated scientfic name (like E. coli)       
 | alternative_names         | array of strings      | Alternative names (if any)                 
 | taxon_id                  | integer               | Taxonomic identifier. 
 
@@ -19,7 +19,7 @@ The Species data type contains information sufficient to describe a given specie
 {
   "scientific_name": "Bos taurus",
   "ncbi_common_name": "cattle",
-  "ensembl_name": "cow",
+  "scientific_parlance_name": "cow",
   "alternative_names": ["bovine", "cow", "dairy cow", "domestic cattle", "domestic cow"],
   "taxon_id": 9913
 }
@@ -31,21 +31,31 @@ The Species data type contains information sufficient to describe a given specie
 {
   "scientific_name": "Escherichia coli str. K-12 substr. MG1655",
   "ncbi_common_name": null, 
-  "ensembl_name": "E. coli K-12",
+  "scientific_parlance_name": "E. coli K-12",
   "alternative_names": [],
   "taxon_id": 511145
 }
 ```
 
-3. Mus musculus castaneus
-
+3. Pieris rapae (no scientific_parlance_name provided)
 ```json
 {
-  "scientific_name": "Mus musculus castaneus",
-  "ncbi_common_name": "southeastern Asian house mouse", 
-  "ensembl_name": "SE Asian house mouse",
+  "scientific_name": "Pieris rapae",
+  "ncbi_common_name": "cabbage white",
+  "alternative_names": [ "small cabbage white", "small white", "european cabbage white"],
+  "scientific_parlance_name": null,
+  "taxon_id": 64459
+}
+```
+
+4. Trypanosoma rangeli SC58 (only scientific_name provided)
+```json
+{
+  "scientific_name": "Trypanosoma rangeli SC58",
+  "ncbi_common_name": null,
   "alternative_names": [],
-  "taxon_id": 10091
+  "scientific_parlance_name": null,
+  "taxon_id": 429131
 }
 ```
 
