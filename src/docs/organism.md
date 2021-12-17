@@ -45,7 +45,7 @@ The OrganismGroup data type contains information relating to the organism, inclu
  }
 ```
 
-2. Escherichia coli — notice that the ensembl_name field can now contain Ensembl's preferred abbreviated name
+2. Escherichia coli — notice that the scientific_parlance_name field can now contain Ensembl's preferred abbreviated name
 
 ```json
 {
