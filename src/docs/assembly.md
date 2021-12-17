@@ -8,9 +8,9 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
 | name              | string          | The name provided by the assembly creator
 | accession_id      | string          | Name provided by an accessioning body
 | accessioning_body | string          | The independent assigner of an identity to the assembly
-| organism          | Organism        | The species entity to which many assemblies may belong
+| organism          | Organism        | The organism entity to which many assemblies may belong
 | regions           | array of Region | see Region
-| default           | boolean         | The "best" assembly for the species, for when the user does not want to choose
+| default           | boolean         | The "best" assembly for the organism, for when the user does not want to choose
 
 ## Notes
 1. Not all assemblies have yet been recognised by accessioning bodies like INSDC, so the accession_id and accessioning_body may be null
