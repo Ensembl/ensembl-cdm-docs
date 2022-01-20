@@ -12,7 +12,7 @@ The Organism data type contains information sufficient to describe a given speci
 
 # OrganismGroup
 
-The OrganismGroup data type contains information relating to the organism, including breed, stain, division:
+The OrganismGroup data type contains information relating to the organism, including breed, strain, cultivar, division:
 
 | Field         | Type                   | Description                               | 
 |---------------|------------------------|-------------------------------------------|
