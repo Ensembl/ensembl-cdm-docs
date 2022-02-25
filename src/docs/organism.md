@@ -7,43 +7,84 @@ The Organism data type contains information sufficient to describe a given speci
 | scientific_name           | string                  | Scientific name of the species.           
 | scientific_parlance_name  | string or null          | Preferred name for the organism within the scientific domain.
 | species                   | Species                 | The related NCBI species
-| groups                    | array of OrganismGroup  | An array of OrganismGroups to provide additional information about the organism       
+| id                        | string                  | A unique identifier for an organism
+| groups                    | array of OrganismGroup  | An array of OrganismGroups to provide additional information about the organism
+| is_reference_organism     | Boolean                 | Indicates that the organism is the reference for a particular OrganismGroup
+
+Note: The field is_reference_organism is only present if Organism is access from an OrganismGroup.  If the Organism is referenced directly, it will not be present.
 
 
 # OrganismGroup
 
-The OrganismGroup data type contains information relating to the organism, including breed, strain, cultivar, division:
+The OrganismGroup data type contains information relating to the organism, including breed, strain, cultivar, population and division:
 
 | Field         | Type                   | Description                               | 
 |---------------|------------------------|-------------------------------------------|
-| id            | string                 | ID for the species group           
+| code          | string                 | A code for the species group           
 | type          | string                 | Type of the species group   
 | name          | string                 | Name of the species group     
-
+| organisms     | array of Organism      | An array of related organisms
 
 
 
 ## Examples
 
-1. Representation of Cow:
+1.a. Representation of Cow:
 
 ```json
 {
   "scientific_name": "Bos taurus",
   "scientific_parlance_name": "cow",
+  "id": "Bos Taurus (bos_taurus)",
   "species": {
     "scientific_name": "Bos taurus",
     "ncbi_common_name": "cattle",
     "alternative_names": ["bovine", "cow", "dairy cow", "domestic cattle", "domestic cow"],
     "taxon_id": 9913
   },
- "groups": [{
-    "id": "hereford_breed",
+ "groups": [
+ {
+    "code": "hereford_breed",
     "type": "breed",
-    "name": "Hereford"
+    "name": "Hereford",
+    "is_reference_organism": "true",
+    "organisms": [...]
+  },
+  {
+    "code": "farmed_animals",
+    "type": "population",
+    "name": "Farmed Animals",
+    "is_reference_organism": "false",
+    "organisms": [...]
   }]
  }
 ```
+
+1.b. Representation of Cow:
+
+```json
+{
+    "code": "hereford_breed",
+    "type": "breed",
+    "name": "Hereford",
+    "organisms":[
+        {
+          "scientific_name": "Bos taurus",
+          "scientific_parlance_name": "cow",
+          "id": "Bos Taurus (bos_taurus)",
+          "groups": [...],
+          "is_reference_organism": "true",
+          "species": {
+            "scientific_name": "Bos taurus",
+            "ncbi_common_name": "cattle",
+            "alternative_names": ["bovine", "cow", "dairy cow", "domestic cattle", "domestic cow"],
+            "taxon_id": 9913
+         }},
+        {...}]
+  }
+
+```
+
 
 2. Escherichia coli — notice that the scientific_parlance_name field can now contain Ensembl's preferred abbreviated name
 
@@ -51,6 +92,7 @@ The OrganismGroup data type contains information relating to the organism, inclu
 {
   "scientific_name": "Escherichia coli str. K-12 substr. MG1655",
   "scientific_parlance_name": "E. coli K-12",
+  "id": "E. coli (str. K-12 substr. MG1655)",
   "species": {
     "scientific_name": "Escherichia coli str. K-12 substr. MG1655",
     "ncbi_common_name": null, 
@@ -66,6 +108,7 @@ The OrganismGroup data type contains information relating to the organism, inclu
 {
   "scientific_name": "Pieris rapae",
   "scientific_parlance_name": null,
+  "id": "Pieris rapae",
   "species": {
     "scientific_name": "Pieris rapae",
     "ncbi_common_name": "cabbage white", 
@@ -81,6 +124,7 @@ The OrganismGroup data type contains information relating to the organism, inclu
 {
   "scientific_name": "Trypanosoma rangeli SC58",
   "scientific_parlance_name": null,
+  "id": "Trypanosoma rangeli (SC58)"
   "species": {
     "scientific_name": "Trypanosoma rangeli SC58",
     "ncbi_common_name": null, 
