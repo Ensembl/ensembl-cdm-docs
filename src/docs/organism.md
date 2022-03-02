@@ -16,15 +16,15 @@ Note: The field is_reference_organism is only present if Organism is accessed fr
 
 # OrganismGroup
 
-The OrganismGroup data type contains information relating to the organism, including breed, strain, cultivar, population and division:
+The OrganismGroup data type contains information relating to the groups an organism is in.  These include breed, strain, cultivar, population and division.
 
-| Field         | Type                   | Description                               | 
-|---------------|------------------------|-------------------------------------------|
-| code          | string                 | A code for the species group           
-| type          | string                 | Type of the species group   
-| name          | string                 | Name of the species group     
-| organisms     | array of Organism      | An array of related organisms
-
+| Field                     | Type               | Description                               | 
+|---------------------------|--------------------|-------------------------------------------|
+| code                      | string             | A code for the species group           
+| type                      | string             | Type of the species group   
+| name                      | string             | Name of the species group     
+| organisms                 | array of Organism  | An array of related organisms belonging to the group
+| is_reference_organism     | Boolean            | Indicates that the organism is the reference for a particular OrganismGroup
 
 
 ## Examples
@@ -98,7 +98,8 @@ The OrganismGroup data type contains information relating to the organism, inclu
     "ncbi_common_name": null, 
     "alternative_names": [],
     "taxon_id": 511145
-  }
+  },
+  "groups" : [...]
 }
 ```
 
@@ -114,7 +115,8 @@ The OrganismGroup data type contains information relating to the organism, inclu
     "ncbi_common_name": "cabbage white", 
     "alternative_names": ["small cabbage white", "small white", "european cabbage white"],
     "taxon_id": 64459
-  }
+  },
+  "groups" : [...]
 }
 ```
 
@@ -130,7 +132,8 @@ The OrganismGroup data type contains information relating to the organism, inclu
     "ncbi_common_name": null, 
     "alternative_names": [],
     "taxon_id": 429131
-  }
+  },
+  "groups" : [...]
 }
 ```
 
