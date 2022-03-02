@@ -16,8 +16,7 @@ Note: The field is_reference_organism is only present if Organism is accessed fr
 
 # OrganismGroup
 
-The OrganismGroup data type contains information relating to the groups an organism is in.  These include breed, strain, cultivar, population and division.
-
+The OrganismGroup data type contains information relating to the groups an organism is in.  These include breed, strain, cultivar, population and division. It can also identify if a related Organism is the reference for the group.
 | Field                     | Type               | Description                               | 
 |---------------------------|--------------------|-------------------------------------------|
 | code                      | string             | A code for the species group           
@@ -26,6 +25,7 @@ The OrganismGroup data type contains information relating to the groups an organ
 | organisms                 | array of Organism  | An array of related organisms belonging to the group
 | is_reference_organism     | Boolean            | Indicates that the organism is the reference for a particular OrganismGroup
 
+Note: The field is_reference_organism is only present if the OrganismGroup is accessed from an Organism (and therefore identifies that Organism as being the reference for the group).  
 
 ## Examples
 
