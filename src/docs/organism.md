@@ -9,6 +9,7 @@ The Organism data type contains information sufficient to describe a given speci
 | species                   | Species                 | The related NCBI species
 | id                        | string                  | A unique identifier for an organism
 | groups                    | array of OrganismGroup  | An array of OrganismGroups to provide additional information about the organism
+| assemblies                | array of Assembly       | An array of Assemblies for the Organism
 | is_reference_organism     | Boolean                 | Indicates that the organism is the reference for a particular OrganismGroup
 
 Note: The field is_reference_organism is only present if Organism is accessed from an OrganismGroup.  If the Organism is referenced directly, this field will not be present.
@@ -56,7 +57,8 @@ Note: The field is_reference_organism is only present if the OrganismGroup is ac
     "name": "Farmed Animals",
     "is_reference_organism": "false",
     "organisms": [...]
-  }]
+  }],
+  "assemblies" : [...]
  }
 ```
 
@@ -73,6 +75,7 @@ Note: The field is_reference_organism is only present if the OrganismGroup is ac
           "scientific_parlance_name": "cow",
           "id": "Bos Taurus (bos_taurus)",
           "groups": [...],
+          "assemblies" : [...],
           "is_reference_organism": "true",
           "species": {
             "scientific_name": "Bos taurus",
@@ -99,7 +102,8 @@ Note: The field is_reference_organism is only present if the OrganismGroup is ac
     "alternative_names": [],
     "taxon_id": 511145
   },
-  "groups" : [...]
+  "groups" : [...],
+  "assemblies" : [...]
 }
 ```
 
@@ -116,7 +120,8 @@ Note: The field is_reference_organism is only present if the OrganismGroup is ac
     "alternative_names": ["small cabbage white", "small white", "european cabbage white"],
     "taxon_id": 64459
   },
-  "groups" : [...]
+  "groups" : [...],
+  "assemblies" : [...]
 }
 ```
 
@@ -133,7 +138,8 @@ Note: The field is_reference_organism is only present if the OrganismGroup is ac
     "alternative_names": [],
     "taxon_id": 429131
   },
-  "groups" : [...]
+  "groups" : [...],
+  "assemblies" : [...]
 }
 ```
 
