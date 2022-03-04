@@ -62,7 +62,7 @@ Note: The field is_reference_organism is only present if the OrganismGroup is ac
  }
 ```
 
-1.b. Representation of Cow:
+1.b. Representation of a breed group for a Cow:
 
 ```json
 {
