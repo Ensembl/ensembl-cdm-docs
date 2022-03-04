@@ -8,6 +8,7 @@ The Species data type contains information sufficient to describe a given specie
 | ncbi_common_name          | string or null        | Common name of the species from NCBI.        
 | alternative_names         | array of strings      | Alternative names (if any)                 
 | taxon_id                  | integer               | Taxonomic identifier. 
+| organisms                 | array of Organism     | The organisms linked to the species
 
 
 ## Examples
@@ -19,7 +20,8 @@ The Species data type contains information sufficient to describe a given specie
   "scientific_name": "Bos taurus",
   "ncbi_common_name": "cattle",
   "alternative_names": ["bovine", "cow", "dairy cow", "domestic cattle", "domestic cow"],
-  "taxon_id": 9913
+  "taxon_id": 9913,
+  "organisms": [...]
 }
 ```
 
@@ -30,7 +32,8 @@ The Species data type contains information sufficient to describe a given specie
   "scientific_name": "Escherichia coli str. K-12 substr. MG1655",
   "ncbi_common_name": null, 
   "alternative_names": [],
-  "taxon_id": 511145
+  "taxon_id": 511145,
+  "organisms": [...]
 }
 ```
 
@@ -40,7 +43,8 @@ The Species data type contains information sufficient to describe a given specie
   "scientific_name": "Pieris rapae",
   "ncbi_common_name": "cabbage white",
   "alternative_names": [ "small cabbage white", "small white", "european cabbage white"],
-  "taxon_id": 64459
+  "taxon_id": 64459,
+  "organisms": [...]
 }
 ```
 
@@ -50,7 +54,8 @@ The Species data type contains information sufficient to describe a given specie
   "scientific_name": "Trypanosoma rangeli SC58",
   "ncbi_common_name": null,
   "alternative_names": [],
-  "taxon_id": 429131
+  "taxon_id": 429131,
+  "organisms": [...]
 }
 ```
 
