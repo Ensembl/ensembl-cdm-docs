@@ -26,7 +26,7 @@ The OrganismGroup data type contains information relating to the groups an organ
 | organisms                 | array of Organism  | An array of related organisms belonging to the group
 | is_reference_organism     | Boolean            | Indicates that the organism is the reference for a particular OrganismGroup
 
-Note: The field is_reference_organism is only present if the OrganismGroup is accessed from an Organism (and therefore identifies that Organism as being the reference for the group).  
+Note: The field is_reference_organism is only present if the OrganismGroup is accessed from an Organism (and therefore identifies that Organism as being one of the references for the group).  
 
 ## Examples
 
