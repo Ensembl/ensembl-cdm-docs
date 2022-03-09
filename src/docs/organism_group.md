@@ -8,7 +8,7 @@ The OrganismGroup data type contains information relating to the groups an [orga
 | code                      | string             | A code for the species group           
 | type                      | string             | Type of the species group   
 | name                      | string             | Name of the species group     
-| organisms                 | array of [Organism](../organism.md)  | An array of related organisms belonging to the group
+| organisms                 | array of [Organism](./organism.md)  | An array of related organisms belonging to the group
 | is_reference_organism     | Boolean            | Indicates that the organism is the reference for a particular OrganismGroup
 
 Note: The field `is_reference_organism` is only present if the OrganismGroup is accessed from an Organism (and therefore identifies that Organism as being one of the references for the group).  
