@@ -1,12 +1,13 @@
 # Location
 
-The `Location` data type stores coordinates that position a `Feature` on a `Region`. The `Location` has the following fields:
+The Location data type stores coordinates that position a [Feature](./feature.md) on a [Region](./region.md). The Location has the following fields:
 
-| Field  | Type      | Description |
-|------- |-----------|-------------|
-| start  | integer   | start coordinate
-| end    | integer   | end coordinate
-| length | integer   | number of nucleotides between start and end coordinates, inclusive
+| Field             | Type                        | Description |
+|-------------------|-----------------------------|-------------|
+| start             | integer                     | start coordinate
+| end               | integer                                               | end coordinate
+| length            | integer                                               | number of nucleotides between start and end coordinates, inclusive
+| location_modifier | [LocationModifier](./location_modifier.md) or NULL    | LocationModifier is used to define whether or not the feature is a partial model with undefined start and/or end coordinates
 
 ## Notes
 1. Start coordinate of a Feature is the one closest to the 5'-end of the Region on which it is located; while the end coordinate is the one closest to the 3'-end.
@@ -22,6 +23,19 @@ The `Location` data type stores coordinates that position a `Feature` on a `Regi
 {
   "start": 32315474,
   "end": 32400266,
-  "length": 84793
+  "length": 84793,
+  "location_modifier" : null
+}
+```
+
+```json
+{
+  "start": 888,
+  "end": 368689,
+  "length": 83906,
+  "location_modifier" {
+    "partial_start": true,
+    "partial_end": false    
+  }
 }
 ```
