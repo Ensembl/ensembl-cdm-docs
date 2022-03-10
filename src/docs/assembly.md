@@ -11,12 +11,14 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
 | organism          | Organism        | The organism entity to which many assemblies may belong
 | regions           | array of Region | see Region
 | default           | boolean         | The "best" assembly for the organism, for when the user does not want to choose
+| tolid             | string or null  | Tree of Life identifier
 
 ## Notes
 1. Not all assemblies have yet been recognised by accessioning bodies like INSDC, so the accession_id and accessioning_body may be null
+2. Not all assemblies will have ToLID
 
 ## Example
-```
+```json
 {
   "id": "GRCh38.p13",
   "name": "GRCh38",
@@ -24,6 +26,20 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
   "accessioning_body": "EGA",
   "organism": { ... },
   "regions": [ ... ],
-  "default": true
+  "default": true,
+  "tolid": null
+}
+```
+
+```json
+{
+  "id": "GCA_905171775.1",
+  "name": "GCA_905171775.1",
+  "accession_id": "GCA_905171775",
+  "accessioning_body": "DToL",
+  "organism": { ... },
+  "regions": [ ... ],
+  "default": true,
+  "tolid": "aRanTem1"
 }
 ```
