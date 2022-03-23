@@ -1,0 +1,17 @@
+# Closest Data Provider
+
+For cases when a match was calculated using an aggregator database, such as Interpro, this is the reference to the record in such database.
+
+| Field        | Type       | Description |
+|--------------|------------|-------------|
+| source       | ExternalDB | See [ExternalDB](./external_db.md) in the documentation
+| accession_id | string     | Unique identifier of the family in the database
+| url          | string     | Url for accessing the family in the source database
+
+```json
+{
+  "source": { ...  },
+  "accession_id": "IPR002093",
+  "url": "https://www.ebi.ac.uk/interpro/entry/InterPro/IPR002093/"
+}
+```
