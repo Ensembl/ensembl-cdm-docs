@@ -10,7 +10,7 @@ A [GeneAllele](./gene_allele.md) has the following metadata associated with it:
 
 
 ### GeneAlleleNameMetadata
-GeneAlelleName metadata is an instance of [XrefMetadata](./feature_metadata.md). Due to issues with data availability, the fields in gene name metadata have to be nullable.
+GeneAlleleName metadata is an instance of [XrefMetadata](./feature_metadata.md). Due to issues with data availability, the fields in gene name metadata have to be nullable.
 
 | Field          | Type                 | Description                                   |
 |----------------|----------------------|-----------------------------------------------|
@@ -55,7 +55,7 @@ GeneAlleleFunctionMetadata is an instance of XrefMetadata. The information about
 }
 ```
 
-### GeneBiotypeMetadata
+### GeneAlleleBiotypeMetadata
 GeneAlleleBiotypeMetadata is an instance of [ValueSetMetadata](./feature_metadata.md):
 
 ```json
