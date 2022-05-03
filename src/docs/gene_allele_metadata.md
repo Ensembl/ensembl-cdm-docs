@@ -1,16 +1,16 @@
-# Gene metadata
+# GeneAlleleMetadata
 
-A [Gene](./gene.md) has the following metadata associated with it:
+A [GeneAllele](./gene_allele.md) has the following metadata associated with it:
 
 | Field          | Type                         |
 |----------------|------------------------------|
-| name           | GeneNameMetadata or null     |
-| function       | GeneFunctionMetadata or null |
-| biotype        | GeneBiotypeMetadata          |
+| name           | GeneAlleleNameMetadata or null     |
+| function       | GeneAlleleFunctionMetadata or null |
+| biotype        | GeneAlleleBiotypeMetadata          |
 
 
-### GeneNameMetadata
-Gene name metadata is an instance of [XrefMetadata](./feature_metadata.md). Due to issues with data availability, the fields in gene name metadata have to be nullable.
+### GeneAlleleNameMetadata
+GeneAlelleName metadata is an instance of [XrefMetadata](./feature_metadata.md). Due to issues with data availability, the fields in gene name metadata have to be nullable.
 
 | Field          | Type                 | Description                                   |
 |----------------|----------------------|-----------------------------------------------|
@@ -36,8 +36,8 @@ Gene name metadata is an instance of [XrefMetadata](./feature_metadata.md). Due 
 }
 ```
 
-### GeneFunctionMetadata
-Gene function metadata is an instance of XrefMetadata. The information about gene function is provided by Uniprot.
+### GeneAlleleFunctionMetadata
+GeneAlleleFunctionMetadata is an instance of XrefMetadata. The information about gene allele function is provided by Uniprot.
 
 ```json
 {
@@ -56,7 +56,7 @@ Gene function metadata is an instance of XrefMetadata. The information about gen
 ```
 
 ### GeneBiotypeMetadata
-Gene biotype metadata is an instance of [ValueSetMetadata](./feature_metadata.md):
+GeneAlleleBiotypeMetadata is an instance of [ValueSetMetadata](./feature_metadata.md):
 
 ```json
 {
