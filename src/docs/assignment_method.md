@@ -1,5 +1,5 @@
 # AssignmentMethod
-Data type describing the method by which an external reference was assigned to an item.
+The `AssignmentMethod` data type describes the method by which an external reference was assigned to an item.
 
 | Field       | Type           | Description |
 |-------------|----------------|-------------|
@@ -7,7 +7,7 @@ Data type describing the method by which an external reference was assigned to a
 | description | string or null | brief human-readable explanation
 
 ## Note
-`assignment_method.type` can have one of the following values:
+`assignment_method`.`type` can have one of the following values:
   - `CHECKSUM`
   - `COORDINATE_OVERLAP`
   - `DEPENDENT`
@@ -20,9 +20,10 @@ Data type describing the method by which an external reference was assigned to a
   - `SEQUENCE_MATCH`
   - `UNMAPPED`
 
-  ```json
-  "assignment_method": {
+## Examples
+```json
+{
     "type": "DIRECT",
     "description": "A reference made by an external resource of annotation to an Ensembl feature that Ensembl imports without modification"
-  }
-  ```
+}
+```

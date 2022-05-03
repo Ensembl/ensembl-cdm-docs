@@ -7,7 +7,7 @@ The sequence of the spliced exons of a transcript expressed in DNA notation (T r
 | start             | integer   | genomic start coordinate (1-based)
 | end               | integer   | genomic end coordinate (1-based, inclusive)
 | length            | integer   | length of the cDNA in nucleotides
-| sequence          | Sequence  | see Sequence
+| sequence          | Sequence | see [Sequence](./sequence.md)
 
 ## Notes
 1. Fields may not be null.
