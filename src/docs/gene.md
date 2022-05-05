@@ -3,15 +3,15 @@
 The Gene data type contains the information to represents the concept of a Gene.  It is without a genomic location, but lists its GeneAlleles which do have genomic locations.
 `Gene` has the following fields:
 
-| Field                 | Type                | Description                         |
-|-----------------------|---------------------|-------------------------------------|
-| symbol                | string              | Short name
-| alternative_symbols   | array of string     | List of alternative symbols
-| gene_alleles   | array of [GeneAllele](./gene_allele.md)| Related Gene Alleles across Assemblies for the same species
-| species   | [Species](./species.md)| Species for the gene.   
+| Field                 | Type                                    | Description                         |
+|-----------------------|-----------------------------------------|-------------------------------------|
+| symbol                | string                                  | Short name
+| alternative_symbols   | array of string                         | List of alternative symbols
+| gene_alleles          | array of [GeneAllele](./gene_allele.md) | Related Gene Alleles across Assemblies for the same species
+| species               | [Species](./species.md)                 | Species for the gene.   
 
 ## Notes
-1. alternative_symbols and alternative_names can be empty lists
+1. alternative_symbols can be an empty list
 
 ## Examples
 ```json
