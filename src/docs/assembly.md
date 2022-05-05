@@ -11,7 +11,7 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
 | organism          | Organism        | The organism entity to which many assemblies may belong
 | regions           | array of Region | see Region
 | default           | boolean         | The "best" assembly for the organism, for when the user does not want to choose
-| tolid             | string or null  | Tree of Life identifier
+| tol_id            | string or null  | Tree of Life identifier
 
 ## Notes
 1. Not all assemblies have yet been recognised by accessioning bodies like INSDC, so the accession_id and accessioning_body may be null
@@ -27,7 +27,7 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
   "organism": { ... },
   "regions": [ ... ],
   "default": true,
-  "tolid": null
+  "tol_id": null
 }
 ```
 
@@ -40,6 +40,6 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
   "organism": { ... },
   "regions": [ ... ],
   "default": true,
-  "tolid": "aRanTem1"
+  "tol_id": "aRanTem1"
 }
 ```
