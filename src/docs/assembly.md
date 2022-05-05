@@ -15,7 +15,7 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
 
 ## Notes
 1. Not all assemblies have yet been recognised by accessioning bodies like INSDC, so the accession_id and accessioning_body may be null
-2. Not all assemblies will have ToLID
+2. Not all assemblies will have a Tree of Life Identifier (`tol_id`)
 
 ## Example
 ```json
