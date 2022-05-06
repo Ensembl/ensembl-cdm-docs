@@ -1,6 +1,6 @@
 # FamilyMatch
 
-FamilyMatch contains information about a match between the product sequence and a sequence from a known family recorded in an external database. It has the following fields:
+`FamilyMatch` contains information about a match between the product sequence and a sequence from a known family recorded in an external database. It has the following fields:
 
 
 | Field             | Type                         | Description |
@@ -41,12 +41,14 @@ FamilyMatch contains information about a match between the product sequence and 
   "relative_location": {
     "start": 1003,
     "end": 1035,
-    "length": 33
+    "length": 33,
+    "location_modifier" : null
   },
   "hit_location": {
     "start": 1,
     "end": 33,
-    "length": 33
+    "length": 33,
+    "location_modifier" : null
   },
   "score": ???,
   "evalue": ???

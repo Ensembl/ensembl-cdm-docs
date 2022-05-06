@@ -1,4 +1,4 @@
-# External Reference
+# ExternalReference
 
 The `External Reference` data type represents a reference to a database outside of Ensembl. It has the following fields:
 
@@ -14,6 +14,7 @@ The `External Reference` data type represents a reference to a database outside 
 
 ## Note
 `accession_id` of a given reference is not guaranteed to be unique
+
 
 ## Examples
 

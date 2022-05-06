@@ -1,4 +1,4 @@
-# Feature metadata
+# FeatureMetadata
 
 A feature may have various kinds of metadata associated with it. These pieces of metadata are described by the Metadata data type.
 
@@ -11,9 +11,9 @@ All metadata items will have the following fields in common:
 | value        | string, number, or boolean
 | accession_id | string
 
-Metadata items tend to fall into one of two categories: metadata derived from an external reference (XrefMetadata), and metadata derived from a value set (ValueSetMetadata).
+Metadata items tend to fall into one of two categories: metadata derived from an external reference (ExternalReferenceMetadata), and metadata derived from a value set (ValueSetMetadata).
 
-An XrefMetadata item will have the following shape (cf. [ExternalReference](./external_reference.md)):
+An `ExternalReferenceMetadata` item will have the following shape:
 
 | Field          | Type        | Description |
 |----------------|-------------|-------------|
@@ -22,7 +22,7 @@ An XrefMetadata item will have the following shape (cf. [ExternalReference](./ex
 | url            | string      | url for accessing the item in another resource
 | source         | ExternalDB  | see ExternalDB
 
-A ValueSetMetadata item will have the following shape:
+A `ValueSetMetadata` item will have the following shape:
 
 | Field          | Type                       | Description |
 |----------------|----------------------------|-------------|
@@ -32,4 +32,4 @@ A ValueSetMetadata item will have the following shape:
 | definition     | string                     | succinct definition of the term
 | description    | string or null             | optional longer description that can contain nuances
 
-**Note**: apart from the fields listed in the table above, ValueSetMetadata items may also contain additional optional fields unique for each given kind of metadata. See [TranscriptManeMetadata](./transcript_metadata.md) for an example.
+**Note**: apart from the fields listed in the table above, ValueSetMetadata items may also contain additional optional fields unique for each given kind of metadata. See [TranscriptManeMetadata](./transcript_metadata.md) or [GeneMetadata](./gene_metadata.md) for examples.
