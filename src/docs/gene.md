@@ -1,17 +1,25 @@
 # Gene
 
-The Gene data type contains the information to represents the concept of a Gene.  It is without a genomic location, but lists its GeneAlleles which do have genomic locations.
+The `Gene` data type contains the information to represents the concept of a Gene.  It is without a genomic location, but lists its `GeneAlleles` which do have genomic locations.
 `Gene` has the following fields:
 
 | Field                 | Type                                    | Description                         |
 |-----------------------|-----------------------------------------|-------------------------------------|
-| symbol                | string                                  | Short name
-| alternative_symbols   | array of string                         | List of alternative symbols
+| external_id           | string or null                          | Identifier provided by external nomenclature committee (such as HGNC)
+| symbol                | string or null                          | Short name provided by external nomenclature committee (such as HGNC)
+| stable_id             | string                                  | A unique identifier for the gene allele
+| version               | integer                                 | Version of the gene allele
+| unversioned_stable_id | string                                  | Unversioned unique identifier for the gene
+| alternative_symbols   | array of strings                        | List of alternative symbols
 | gene_alleles          | array of [GeneAllele](./gene_allele.md) | Related Gene Alleles across Assemblies for the same species
 | species               | [Species](./species.md)                 | Species for the gene.   
+| metadata              | GeneMetadata                            | See [feature_metadata](./feature_metadata.md) and [gene_metadata](./gene_metadata.md)
+
 
 ## Notes
-1. alternative_symbols can be an empty list
+1. `alternative_symbols` can be an empty list
+2. `external_id` is the `accession_id` from [GeneSymbolMetadata](./gene_metadata.md)
+2. `symbol` is the `value` from [GeneSymbolMetadata](./gene_metadata.md)
 
 ## Examples
 ```json

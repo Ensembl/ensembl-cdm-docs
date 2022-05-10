@@ -13,7 +13,7 @@ All metadata items will have the following fields in common:
 
 Metadata items tend to fall into one of two categories: metadata derived from an external reference (XrefMetadata), and metadata derived from a value set (ValueSetMetadata).
 
-An XrefMetadata item will have the following shape (cf. [ExternalReference](./external_reference.md)):
+An ExternalReferenceMetadata item will have the following shape (cf. [ExternalReference](./external_reference.md)):
 
 | Field          | Type        | Description |
 |----------------|-------------|-------------|

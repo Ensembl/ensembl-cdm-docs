@@ -2,22 +2,22 @@
 
 A [GeneAllele](./gene_allele.md) has the following metadata associated with it:
 
-| Field          | Type                         |
-|----------------|------------------------------|
-| name           | GeneAlleleNameMetadata or null     |
-| function       | GeneAlleleFunctionMetadata or null |
-| biotype        | GeneAlleleBiotypeMetadata          |
+| Field          | Type                               | Notes                                         |
+|----------------|------------------------------------|-----------------------------------------------|
+| name           | GeneAlleleNameMetadata or null     | See below                                     |
+| function       | GeneAlleleFunctionMetadata or null | See below                                     |
+| biotype        | BiotypeMetadata                    | See [GenericMetadata](./generic_metadata.md)  |
 
 
 ### GeneAlleleNameMetadata
-GeneAlleleName metadata is an instance of [XrefMetadata](./feature_metadata.md). Due to issues with data availability, the fields in GeneAlleleNameMetadata have to be nullable.
+`GeneAlleleName` metadata is an instance of [ExternalReferenceMetadata](./feature_metadata.md). Due to issues with data availability, the fields in `GeneAlleleNameMetadata` have to be nullable.
 
-| Field          | Type                 | Description                                   |
-|----------------|----------------------|-----------------------------------------------|
-| accession_id   | string or null       | item's identifier in an external database     |
-| value          | string or null       | relevant information about the item           |
-| url            | string or null       | url for accessing the item in another resource|
-| source         | ExternalDB or null   | see ExternalDB                                |
+| Field          | Type                 | Description                                      |
+|----------------|----------------------|--------------------------------------------------|
+| accession_id   | string or null       | GeneAllele's identifier in an external database  |
+| value          | string or null       | Relevant information about the item              |
+| url            | string or null       | URL for accessing the item in another resource   |
+| source         | ExternalDB or null   | See ExternalDB                                   |
 
 
 ```json
@@ -37,7 +37,7 @@ GeneAlleleName metadata is an instance of [XrefMetadata](./feature_metadata.md).
 ```
 
 ### GeneAlleleFunctionMetadata
-GeneAlleleFunctionMetadata is an instance of XrefMetadata. The information about gene allele function is provided by Uniprot.
+`GeneAlleleFunctionMetadata` is an instance of [ExternalReferenceMetadata](./feature_metadata.md). The information about the allele's function is provided by Uniprot.
 
 ```json
 {
@@ -55,8 +55,8 @@ GeneAlleleFunctionMetadata is an instance of XrefMetadata. The information about
 }
 ```
 
-### GeneAlleleBiotypeMetadata
-GeneAlleleBiotypeMetadata is an instance of [ValueSetMetadata](./feature_metadata.md):
+### BiotypeMetadata
+`GeneAlleleBiotypeMetadata` is an instance of [ValueSetMetadata](./feature_metadata.md):
 
 ```json
 {
