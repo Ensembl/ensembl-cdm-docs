@@ -24,7 +24,8 @@ The `Exon` data type represents a fragment of a gene that is present in the matu
 ```json
 {
   "version": 1,
-  "stable_id": "ENSE00003856928",
+  "stable_id": "ENSE00003856928.1",
+  "unversioned_stable_id": "ENSE00003856928",
   "type": "Exon",
   "slice": {
     "location": {

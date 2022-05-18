@@ -1,4 +1,4 @@
-# Closest Data Provider
+# ClosestDataProvider
 
 For cases when a match was calculated using an aggregator database, such as Interpro, this is the reference to the record in such database.
 

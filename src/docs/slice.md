@@ -1,16 +1,16 @@
 # Slice
 
-The `Slice` data type contains the information sufficient to describe the position of a Feature on a coordinate system. It consists of the following fields:
+The `Slice` data type contains the information sufficient to describe the position of a [Feature](./feature.md) on a coordinate system. It consists of the following fields:
 
-| Field     | Type     | Description |
-|-------    |----------|-------------|
-| region    | Region   | see [Region](./region.md)
-| location  | Location | see [Location](./location.md)
-| strand    | Strand   | see [Strand](./strand.md)
+| Field     | Type     | Description                   |
+|-------    |----------|-------------------------------|
+| region    | Region   | See [Region](./region.md)
+| location  | Location | See [Location](./location.md)
+| strand    | Strand   | See [Strand](./strand.md)
 
 ## Examples
 
-1. Slice taken by transcript ENST00000671466.1 (BRCA2-211):
+1. `Slice` for [transcript](./transcript.md) ENST00000671466.1 (BRCA2-211):
 
 ```json
 {
@@ -38,7 +38,7 @@ The `Slice` data type contains the information sufficient to describe the positi
 
 
 
-2. Slice taken by the `hemE` gene — a gene on a circular bacterial chromosome (which Ensembl labels simply as "Chromosome") that overlaps the origin:
+2. `Slice` taken by the `hemE` `gene` — a gene on a circular bacterial chromosome (which Ensembl labels simply as "Chromosome") that overlaps the origin:
 
 ```json
 {

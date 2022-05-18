@@ -1,6 +1,6 @@
 # Organism
 
-The Organism data type contains information sufficient to describe the concept of a specific instance or logical grouping of a species (such as a breed or strain).  An Organism does not describe an individual.  
+The `Organism` data type contains information sufficient to describe the concept of a specific instance or logical grouping of a species (such as a breed or strain).  An `Organism` does not describe an individual, but rather the Platonic ideal of something.  
 
 It consists of the following fields:
 
@@ -9,12 +9,12 @@ It consists of the following fields:
 | scientific_name           | string                                                      | Scientific name of the species.           
 | scientific_parlance_name  | string or null                                              | Preferred name for the organism within the scientific domain.
 | species                   | [Species](./species.md)                                     | The related NCBI species
-| id                        | string                                                      | A unique identifier for an organism
-| groups                    | array of [OrganismGroup](./organism_group.md)               | An array of OrganismGroups to provide additional information about the organism
-| assemblies                | array of [Assembly](./assembly.md)                          | An array of Assemblies for the Organism
-| is_reference_organism     | Boolean                                                     | Indicates that the organism is the reference for a particular OrganismGroup
+| id                        | string                                                      | A unique identifier for an `organism`
+| groups                    | array of [OrganismGroup](./organism_group.md)               | An array of `OrganismGroups` to provide additional information about the `organism`
+| assemblies                | array of [Assembly](./assembly.md)                          | An array of `Assemblies` for the `Organism`
+| is_reference_organism     | Boolean                                                     | Indicates that the `organism` is the reference for a particular `OrganismGroup`
 
-Note: The field `is_reference_organism` is only present if Organism is accessed from an OrganismGroup.  If the Organism is referenced directly, this field will not be present.
+Note: The field `is_reference_organism` is only present if `Organism` is accessed from an `OrganismGroup`.  If the `Organism` is referenced directly, this field will not be present.
 
 
 ## Examples
@@ -78,7 +78,7 @@ Note: The field `is_reference_organism` is only present if Organism is accessed 
 ```
 
 
-2. Escherichia coli — notice that the scientific_parlance_name field can now contain Ensembl's preferred abbreviated name
+2. Escherichia coli — notice that the `scientific_parlance_name` field can now contain Ensembl's preferred abbreviated name
 
 ```json
 {
@@ -96,7 +96,7 @@ Note: The field `is_reference_organism` is only present if Organism is accessed 
 }
 ```
 
-3. Pieris rapae (no scientific_parlance_name provided)
+3. Pieris rapae (no `scientific_parlance_name` provided)
 
 ```json
 {
@@ -114,7 +114,7 @@ Note: The field `is_reference_organism` is only present if Organism is accessed 
 }
 ```
 
-4. Trypanosoma rangeli SC58 (only scientific_name provided)
+4. Trypanosoma rangeli SC58 (only `scientific_name` provided)
 
 ```json
 {

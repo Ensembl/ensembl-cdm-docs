@@ -1,7 +1,9 @@
-# Generic metadata
+# GenericMetadata
 
 ### OntologyTermMetadata
-Ontology term metadata is common across different types of features and also exists on non-features, such as [Region](./region.md). It is an instance of [XrefMetadata](./feature_metadata.md). An example would look as follows:
+OntologyTermMetadata is common across different types of [features](./features.md) and also exists on non-features, such as [Region](./region.md). It is an instance of [ExternalReferenceMetadata](./feature_metadata.md). A
+
+### Examples
 
 ```json
 {

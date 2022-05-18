@@ -4,16 +4,16 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
 
 | Field             | Type                            | Description
 |-------------------|---------------------------------|---------------------
-| id                | string                          | A unique identifier for the assembly
-| name              | string                          | The name provided by the assembly creator
+| id                | string                          | A unique identifier for the `assembly`
+| name              | string                          | The name provided by the `assembly` creator
 | accession_id      | string or null                  | Name provided by an accessioning body
-| accessioning_body | string or null                  | The organisation which assigned the `accession_id` to the assembly
-| organism          | Organism                        | The organism the assembly represents.  See [Organism](./organism.md)
+| accessioning_body | string or null                  | The organisation which assigned the `accession_id` to the `assembly`
+| organism          | Organism                        | The `organism` the assembly represents.  See [Organism](./organism.md)
 | regions           | array of Region                 | see [Region](./region.md)
-| default           | boolean                         | The "best" assembly for the organism
+| default           | boolean                         | The "best" `assembly` for the organism
 
 ## Notes
-1. Not all assemblies have yet been recognised by accessioning bodies like INSDC, so the accession_id and accessioning_body may be null
+1. Not all `assemblies` have yet been recognised by accessioning bodies like INSDC, so the `accession_id` and accessioning_body may be null
 
 ## Examples
 ```json

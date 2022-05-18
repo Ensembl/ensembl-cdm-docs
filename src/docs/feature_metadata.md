@@ -2,7 +2,7 @@
 
 A feature may have various kinds of metadata associated with it. These pieces of metadata are described by the Metadata data type.
 
-## A metadata item
+## A Metadata item
 
 All metadata items will have the following fields in common:
 
@@ -11,25 +11,25 @@ All metadata items will have the following fields in common:
 | value        | string, number, or boolean
 | accession_id | string
 
-Metadata items tend to fall into one of two categories: metadata derived from an external reference (ExternalReferenceMetadata), and metadata derived from a value set (ValueSetMetadata).
+Metadata items tend to fall into one of two categories: metadata derived from an external reference (`ExternalReferenceMetadata`), and metadata derived from a [value set](./value_set.md) (`ValueSetMetadata`).
 
 An `ExternalReferenceMetadata` item will have the following shape:
 
 | Field          | Type        | Description |
 |----------------|-------------|-------------|
-| accession_id   | string      | item's identifier in an external database
-| value          | string      | relevant information about the item
-| url            | string      | url for accessing the item in another resource
-| source         | ExternalDB  | see ExternalDB
+| accession_id   | string      | Item's identifier in an external database
+| value          | string      | Relevant information about the item
+| url            | string      | URL for accessing the item in another resource
+| source         | ExternalDB  | See [ExternalDB](./external_db.md)
 
 A `ValueSetMetadata` item will have the following shape:
 
 | Field          | Type                       | Description |
 |----------------|----------------------------|-------------|
-| accession_id   | string                     | item's identifier in a value sets glossary
-| value          | string, number, or boolean | value intended for programmatic use by the consumer
-| label          | string                     | a short, human-readable and display-friendly label
-| definition     | string                     | succinct definition of the term
-| description    | string or null             | optional longer description that can contain nuances
+| accession_id   | string                     | Item's identifier in a value sets glossary
+| value          | string, number, or boolean | Value intended for programmatic use by the consumer
+| label          | string                     | A short, human-readable and display-friendly label
+| definition     | string                     | Succinct definition of the term
+| description    | string or null             | Optional longer description that can contain nuances
 
-**Note**: apart from the fields listed in the table above, ValueSetMetadata items may also contain additional optional fields unique for each given kind of metadata. See [TranscriptManeMetadata](./transcript_metadata.md) or [GeneMetadata](./gene_metadata.md) for examples.
+**Note**: apart from the fields listed in the table above, `ValueSetMetadata` items may also contain additional optional fields unique for each given kind of metadata. See [TranscriptManeMetadata](./transcript_metadata.md) or [GeneMetadata](./gene_metadata.md) for examples.

@@ -1,6 +1,6 @@
 # OrganismGroup
 
-The OrganismGroup data type contains information relating to the groups an [organism](./organism.md "Organism") is in.  These include breed, strain, cultivar, population and division. It can also identify if a related Organism is the reference for the group.
+The `OrganismGroup` data type contains information relating to the groups an [organism](./organism.md) is in.  These include breed, strain, cultivar, population and division. It can also identify if a related `Organism` is the reference for the group.
 
 
 | Field                     | Type               | Description                               |
@@ -8,14 +8,14 @@ The OrganismGroup data type contains information relating to the groups an [orga
 | code                      | string             | A code for the species group           
 | type                      | string             | Type of the species group   
 | name                      | string             | Name of the species group     
-| organisms                 | array of [Organism](./organism.md)  | An array of related organisms belonging to the group
-| is_reference_organism     | Boolean            | Indicates that the organism is the reference for a particular OrganismGroup
+| organisms                 | array of [Organism](./organism.md)  | An array of related `organisms` belonging to the group
+| is_reference_organism     | Boolean            | Indicates that the `Organism` is the reference for a particular `OrganismGroup`
 
-Note: The field `is_reference_organism` is only present if the OrganismGroup is accessed from an Organism (and therefore identifies that Organism as being one of the references for the group).  
+Note: The field `is_reference_organism` is only present if the `OrganismGroup` is accessed from an `Organism` (and therefore identifies that `Organism` as being one of the references for the group).  
 
 ## Examples
 
-1. Representation of Cow showing and array of OrganismGroup (as groups) with `is_reference_organism` present. :
+1. Representation of Cow showing and array of `OrganismGroup` (as groups) with `is_reference_organism` present. :
 
 ```json
 {
@@ -47,7 +47,7 @@ Note: The field `is_reference_organism` is only present if the OrganismGroup is 
  }
 ```
 
-2. Representation of an OrganismGroup showing a breed group for a Cow (note: `is_reference_organism` is not present as the OrganismGroup has been accessed directly.):
+2. Representation of an `OrganismGroup` showing a breed group for a Cow (note: `is_reference_organism` is not present as the `OrganismGroup` has been accessed directly.):
 
 ```json
 {

@@ -1,17 +1,18 @@
 # FamilyMatch
 
-`FamilyMatch` contains information about a match between the product sequence and a sequence from a known family recorded in an external database. It has the following fields:
+`FamilyMatch` contains information about a match between the [product](./product.md) sequence and a sequence from a known family recorded in an external database. It has the following fields:
 
 
 | Field             | Type                         | Description |
 |-------------------|------------------------------|-------------|
 | sequence_family   | SequenceFamily               | See [SequenceFamily](./sequence_family.md)
 | via               | ClosestDataProvider or null  | See [ClosestDataProvider](./closest_data_provider.md)
-| relative_location | Location                     | Location within the product where the hit lands (see [Location](./location.md))
-| hit_location      | Location or null             | Location within the family sequence that is matched to the product sequence (see [Location](./location.md))
-| score             | float or null                | Analysis score asserting the presence of this match at this location
-| evalue            | float or null                | Expectation value for the presence of this match at this location
+| relative_location | Location                     | `Location` within the product where the hit lands (see [Location](./location.md))
+| hit_location      | Location or null             | `Location` within the family sequence that is matched to the `product` sequence (see [Location](./location.md))
+| score             | float or null                | Analysis score asserting the presence of this match at this `location`
+| evalue            | float or null                | Expectation value for the presence of this match at this `location`
 
+### Examples 
 
 ```json
 {

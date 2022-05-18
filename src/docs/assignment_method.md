@@ -1,10 +1,10 @@
 # AssignmentMethod
-The `AssignmentMethod` data type describes the method by which an external reference was assigned to an item.
+The `AssignmentMethod` data type describes the method by which an [external reference](./external_reference.md) was assigned to an item.
 
 | Field       | Type           | Description |
 |-------------|----------------|-------------|
-| type        | string         | a member of a short list of keywords
-| description | string or null | brief human-readable explanation
+| type        | string         | A member of a short list of keywords
+| description | string or null | Brief human-readable explanation
 
 ## Note
 `assignment_method`.`type` can have one of the following values:
