@@ -12,7 +12,7 @@ The `RelativeLocation` data type describes the position of a [Feature](./feature
 The purpose of the `Relative Location` data type is to supply the client with coordinates of a feature relative to its immediate parent to relieve the client of the need to calculate these positions by itself. The value of `Relative Location` becomes particularly noticeable for features on the reverse strand or on a circular chromosome overlapping the origin.
 
 ## Notes
-1. `Relative Location` is relative to the location of the immediate parent feature. For example, [Transcript's](./transcript.md) `Relative Location` is relative to the location of the [GeneAllele](./gene_allele.md) that produces this `Transcript`. Similarly, [Exon's](./exon.md) `Relative Location` is relative to the location of the `Transcript` that contains this `Exon`.
+1. `Relative Location` is relative to the location of the immediate parent feature. For example, [Transcript's](./transcript.md) `Relative Location` is relative to the location of the [Gene](./gene.md) that produces this `Transcript`. Similarly, [Exon's](./exon.md) `Relative Location` is relative to the location of the `Transcript` that contains this `Exon`.
 2. `Relative Location` is always calculated in the 5'->3' direction. Therefore, on the forward [strand](./strand.md), relative coordinate 1 points at the same nucleotide as the **start** coordinate of the parent feature; and on the reverse strand relative coordinate 1 points at the same nucleotide as the **end** coordinate of the parent `feature`.
 3. In contrast to `Location`, `Relative Location` guarantees that the end coordinate will be greater than the start coordinate.
 

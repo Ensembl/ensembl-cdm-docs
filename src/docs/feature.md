@@ -17,7 +17,6 @@ Feature is an abstract representation which other feature-like entities (e.g. Ge
 1. localised flag allows features such as genes in a pangenome context to exist without requiring a slice.  If it is set to true, then slice should contain a Slice.  If the flag is false, then slice will be null.
 2. Features can implement a method `sequence` as a shortcut to obtain the sequence.
 3. Concepts which are features include:
- - GeneAllele
  - Gene
  - Exon
  - Intron
