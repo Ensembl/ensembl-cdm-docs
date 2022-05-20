@@ -1,6 +1,6 @@
 # Gene
 
-The `Gene` data type contains the information to represents the concept of a Gene.  It is without a genomic location, but lists its `GeneAlleles` which do have genomic locations.
+The `Gene` data type contains the information to represent the concept of a Gene.  It is without a genomic location, but lists its `GeneAlleles` which do have genomic locations.
 `Gene` has the following fields:
 
 | Field                 | Type                                    | Description                         |

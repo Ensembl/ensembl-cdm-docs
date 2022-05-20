@@ -1,6 +1,6 @@
 # GeneAllele
 
-The GeneAllele data type contains the information to represents a locus, the genomic region where a allele is located. It will have at least one Transcript data type.
+The GeneAllele data type contains the information to represent a locus, the genomic region where a allele is located. It will have at least one Transcript data type.
 `GeneAllele` has the following fields:
 
 | Field                 | Type                | Description                         |
@@ -14,7 +14,6 @@ The GeneAllele data type contains the information to represents a locus, the gen
 | unversioned_stable_id | string              | Unversioned unique identifier for the gene allele
 | type                  | string              | This is always `GeneAllele`
 | metadata              | GeneAlleleMetadata  | See [feature_metadata](./feature_metadata.md) and [gene_allele_metadata](./gene_allele_metadata.md)
-| sequence              | string              | Genomic sequence on the forward strand from the lowest 5' end coordinate to the highest 3' end coordinate
 | slice                 | Slice               | Slice describing the coordinates of the gene allele
 | transcripts           | array of Transcript | List of transcripts
 | gene                  | Gene or null        | The [Gene](./gene.md) which the GeneAllele is derived from

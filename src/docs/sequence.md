@@ -14,6 +14,7 @@ The `Sequence` data type describes a contiguous set of nucleic acid or amino aci
 2. GA4GH identifiers are preferred as checksums since they are a CURIE and therefore namespace the checksum
 3. Sequence strings can be quite large (for example, they may represent the nucleotide sequence of a whole chromosome). Therefore, due to technical constraints, some implementations that provide the Sequence data type (e.g. a graphQL server) may not contain the `sequence` field. If the `sequence` field is present, it contains a string of upper-case characters with no white spaces.
 4. If the `sequence` field is unavailable in a given implementation, the checksum can be used to retrieve the sequence from a RefGet service.
+5. Genomic sequence will be on the forward strand from the lowest 5' end coordinate to the highest 3' end coordinate.
 
 ## Example
 
