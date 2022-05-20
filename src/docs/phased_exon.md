@@ -1,6 +1,6 @@
 # PhasedExon
 
-The `Phased Exon` data type combines the immutable, context-independent set of properties of an [Exon](./exon.md) with the properties that characterise arrangement of `exons` in mature messenger RNA. `Phased Exon` has the following fields:
+The `PhasedExon` data type combines the immutable, context-independent set of properties of an [Exon](./exon.md) with the properties that characterise arrangement of `exons` in mature messenger RNA. `PhasedExon` has the following fields:
 
 | Field             | Type             | Description |
 |-------------------|------------------|-------------|
@@ -28,10 +28,10 @@ In ascii art, with alternate codons represented by `###` and `+++`, ExonPhase ca
 ```
 
 ## Rationale
-Similarly to [SplicedExon](./spliced_exon.md), `Phased Exon` supports the separation of context-independent exon properties (through the `Exon` data type) and the properties that emerge within a context of mature messenger RNA.
+Similarly to [SplicedExon](./spliced_exon.md), `PhasedExon` supports the separation of context-independent exon properties (through the `Exon` data type) and the properties that emerge within a context of mature messenger RNA.
 
 ## Notes
-1. `Phased Exons` are a property of `Product-Generating Context`. Ordinarily, they all are children of the same parent transcript; but in cases of trans-splicing they will include `exons` from other `transcripts`.
+1. `PhasedExons` are a property of `Product-Generating Context`. Ordinarily, they all are children of the same parent transcript; but in cases of trans-splicing they will include `exons` from other `transcripts`.
 
 ## Example
 
