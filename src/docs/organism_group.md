@@ -47,7 +47,7 @@ Note: The field `is_reference_organism` is only present if the `OrganismGroup` i
  }
 ```
 
-2. Representation of an `OrganismGroup` showing a breed group for a Cow (note: `is_reference_organism` is not present as the `OrganismGroup` has been accessed directly.):
+2. Representation of an `OrganismGroup` showing a breed group for a Cow (note: `is_reference_organism` is not present as the `OrganismGroup` has been accessed directly):
 
 ```json
 {

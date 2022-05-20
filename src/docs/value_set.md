@@ -4,7 +4,7 @@ A `ValueSet` is a collection of key/value pairs that are related to a given topi
 
 ValueSets are used extensively in the CoreDataModel (e.g. [ValueSetMetaData](./feature_metadata.md) or [SequenceAlphabet](./sequence_alphabet.md)).
 
-A `ValueSet` should have the following fields:
+A `ValueSet` item should have the following fields:
 
 | Field        | Type           |
 |--------------|----------------|
@@ -30,7 +30,7 @@ Examples are:
 
 
 #### Value
-A short machine readable name for the `ValueSet` item.  This should be lowercase and `camel_case`.
+A short machine readable name for the `ValueSet` item.  This should be lowercase and `snake_case`.
 Examples are:
 - `protein_coding_gene`
 - `select`
@@ -50,7 +50,7 @@ Examples:
 
 
 #### Mutability
-Once a `ValueSet` has been published, it should be immutable.  If an update is required, then another `ValueSet` record should be created with a new `accession_id`.
+Once a `ValueSet` item has been published, it should be immutable.  If an update is required, then another `ValueSet` record should be created with a new `accession_id`.
 
 
 ----

@@ -1,6 +1,6 @@
 # Organism
 
-The `Organism` data type contains information sufficient to describe the concept of a specific instance or logical grouping of a species (such as a breed or strain).  An `Organism` does not describe an individual, but rather the Platonic ideal of something.  
+The `Organism` data type contains information sufficient to describe the concept of a specific instance or logical grouping of a species (such as a breed or strain).  An `Organism` does not describe an individual.  
 
 It consists of the following fields:
 

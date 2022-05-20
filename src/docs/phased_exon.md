@@ -1,4 +1,4 @@
-# Phased Exon
+# PhasedExon
 
 The `Phased Exon` data type combines the immutable, context-independent set of properties of an [Exon](./exon.md) with the properties that characterise arrangement of `exons` in mature messenger RNA. `Phased Exon` has the following fields:
 
@@ -7,7 +7,7 @@ The `Phased Exon` data type combines the immutable, context-independent set of p
 | index             | integer          | 0-based, denotes order of exons in mature messenger RNA
 | start_phase       | ExonPhase        | See below
 | end_phase         | ExonPhase        | See below
-| exon              | Exon             | context-independent properties of the exon, see [Exon](./exon.md)
+| exon              | Exon             | Context-independent properties of the exon, see [Exon](./exon.md)
 
 ## ExonPhase
 `ExonPhase` is an enum of integers: `-1`, `0`, `1`, or `2`.
