@@ -1,6 +1,6 @@
 # Organism
 
-The `Organism` data type contains information sufficient to describe the concept of a specific instance or logical grouping of a species (such as a breed or strain).  An `Organism` does not describe an individual.  
+The `Organism` data type contains information sufficient to describe an abstract representation of a `Species` member.  Organism augments the data provided by [Species](./species.md) and allows assemblies, genes set, analysis for entities to be grouped and named in Ensembl services. Therefore, in Ensembl, multiple `organisms` can exists for the same `species`, such as breeds, strains, cell lines, even (anonymised) individuals
 
 It consists of the following fields:
 

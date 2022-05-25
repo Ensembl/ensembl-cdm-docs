@@ -1,6 +1,6 @@
 # Species
 
-The `Species` data type consists of the following fields:
+The `Species` data type represents a taxonomic entry and consists of the following fields:
 
 | Field                     | Type                                    | Description                                           |
 |---------------------------|-----------------------------------------|-------------------------------------------------------|
@@ -8,7 +8,7 @@ The `Species` data type consists of the following fields:
 | ncbi_common_name          | string or null                          | Common name of the species from NCBI taxonomy service.        
 | alternative_names         | array of strings                        | Alternative names (if any)                 
 | taxon_id                  | integer                                 | Taxonomic identifier.
-| organisms                 | array of [Organism](./organism.md)      | The organisms linked to the species
+| organisms                 | array of [Organism](./organism.md)      | The `organisms` linked to the `species`
 
 
 ## Examples

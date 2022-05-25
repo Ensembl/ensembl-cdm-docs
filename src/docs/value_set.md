@@ -50,13 +50,12 @@ Examples:
 
 
 #### Mutability
-Once a `ValueSet` item has been published, it should be immutable.  If an update is required, then another `ValueSet` record should be created with a new `accession_id`.
+Implementations of `ValueSet` should specify whether or not their `ValueSet` items are mutable.  If they are not, then it should be acknowledged that alterations to `ValueSet` items will have global implications.
 
 
 ----
 
 ### Future fields
-
 Additional fields which have been discussed but have not been included in the Core Data Model are:
 
 #### Identical terms
