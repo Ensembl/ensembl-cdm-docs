@@ -8,7 +8,7 @@ All metadata items will have the following fields in common:
 
 | Field        | Type                        
 |--------------|-----------------------------
-| value        | string, number, or boolean
+| value        | string
 | accession_id | string
 
 Metadata items tend to fall into one of two categories: metadata derived from an external reference (`ExternalReferenceMetadata`), and metadata derived from a [value set](./value_set.md) (`ValueSetMetadata`).

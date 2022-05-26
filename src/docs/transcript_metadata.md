@@ -53,7 +53,7 @@ Transcript gencode basic metadata is an instance of ValueSetMetadata:
 {
   "gencode_basic": {
     "accession_id": "gencode_basic.true",
-    "value": true,
+    "value": "true",
     "label": "GENCODE Basic",
     "definition": "Gene loci with at least one protein coding transcript.",
     "description": "???"
@@ -71,7 +71,7 @@ There is always one — and only one — transcript among gene transcripts that
 {
   "canonical": {
     "accession_id": "canonical_transcript.true",
-    "value": true,
+    "value": "true",
     "label": "Ensembl canonical",
     "definition": "???",
     "description": "???"
@@ -109,7 +109,7 @@ Transcript TSL metadata is an instance of ValueSetMetadata.
 {
   "tsl": {
     "accession_id": "tsl.one",
-    "value": 1, // there is also a tslNA — would it be a null?
+    "value": "1",
     "label": "TSL:1",
     "definition": "All splice junctions of the transcript are supported by at least one non-suspect mRNA.",
     "description": "???"
@@ -145,7 +145,7 @@ Transcript gencode primary metadata is an instance of ValueSetMetadata:
 {
     "gencode_primary": {
       "accession_id": "gencode_primary.true",
-      "value": true,
+      "value": "true",
       "label": "GENCODE Primary",
       "definition": "Gene loci with at least one protein coding transcript.",
       "description": "???",
