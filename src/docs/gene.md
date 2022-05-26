@@ -11,6 +11,7 @@ The `Gene` data type contains the information to represent the concept of a Gene
 | version               | integer                                 | Version of the gene allele
 | unversioned_stable_id | string                                  | Unversioned unique identifier for the gene
 | alternative_symbols   | array of strings                        | List of alternative symbols
+| type                  | string                                  | This is always `Gene`
 | gene_alleles          | array of [GeneAllele](./gene_allele.md) | Related Gene Alleles across Assemblies for the same species
 | species               | [Species](./species.md)                 | Species for the gene.   
 | metadata              | GeneMetadata                            | See [feature_metadata](./feature_metadata.md) and [gene_metadata](./gene_metadata.md)
@@ -34,6 +35,7 @@ The `Gene` data type contains the information to represent the concept of a Gene
     "FANCD1",
     "XRCC11"
   ],
+  "type": "Gene",
   "gene_alleles": [{
     "symbol": "BRCA2",
     "name": "BRCA2 DNA repair associated",

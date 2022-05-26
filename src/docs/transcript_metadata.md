@@ -99,7 +99,7 @@ Notice that it has a custom `ncbi_transcript` field.
 ```json
 {
   "accession_id": "tsl.one",
-  "value": 1,
+  "value": "1",
   "label": "TSL:1",
   "definition": "All splice junctions of the transcript are supported by at least one non-suspect mRNA.",
   "description": "???"
@@ -135,7 +135,7 @@ Transcript metadata that is expected to be added in the future.
 ```json
 {
   "accession_id": "gencode_primary.true",
-  "value": true,
+  "value": "true",
   "label": "GENCODE Primary",
   "definition": "Gene loci with at least one protein coding transcript.",
   "description": "???",
