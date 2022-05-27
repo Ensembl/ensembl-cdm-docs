@@ -15,12 +15,12 @@ Metadata items tend to fall into one of two categories: metadata derived from an
 
 An `ExternalReferenceMetadata` item will have the following shape:
 
-| Field          | Type        | Description |
-|----------------|-------------|-------------|
-| accession_id   | string      | Item's identifier in an external database
-| value          | string      | Relevant information about the item
-| url            | string      | URL for accessing the item in another resource
-| source         | ExternalDB  | See [ExternalDB](./external_db.md)
+| Field          | Type                | Description |
+|----------------|---------------------|-------------|
+| accession_id   | string              | Item's identifier in an external database
+| value          | string              | Relevant information about the item
+| url            | string              | URL for accessing the item in another resource
+| source         | ExternalDB or null  | See [ExternalDB](./external_db.md)
 
 A `ValueSetMetadata` item will have the following shape:
 

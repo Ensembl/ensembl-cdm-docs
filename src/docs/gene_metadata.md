@@ -10,7 +10,7 @@ A [Gene](./gene.md) has the following metadata associated with it:
 
 
 ### GeneNameMetadata
-Gene name metadata is an instance of [ExternalReferenceMetadata](./feature_metadata.md). Due to issues with data availability, the fields in gene name metadata have to be nullable.
+Gene name metadata is an instance of [ExternalReferenceMetadata](./feature_metadata.md). Due to issues with data availability, the fields in gene name metadata have to be nullable (although at least one fields must be filled in).
 
 | Field          | Type                 | Description                                   |
 |----------------|----------------------|-----------------------------------------------|
