@@ -13,7 +13,7 @@ A [Transcript](./transcript.md) has the following metadata associated with it:
 | biotype        | TranscriptBiotypeMetadata               |
 
 ### TranscriptFunctionMetadata
-Like gene function metadata, transcript function metadata is an instance of [XrefMetadata](./feature_metadata.md). The information about gene function is provided by Uniprot.
+Like gene function metadata, transcript function metadata is an instance of [XrefMetadata](./metadata.md). The information about gene function is provided by Uniprot.
 
 ```json
 {
@@ -31,7 +31,7 @@ Like gene function metadata, transcript function metadata is an instance of [Xre
 ```
 
 ### TranscriptBiotypeMetadata
-Like gene biotype metadata, transcript biotype metadata is an instance of [ValueSetMetadata](./feature_metadata.md). It will likely have a different definition from gene biotype metadata, necessitating a different accession_id.
+Like gene biotype metadata, transcript biotype metadata is an instance of [ValueSetMetadata](./metadata.md). It will likely have a different definition from gene biotype metadata, necessitating a different accession_id.
 
 ```json
 {

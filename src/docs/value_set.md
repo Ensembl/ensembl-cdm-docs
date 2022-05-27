@@ -2,7 +2,7 @@
 
 A `ValueSet` is a collection of key/value pairs that are related to a given topic. For example, biotypes, APPRIS annotation terms, or transcript support level (TSL) definitions.
 
-ValueSets are used extensively in the CoreDataModel (e.g. [ValueSetMetaData](./feature_metadata.md) or [SequenceAlphabet](./sequence_alphabet.md)).
+ValueSets are used extensively in the CoreDataModel (e.g. [ValueSetMetaData](./metadata.md) or [SequenceAlphabet](./sequence_alphabet.md)).
 
 A `ValueSet` item should have the following fields:
 

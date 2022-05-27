@@ -10,7 +10,7 @@ The `Exon` data type represents a fragment of a gene that is present in the matu
 | type                  | string                | the value is always `Exon`                          |
 | slice                 | Slice                 | see [Slice](./slice.md)                             |
 | transcripts           | array of Transcript   | see [Transcript](./transcript.md)                   |
-| metadata              | Metadata              | See [FeatureMetadata](./feature_metadata.md)       |
+| metadata              | Metadata              | See [FeatureMetadata](./metadata.md)       |
 
 
 ## Notes

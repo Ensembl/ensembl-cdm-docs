@@ -12,7 +12,7 @@ The Gene data type contains the information to represents a locus, the genomic r
 | version               | integer             | Version of the gene
 | unversioned_stable_id | string              | Unversioned unique identifier for the gene
 | type                  | string              | This is always `Gene`
-| metadata              | GeneMetadata        | See [feature_metadata](./feature_metadata.md)
+| metadata              | GeneMetadata        | See [metadata](./metadata.md)
 | sequence              | string              | Genomic sequence on the forward strand from the lowest 5' end coordinate to the highest 3' end coordinate
 | slice                 | Slice               | Slice describing the coordinates of the gene
 | transcripts           | array of Transcript | List of transcripts

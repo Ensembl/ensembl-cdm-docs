@@ -1,4 +1,4 @@
-# FeatureMetadata
+# Metadata
 
 A feature may have various kinds of metadata associated with it. These pieces of metadata are described by the Metadata data type.
 
