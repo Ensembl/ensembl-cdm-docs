@@ -27,7 +27,7 @@ A ValueSetMetadata item will have the following shape:
 | Field          | Type                       | Description |
 |----------------|----------------------------|-------------|
 | accession_id   | string                     | item's identifier in a value sets glossary
-| value          | string, number, or boolean | value intended for programmatic use by the consumer
+| value          | string                     | value intended for programmatic use by the consumer
 | label          | string                     | a short, human-readable and display-friendly label
 | definition     | string                     | succinct definition of the term
 | description    | string or null             | optional longer description that can contain nuances
