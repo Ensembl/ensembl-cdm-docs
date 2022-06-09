@@ -4,8 +4,8 @@ The `LocationModifier` data type is used to whether or not a [feature](./feature
 
 | Field                     | Type                        | Description |
 |---------------------------|-----------------------------|-------------|
-| partial_start             | boolean                     | defines whether or not the `feature` has a partial start
-| partial_end               | boolean                     | defines whether or not the `feature` has a partial end
+| partial_start             | boolean                     | defines whether or not the `feature` has a partial start (i.e. its start coordinate falls within a range of possible coordinates)
+| partial_end               | boolean                     | defines whether or not the `feature` has a partial end (i.e. its end coordinate falls within a range of possible coordinates)
 
 
 ## Notes

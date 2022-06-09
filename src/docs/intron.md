@@ -11,7 +11,7 @@ The `Intron` data type represents a fragment of a [gene](./gene.md) that is remo
 
 ## Notes
 1. All `introns` that make up a [transcript](./transcript.md) are stored together in a list called `introns`. The index of an `intron` reflects the position of the `intron` relative to its surrounding `introns`. The order is determined by the alternating pattern of [exons](./exon.md) and `introns` in a `transcript`.
-2. `Intron` is a [feature](./feature.md). `Intron` does not have `stable_id`, `unversioned_stable_id` and `version` fields.
+2. `Intron` is a [feature](./feature.md) as it shares many characteristics with features (such as genomic location).  However, `Intron` does not have `stable_id`, `unversioned_stable_id` and `version` fields.
 
 ## Examples
 ```json

@@ -10,16 +10,7 @@ In addition to the fields common for all [Products](./product.md), a ProteinProd
 | family_matches        | array of FamilyMatch          | See [FamilyMatch](./family_match.md)
 | mappings              | array of Mapping              | See [Mapping](./mapping.md)
 
-
-1. For a match between an Ensembl `product` and an external feature, the location of the matching sequence within the Ensembl `product` is referred to here as `relative_location`, the location of the matching sequence within the external feature, as `hit_location`, and the projection of Ensembl `product`'s matching sequence onto genomic coordinates, as `genomic_location`.
-
-![diagram of a match](https://user-images.githubusercontent.com/6834224/117651701-2805bd00-b18a-11eb-9569-a1a27ebcdc5b.png)
-
-2. A [slice](./slice.md) associated with a single `genomic_location` can span multiple [exons](./exon.md); and the exact match is described using a CIGAR string in the `cigar_string` field. Because trans-splicing is possible, the `genomic_locations` field of a `Mapping` is an array.
-3. A `relative_location` length may be the same as the `hit_location` length, or it may be different due to mismatches.
-
-
-## Example
+## Examples
 
 ```json
 {

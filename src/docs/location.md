@@ -7,7 +7,7 @@ The `Location` data type stores coordinates that position a [Feature](./feature.
 | start             | integer                                               | start coordinate
 | end               | integer                                               | end coordinate
 | length            | integer                                               | number of nucleotides between start and end coordinates, inclusive
-| location_modifier | [LocationModifier](./location_modifier.md) or NULL    | `LocationModifier` is used to define whether or not the feature is a partial model with undefined start and/or end coordinates
+| location_modifier | [LocationModifier](./location_modifier.md) or NULL    | `LocationModifier` is used to define whether or not the feature is a "partial model" with undefined start and/or end coordinates.  See point 5 in the notes below
 
 ## Notes
 1. Start coordinate of a `Feature` is the one closest to the 5'-end of the `Region` on which it is located; while the end coordinate is the one closest to the 3'-end.
@@ -16,6 +16,7 @@ The `Location` data type stores coordinates that position a [Feature](./feature.
 4. Although the length of a `Feature` is trivially calculable when the `Feature` is positioned on a linear `Region`, the `Location` data type still contains the `length` field for two reasons:
   - to provide a quick check to guard against off-by-one errors;
   - to help avoid more involved calculations required if a `Feature` is located on a circular `Region` and overlaps the origin
+5. Partial models are defined as features where the start and/or coordinates are poorly defined.  For example, `<1..123`, where the feature starts before the first sequenced base and continues to and includes base 123.
 
 ## Examples
 

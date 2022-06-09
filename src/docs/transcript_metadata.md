@@ -109,7 +109,7 @@ Transcript TSL metadata is an instance of ValueSetMetadata.
 {
   "tsl": {
     "accession_id": "tsl.one",
-    "value": "1",
+    "value": "tsl1",
     "label": "TSL:1",
     "definition": "All splice junctions of the transcript are supported by at least one non-suspect mRNA.",
     "description": "???"
