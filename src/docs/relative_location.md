@@ -1,6 +1,6 @@
 # RelativeLocation
 
-The `RelativeLocation` data type describes the position of a [Feature](./feature.md) **relative to its immediate parent feature**. It has the same fields as does [Location](./location.md):
+The `RelativeLocation` data type describes the position of a [Feature](./feature.md) **relative to its immediate parent feature**. 
 
 | Field  | Type      | Description |
 |------- |-----------|-------------|
