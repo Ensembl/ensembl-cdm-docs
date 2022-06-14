@@ -2,6 +2,7 @@
 
 The Gene data type contains the information to represents a locus, the genomic region where a gene is located. It will have at least one Transcript data type.
 `Gene` has the following fields:
+
 | Field                 | Type                | Description                         |
 |-----------------------|---------------------|-------------------------------------|
 | symbol                | string              | Short name
