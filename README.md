@@ -1,30 +1,11 @@
 # Ensembl Core Data Model (CDM)
 
 ## Introduction
-The Ensembl Core Data Model (CDM) describes how the central concepts of Ensembl (Features, genomic locations, external references, metadata etc.) are presented through APIs and services to internal (e.g the 2020 Ensembl website) and external clients (e.g those who interact with Ensembl APIs).
+The Ensembl Core Data Model (CDM) describes how the central concepts of Ensembl (Features, genomic locations, external references, metadata etc.) are presented through APIs and services to internal (e.g the 2020 Ensembl website) and external clients (e.g those who interact with Ensembl APIs). The model will aid Ensembl in future development efforts, being compatible with known strategic directions, including Pangenomes.
 
 The diagram below provides an overview of the model.  The image is available in this repository in [./src/images](./src/images/cdm_full.png).  
 
 ![diagram of the model](./src/images/cdm_full.png)
-
-## Development
-To coincide with the redevelopment of the Ensembl website, this data model has been developed to underpin the site and the services it, and the public, use. The model will aid Ensembl in future development efforts, being compatible with known strategic directions, including Pangenomes.
-
-The development of the model has been conducted by a group of staff from the Ensembl project with specialisms in a variety of areas, including:
-- Variation genomics
-- Comparative genomics
-- Genome annotation
-- Software & API development
-
-The model has been developed iteratively over a number of months and this work has been influenced by the Ensembl website redevelopment.  The diagram below shows how the requirements of the website have fed into the prioritisation of supporting projects, which in turn have driven the CDM development.  
-
-<img src="./src/images/CDM_development_overview.png" width="75%">
-
-
-Within the group, the iterative process has continued.  Github pull requests have been used extensively to ensure all design decisions have had appropriate oversight and approval from group members.
-
-
-<img src="./src/images/CDM_group_process.png" width="75%">
 
 ## Key concepts
 
@@ -94,3 +75,25 @@ ValueSetMetadata is more akin to a well structured controlled vocabulary.  Examp
 
 
 ![Metadata overview](./src/images/metadata_overview.png)
+
+
+## Further information
+
+### Development of the CDM
+
+The development of the model has been conducted by a group of staff from the Ensembl project with specialisms in a variety of areas, including:
+- Variation genomics
+- Comparative genomics
+- Genome annotation
+- Software & API development
+
+
+The model has been developed iteratively over a number of months and this work has been influenced by the Ensembl website redevelopment.  The diagram below shows how the requirements of the website have fed into the prioritisation of supporting projects, which in turn have driven the CDM development.  
+
+<img src="./src/images/CDM_development_overview.png" width="75%">
+
+
+Within the group, the iterative process has continued.  Github pull requests have been used extensively to ensure all design decisions have had appropriate oversight and approval from group members.
+
+
+<img src="./src/images/CDM_group_process.png" width="75%">
