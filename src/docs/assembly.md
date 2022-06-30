@@ -11,11 +11,11 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
 | organism          | Organism        | The organism entity to which many assemblies may belong
 | regions           | array of Region | see Region
 | default           | boolean         | The "best" assembly for the organism, for when the user does not want to choose
-| tol_id            | string or null  | Tree of Life identifier
+| tolid            | string or null  | Tree of Life identifier
 
 ## Notes
 1. Not all assemblies have yet been recognised by accessioning bodies like INSDC, so the accession_id and accessioning_body may be null
-2. Not all assemblies will have a Tree of Life Identifier (`tol_id`)
+2. Not all assemblies will have a Tree of Life Identifier (`tolid`)
 
 ## Examples
 ```json
@@ -27,7 +27,7 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
   "organism": { ... },
   "regions": [ ... ],
   "default": true,
-  "tol_id": null
+  "tolid": null
 }
 ```
 
@@ -40,6 +40,6 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
   "organism": { ... },
   "regions": [ ... ],
   "default": true,
-  "tol_id": "aRanTem1"
+  "tolid": "aRanTem1"
 }
 ```
