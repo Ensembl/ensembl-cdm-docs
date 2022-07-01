@@ -7,8 +7,8 @@ The `Gene` data type contains the information to represent the concept of a Gene
 |-----------------------|-----------------------------------------|-------------------------------------|
 | external_id           | string or null                          | Identifier provided by external nomenclature committee (such as HGNC)
 | symbol                | string or null                          | Short name provided by external nomenclature committee (such as HGNC)
-| stable_id             | string                                  | A unique identifier for the gene allele
-| version               | integer                                 | Version of the gene allele
+| stable_id             | string                                  | A unique identifier for the gene
+| version               | integer                                 | Version of the gene
 | unversioned_stable_id | string                                  | Unversioned unique identifier for the gene
 | alternative_symbols   | array of strings                        | List of alternative symbols
 | type                  | string                                  | This is always `Gene`
