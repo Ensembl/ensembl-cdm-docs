@@ -5,8 +5,8 @@ The `Intron` data type represents a fragment of a [gene](./gene.md) that is remo
 | Field             | Type             | Description |
 |-------------------|------------------|-------------|
 | index             | integer          | Index of `Intron`
-| slice             | Slice            | See Slice
-| relative_location | RelativeLocation | See RelativeLocation
+| slice             | Slice            | See [Slice](./slice.md)
+| relative_location | RelativeLocation | See [RelativeLocation](./relative_location.md)
 | type              | string           | Type is Intron
 
 ## Notes

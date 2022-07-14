@@ -15,7 +15,7 @@ A [ProteinProduct](./protein_product.md) has the following metadata associated w
 | accession_id   | string               | item's identifier in an external database     |
 | value          | string               | relevant information about the item           |
 | url            | string               | url for accessing the item in another resource|
-| source         | ExternalDB           | see ExternalDB                                |
+| source         | ExternalDB           | see [ExternalDB](./external_db.md)                                |
 
 ## Examples
 ```json

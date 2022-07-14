@@ -1,10 +1,10 @@
 # Strand
 The purpose of the `strand` data type is to indicate which strand of a double-stranded molecule a [Feature](./feature.md) is located on.
 
-| Field   | Type         |
-|---------|--------------|
-| code    | StrandCode   |
-| value   | StrandValue  |
+| Field   | Type                   |
+|---------|------------------------|
+| code    | StrandCode (see below) |
+| value   | StrandValue (see below)|
 
 ## StrandCode
 `StrandCode` is a string-based system for identifying a `strand`. It is an enum of two possible string values:

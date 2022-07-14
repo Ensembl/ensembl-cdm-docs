@@ -17,7 +17,7 @@ Gene name metadata is an instance of [ExternalReferenceMetadata](./metadata.md).
 | accession_id   | string or null       | item's identifier in an external database     |
 | value          | string or null       | relevant information about the item           |
 | url            | string or null       | url for accessing the item in another resource|
-| source         | ExternalDB or null   | see ExternalDB                                |
+| source         | ExternalDB or null   | see [ExternalDB](./external_db.md)                                |
 
 
 ```json
