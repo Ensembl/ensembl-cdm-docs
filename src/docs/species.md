@@ -1,14 +1,14 @@
 # Species
 
-The Species data type contains information sufficient to describe a given species. It consists of the following fields:
+The `Species` data type represents a taxonomic entry and consists of the following fields:
 
-| Field                     | Type                  | Description                               | 
-|---------------------------|-----------------------|-------------------------------------------|
-| scientific_name           | string                | Scientific name of the species.           
-| ncbi_common_name          | string or null        | Common name of the species from NCBI.        
-| alternative_names         | array of strings      | Alternative names (if any)                 
-| taxon_id                  | integer               | Taxonomic identifier. 
-| organisms                 | array of Organism     | The organisms linked to the species
+| Field                     | Type                                    | Description                                           |
+|---------------------------|-----------------------------------------|-------------------------------------------------------|
+| scientific_name           | string                                  | Scientific name of the species.           
+| ncbi_common_name          | string or null                          | Common name of the species from NCBI taxonomy service.        
+| alternative_names         | array of strings                        | Alternative names (if any)                 
+| taxon_id                  | integer                                 | Taxonomic identifier.
+| organisms                 | array of [Organism](./organism.md)      | The `organisms` linked to the `species`
 
 
 ## Examples
@@ -30,14 +30,15 @@ The Species data type contains information sufficient to describe a given specie
 ```json
 {
   "scientific_name": "Escherichia coli str. K-12 substr. MG1655",
-  "ncbi_common_name": null, 
+  "ncbi_common_name": null,
   "alternative_names": [],
   "taxon_id": 511145,
   "organisms": [...]
 }
 ```
 
-3. Pieris rapae (no scientific_parlance_name provided)
+3. Pieris rapae
+
 ```json
 {
   "scientific_name": "Pieris rapae",
@@ -49,6 +50,7 @@ The Species data type contains information sufficient to describe a given specie
 ```
 
 4. Trypanosoma rangeli SC58 (only scientific_name provided)
+
 ```json
 {
   "scientific_name": "Trypanosoma rangeli SC58",
@@ -58,4 +60,3 @@ The Species data type contains information sufficient to describe a given specie
   "organisms": [...]
 }
 ```
-

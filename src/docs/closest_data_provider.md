@@ -1,4 +1,4 @@
-# Closest Data Provider
+# ClosestDataProvider
 
 For cases when a match was calculated using an aggregator database, such as Interpro, this is the reference to the record in such database.
 
@@ -6,8 +6,9 @@ For cases when a match was calculated using an aggregator database, such as Inte
 |--------------|------------|-------------|
 | source       | ExternalDB | See [ExternalDB](./external_db.md) in the documentation
 | accession_id | string     | Unique identifier of the family in the database
-| url          | string     | Url for accessing the family in the source database
+| url          | string     | URL for accessing the family in the source database
 
+## Examples
 ```json
 {
   "source": { ...  },

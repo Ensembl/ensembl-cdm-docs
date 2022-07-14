@@ -1,5 +1,5 @@
 # Mapping
-The Mapping data structure describes a match between an Ensembl feature and a feature from an external database, e.g. Uniprot. It has the following fields:
+The `Mapping` data structure describes a match between an Ensembl [feature](./feature.md) and a feature from an external database, e.g. Uniprot. It has the following fields:
 
 | Field             | Type                                                              | Description |
 |-------------------|-------------------------------------------------------------------|-------------|
@@ -9,7 +9,7 @@ The Mapping data structure describes a match between an Ensembl feature and a fe
 | name              | string or null                                                    | Name of the feature
 | relative_location | Location                                                          | Location within the product where the hit lands (see [Location](./location.md))
 | hit_location      | Location                                                          | Location within the external feature that is matched to the product sequence (see [Location](./location.md))
-| genomic_locations | array of [GenomicMappingLocation](./genomic_mapping_location.md)  | Location within the genomic space corresponding to the product sequence that matches the external feature
+| genomic_locations | array of [GenomicMappingLocation](./genomic_mapping_location.md)  | `Location` within the genomic space corresponding to the product sequence that matches the external feature
 | score             | float or null                                                     | Analysis score asserting the presence of this match at this location
 | evalue            | float or null                                                     | Expectation value for the presence of this match at this location
 

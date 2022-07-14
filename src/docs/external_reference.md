@@ -1,19 +1,20 @@
-# External Reference
+# ExternalReference
 
 The `External Reference` data type represents a reference to a database outside of Ensembl. It has the following fields:
 
 | Field             | Type             | Description |
 |-------------------|------------------|-------------|
-| accession_id      | string           | item's identifier in an external database
-| name              | string           | item name
-| description       | string or null   | additional information about the item
-| url               | string or null   | url for accessing the item in another resource
-| assignment_method | AssignmentMethod | see [AssignmentMethod](./assignment_method.md)
-| source            | ExternalDB       | see [ExternalDB](./external_db.md)
+| accession_id      | string           | Item's identifier in an external database
+| name              | string           | Item name
+| description       | string or null   | Additional information about the item
+| url               | string or null   | URL for accessing the item in another resource
+| assignment_method | AssignmentMethod | See [AssignmentMethod](./assignment_method.md)
+| source            | ExternalDB       | See [ExternalDB](./external_db.md)
 
 
 ## Note
 `accession_id` of a given reference is not guaranteed to be unique
+
 
 ## Examples
 
