@@ -1,9 +1,7 @@
 # GenericMetadata
 
 ### OntologyTermMetadata
-OntologyTermMetadata is common across different types of [features](./features.md) and also exists on non-features, such as [Region](./region.md). It is an instance of [ExternalReferenceMetadata](./metadata.md).
-
-### Examples
+Ontology term metadata is common across different types of features and also exists on non-features, such as [Region](./region.md). It is an instance of [ExternalReferenceMetadata](./metadata.md). An example would look as follows:
 
 ```json
 {
@@ -18,3 +16,17 @@ OntologyTermMetadata is common across different types of [features](./features.m
   }
 }
 ```
+
+### BiotypeMetadata
+BiotypeMetadata is common across different types of features and is an instance of [ValueSetMetadata](./metadata.md).:
+
+```json
+{
+  "biotype": {
+    "accession_id": "biotype.gene_protein_coding",
+    "value": "protein_coding",
+    "label": "Protein coding",
+    "definition": "Gene loci with at least one protein coding transcript.",
+    "description": "???"
+  }
+}

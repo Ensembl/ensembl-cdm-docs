@@ -17,7 +17,7 @@ The `Mapping` data structure describes a match between an Ensembl [feature](./fe
 ```json
 {
   "source": {
-    "id": ???,
+    "id": "Uniprot",
     "name": "Uniprot",
     "description": null,
     "url": "https://www.uniprot.org/",
@@ -42,7 +42,7 @@ The `Mapping` data structure describes a match between an Ensembl [feature](./fe
       "cigar_string": "..."
     }
   ],
-  "score": ???,
-  "evalue": ???,
+  "score": 44.0,
+  "evalue": 0.058
 }
 ```

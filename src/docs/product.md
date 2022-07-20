@@ -1,6 +1,6 @@
 # Product
 
-The `Product` data type contains information about the mature functioning molecule produced from a [Gene](./gene.md). Depending on whether this molecule is a protein or an RNA, the Product is subdivided into a [ProteinProduct](./protein_product.md) and, in the future, an [RNAProduct](./rna_product.md).
+The `Product` data type contains information about the mature functioning molecule produced from a [Gene Allele](./gene_allele.md). Depending on whether this molecule is a protein or an RNA, the Product is subdivided into a [ProteinProduct](./protein_product.md) and, in the future, an [RNAProduct](./rna_product.md).
 
 Both `ProteinProduct` and the `RNAProduct` will have the following fields in common:
 

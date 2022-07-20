@@ -1,30 +1,29 @@
-# Gene metadata
+# GeneMetadata
 
 A [Gene](./gene.md) has the following metadata associated with it:
 
-| Field          | Type                         |
-|----------------|------------------------------|
-| name           | GeneNameMetadata or null     |
-| function       | GeneFunctionMetadata or null |
-| biotype        | GeneBiotypeMetadata          |
+| Field          | Type                         | Notes
+|----------------|------------------------------|-------------|
+| symbol         | GeneSymbolMetadata or null   | See below
+| biotype        | BiotypeMetadata              | See [GenericMetadata](./generic_metadata.md)
 
 
-### GeneNameMetadata
-Gene name metadata is an instance of [ExternalReferenceMetadata](./metadata.md). Due to issues with data availability, the fields in gene name metadata have to be nullable (although at least one fields must be filled in).
+### GeneSymbolMetadata
+`GeneSymbolMetadata` is an instance of [ExternalReferenceMetadata](./metadata.md).
 
-| Field          | Type                 | Description                                   |
-|----------------|----------------------|-----------------------------------------------|
-| accession_id   | string or null       | item's identifier in an external database     |
-| value          | string or null       | relevant information about the item           |
-| url            | string or null       | url for accessing the item in another resource|
-| source         | ExternalDB or null   | see [ExternalDB](./external_db.md)                                |
+| Field          | Type                 | Description                                     |
+|----------------|----------------------|-------------------------------------------------|
+| accession_id   | string or null       | Gene's identifier in an external database       |
+| value          | string or null       | Gene's symbol from an extenral database         |
+| url            | string or null       | URL for accessing the item in another resource  |
+| source         | ExternalDB or null   | See [ExternalDB](./external_db.md)              |
 
 
 ```json
 {
   "name": {
     "accession_id": "HGNC:1101",
-    "value": "BRCA2 DNA repair associated",
+    "value": "BRCA2",
     "url": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:1101",
     "source": {
       "id": "HGNC",
@@ -36,27 +35,8 @@ Gene name metadata is an instance of [ExternalReferenceMetadata](./metadata.md).
 }
 ```
 
-### GeneFunctionMetadata
-Gene function metadata is an instance of XrefMetadata. The information about gene function is provided by Uniprot.
-
-```json
-{
-  "function": {
-    "accession_id": "...",
-    "value": "...",
-    "url": "...",
-    "source": {
-      "id": "...",
-      "name" : "...",
-      "url" : "...",
-      "description" : "..."
-    }
-  }
-}
-```
-
 ### GeneBiotypeMetadata
-Gene biotype metadata is an instance of [ValueSetMetadata](./metadata.md):
+`GeneBiotypeMetadata` is an instance of [ValueSetMetadata](./metadata.md):
 
 ```json
 {

@@ -21,19 +21,19 @@ In the model, [Feature](./src/docs/feature.md) is defined as an abstract concept
 ![features overview](./src/images/features_overview.png)
 
 Features in the model are:
-- [Gene](./src/docs/gene.md)
+- [GeneAllele](./src/docs/gene_allele.md)
 - [Transcript](./src/docs/transcript.md)
 - [Intron](./src/docs/intron.md)
 - [Exon](./src/docs/exon.md)
 
-"Feature-like" entities are also included in the model.  These are not considered to be features because they do not exist in the genomic coordinate space in the same way as a feature, like a gene, does. These concepts include:-
+"Feature-like" entities are also included in the model.  These are not considered to be features because they do not exist in the genomic coordinate space in the same way as a feature, like a gene allele, does. These concepts include:-
 - [cDNA](./src/docs/cdna.md)
 - [CDS](./src/docs/cds.md)
 - [UTR](./src/docs/utr.md)
 
 [Products](./src/docs/product.md) ([Protein]((./src/docs/protein_product.md)) and [RNA](./src/docs/rna_product.md)) are included in the diagram of feature-like entities.  However, as they do not occupy the genomic coordinate space, they do not inherit from Feature.  RNA products are not currently available in Ensembl and so have not been fully modelled.  
 
-The transcription and translation event is captured in the [ProductGeneratingContext](./src/docs/product_generating_context.md) (PGC).  The PGC describes the product it is making through the type field, and identifies the features and feature-like entities (gene, transcripts, phased exons, UTRs CDS and cDNA) involved in the process. It also links to the eventual product (if one exists).
+The transcription and translation event is captured in the [ProductGeneratingContext](./src/docs/product_generating_context.md) (PGC).  The PGC describes the product it is making through the type field, and identifies the features and feature-like entities (gene alleles, transcripts, phased exons, UTRs CDS and cDNA) involved in the process. It also links to the eventual product (if one exists).
 
 [PhasedExons](./src/docs/phased_exon.md) in PGCs allow for identifiable exons to be present in multiple PGCs with additional phase information.
 [SplicedExons](./src/docs/spliced_exons) describe the location of identifiable exons in one or more transcripts.
@@ -66,7 +66,7 @@ CDM separates Metadata into two types:
 
 #### ExternalReferenceMetadata
 
-ExternalReferenceMetadata is metadata which comes from a source external to Ensembl.  An example of this would be the `name` of a Gene, which could come from VGNC.
+ExternalReferenceMetadata is metadata which comes from a source external to Ensembl.  An example of this would be the `name` of a gene or gene allele, which could come from VGNC.
 
 #### ValueSetMetadata
 

@@ -4,7 +4,7 @@ The `SplicedExon` data type combines the immutable, context-independent set of p
 
 | Field             | Type             | Description |
 |-------------------|------------------|-------------|
-| index             | integer          | 0-based, denotes order of exons within a gene
+| index             | integer          | 0-based, denotes order of exons within a gene allele
 | relative_location | RelativeLocation | [Location](./location.md) of exon relative to the transcript, see [RelativeLocation](./relative_location.md)
 | exon              | Exon             | Context-independent properties of the exon, see [Exon](./exon.md)
 

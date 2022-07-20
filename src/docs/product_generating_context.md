@@ -18,14 +18,14 @@ The `Product-Generating Context` data type contains information about the specif
 `ProductType` is an enum of strings from a controlled vocabulary, such as `protein`, or `miRNA`.
 
 ## Rationale
-By capturing the information about the arrangement of `exons` and the product that arises from it, the `Product-Generating Context` data type allows modelling a one-to-many relationship between the `Transcript` and the `Product`: one `Product-Generating Context` has one `Product`, but one `Transcript` can have multiple `Product-Generating Context`s.
+By capturing the information about the arrangement of `exons` and the product that arises from it, the `Product-Generating Context` data type allows modelling a one-to-many relationship between the `Transcript` and the `Product`: one `Product-Generating Context` has one `Product`, but one `Transcript` can have multiple `Product-Generating Contexts`.
 
 Note that `Product-Generating Context` is not intended to represent alternative splicing — this has been historically represented at Ensembl as different transcripts of a single gene. However, with `Product-Generating Context` it becomes possible to capture post-translational cleavage of a precursor polypeptide into several proteins, multiple initiation sites, or sequence edits.
 
 ## Notes
 1. The purpose of the `product_type` field in `Product-Generating Context` is to signal which values in other fields to expect. For example, only if the `product_type` is `protein` will the `cds` field contain the `CDS` data; in all other cases it will be `null`.
 2. To represent trans-splicing, a `product_generating_context` can be linked to multiple `transcript`s through `transcripts`.
-3. `phased_exon`s will be present for all `product_generating_context`s regardless of their product.
+3. `phased_exon`s will be present for all `product_generating_contexts` regardless of their product.
 
 ## Examples
 

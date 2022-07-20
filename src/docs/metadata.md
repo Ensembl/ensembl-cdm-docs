@@ -32,4 +32,4 @@ A `ValueSetMetadata` item will have the following shape:
 | definition     | string                     | Succinct definition of the term
 | description    | string or null             | Optional longer description that can contain nuances
 
-**Note**: apart from the fields listed in the table above, `ValueSetMetadata` items may also contain additional optional fields unique for each given kind of metadata. See [TranscriptManeMetadata](./transcript_metadata.md) or [GeneMetadata](./gene_metadata.md) for examples.
+**Note**: apart from the fields listed in the table above, `ValueSetMetadata` items may also contain additional optional fields unique for each given kind of metadata. See [TranscriptManeMetadata](./transcript_metadata.md) or [GeneAlleleMetadata](./gene_allele_metadata.md) for examples.

@@ -1,6 +1,6 @@
 # Intron
 
-The `Intron` data type represents a fragment of a [gene](./gene.md) that is removed by RNA splicing to produce the final messenger RNA molecule. It has the following fields:
+The `Intron` data type represents a fragment of a [gene  allele](./gene_allele.md) that is removed by RNA splicing to produce the final messenger RNA molecule. It has the following fields:
 
 | Field             | Type             | Description |
 |-------------------|------------------|-------------|

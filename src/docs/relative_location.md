@@ -1,6 +1,6 @@
 # RelativeLocation
 
-The `RelativeLocation` data type describes the position of a [Feature](./feature.md) **relative to its immediate parent feature**. 
+The `RelativeLocation` data type describes the position of a [Feature](./feature.md) **relative to its immediate parent feature**.
 
 | Field  | Type      | Description |
 |------- |-----------|-------------|
@@ -12,8 +12,8 @@ The `RelativeLocation` data type describes the position of a [Feature](./feature
 The purpose of the `Relative Location` data type is to supply the client with coordinates of a feature relative to its immediate parent to relieve the client of the need to calculate these positions by itself. The value of `Relative Location` becomes particularly noticeable for features on the reverse strand or on a circular chromosome overlapping the origin.
 
 ## Notes
-1. `Relative Location` is relative to the location of the immediate parent feature. For example, [Transcript's](./transcript.md) `Relative Location` is relative to the location of the [Gene](./gene.md) that produces this `Transcript`. Similarly, [Exon's](./exon.md) `Relative Location` is relative to the location of the `Transcript` that contains this `Exon`.
-2. `Relative Location` is always calculated in the 5'->3' direction. Therefore, on the forward [strand](./strand.md), relative coordinate 1 points at the same nucleotide as the **start** coordinate of the parent feature; and on the reverse strand relative coordinate 1 points at the same nucleotide as the **end** coordinate of the parent `feature`.
+1. `Relative Location` is relative to the location of the immediate parent feature. For example, `Transcript`'s `Relative Location` is relative to the location of the `GeneAllele` that produces this `Transcript`. Similarly, `Exon`'s `Relative Location` is relative to the location of the `Transcript` that contains this `Exon`.
+2. `Relative Location` is always calculated in the 5'->3' direction. Therefore, on the forward strain, relative coordinate 1 points at the same nucleotide as the **start** coordinate of the parent feature; and on the reverse strand relative coordinate 1 points at the same nucleotide as the **end** coordinate of the parent feature.
 3. In contrast to `Location`, `Relative Location` guarantees that the end coordinate will be greater than the start coordinate.
 
 
@@ -43,16 +43,16 @@ The `exon`'s relative locaiton is:
 }
 ```
 
-2. For `feature` on the reverse `strand` (`transcript` ENST00000530622 transcribed from `gene` ENSG00000139597)
-- given that the `gene` is on the reverse `strand`
-- and the `gene`'s genomic coordinates are: start 32400723 and end 32428311
-- and the `transcript`'s genomic coordinates are: start 32401677 and end 32411606
+2. For feature on the reverse strand (transcript ENST00000530622 transcribed from gene allele ENSG00000139597)
+- given that the gene allele is on the reverse strand
+- and the gene allele's genomic coordinates are: start 32400723 and end 32428311
+- and the transcript's genomic coordinates are: start 32401677 and end 32411606
 
 The `transcript`'s relative location is:
 
-`start = gene end - transcript end - 1`, i.e. `32428311 - 32411606 + 1`, i.e. `16706`
+`start = gene allele end - transcript end - 1`, i.e. `32428311 - 32411606 + 1`, i.e. `16706`
 
-`end = gene end - transcript start  - 1`, i.e. `32428311 - 32401677 + 1`, i.e. `26635`
+`end = gene allele end - transcript start  - 1`, i.e. `32428311 - 32401677 + 1`, i.e. `26635`
 
 `length = relative end - relative start + 1`, i.e. `26635 - 16706 + 1`, i.e. `9930`
 
@@ -65,17 +65,17 @@ The `transcript`'s relative location is:
 }
 ```
 
-3. For `feature` on the reverse `strand` of a circular chromosome (`transcript` CAK10225 transcribed from `gene` RL4742)
-- given that the `gene` is on the reverse `strand` and overlaps the origin
+3. For feature on the reverse strand of a circular chromosome (transcript CAK10225 transcribed from gene allele RL4742)
+- given that the gene allele is on the reverse strand and overlaps the origin
 - and the chromosome is circular and has a length of 5057142bp
-- and the `gene`'s genomic coordinates are: start 5056183 and end 72
-- and the `transcript`'s genomic coordinates are: start -959 and end 72
+- and the gene allele's genomic coordinates are: start 5056183 and end 72
+- and the transcript's genomic coordinates are: start -959 and end 72
 
 The `transcript`'s relative location is:
 
-`start = gene end - transcript end + 1`, i.e. `72 - 72 + 1`, i.e. `1`
+`start = gene allele end - transcript end + 1`, i.e. `72 - 72 + 1`, i.e. `1`
 
-`end = gene end - transcript end + 1`, i.e. `72 - -959 + 1`, i.e. `1032`
+`end = gene allele end - transcript end + 1`, i.e. `72 - -959 + 1`, i.e. `1032`
 
 `length = relative end - relative start + 1`, i.e. `1032 - 1 + 1`, i.e. `1032`
 
