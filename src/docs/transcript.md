@@ -14,7 +14,7 @@ The Transcript data type describes a operational unit of a gene allele. In a gen
 | spliced_exons               | array of SplicedExon              | The ordered list of exons of the transcript
 | introns                     | array of Intron                   | The ordered list of introns of the transcript
 | product_generating_contexts | array of ProductGeneratingContext | see ProductGeneratingContext
-| metadata                    | TranscriptMetadata                | See [feature_metadata](./feature_metadata.md)
+| metadata                    | TranscriptMetadata                | See [metadata](./metadata.md)
 | gene_allele                 | GeneAllele                        | The parent gene allele of the transcript, see [GeneAllele](.gene_allele.md)
 
 ## Examples

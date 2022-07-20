@@ -1,19 +1,21 @@
-# Sequence Family
+# SequenceFamily
 
-Reference to the sequence family record in the database that is the original provider of the data about this family.
+`SequenceFamily` references the original provider of the data about this ([protein](./protein_product.md) or [rna](./rna_product.md)) family. It consists of the following fields:
 
-| Field        | Type           | Description |
-|--------------|----------------|-------------|
+| Field        | Type           | Description                                            |
+|--------------|----------------|--------------------------------------------------------|
 | source       | ExternalDB     | See [ExternalDB](./external_db.md) in the documentation
-| accession_id | string         | Unique identifier of the family in the source database
+| accession_id | string         | Identifier of the family in the source database
 | name         | string         | Name of the family
 | description  | string or null | Description of the family
-| url          | string or null | Url for accessing the family in the source database
+| url          | string or null | URL for accessing the family in the source database
+
+## Examples
 
 ```json
 {
   "source": {
-    "id": ???,
+    "id": "pfam",
     "name": "Pfam",
     "description": null,
     "url": "https://pfam.xfam.org",

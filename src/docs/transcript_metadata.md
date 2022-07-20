@@ -13,7 +13,8 @@ A [Transcript](./transcript.md) has the following metadata associated with it:
 | biotype        | BiotypeMetadata                         | See [GenericMetadata](./generic_metadata.md) |
 
 ### TranscriptFunctionMetadata
-Like [GeneAlleleFunctionMetadata](./gene_allele_metadata.md), `TranscriptFunctionMetadata` is an instance of [ExternalReferenceMetadata](./feature_metadata.md). The information about the function is provided by Uniprot.
+Like [GeneAlleleFunctionMetadata](./gene_allele_metadata.md), `TranscriptFunctionMetadata` is an instance of [ExternalReferenceMetadata](./metadata.md). The information about the function is provided by Uniprot.
+
 
 ```json
 {
@@ -29,7 +30,7 @@ Like [GeneAlleleFunctionMetadata](./gene_allele_metadata.md), `TranscriptFunctio
 ```
 
 ### BiotypeMetadata
-[BiotypeMetadata](./generic_metadata.md) is an instance of [ValueSetMetadata](./feature_metadata.md).
+[BiotypeMetadata](./generic_metadata.md) is an instance of [ValueSetMetadata](./metadata.md).
 
 ```json
 {
@@ -42,7 +43,7 @@ Like [GeneAlleleFunctionMetadata](./gene_allele_metadata.md), `TranscriptFunctio
 ```
 
 ### TranscriptGencodeBasicMetadata
-`TranscriptGencodeBasicMetadata` is an instance of [ValueSetMetadata](./feature_metadata.md):
+`TranscriptGencodeBasicMetadata` is an instance of [ValueSetMetadata](./metadata.md):
 
 
 ```json
@@ -58,7 +59,7 @@ Like [GeneAlleleFunctionMetadata](./gene_allele_metadata.md), `TranscriptFunctio
 Note: `TranscriptGencodeBasicMetadata` is only applicable for human and mouse [transcripts](./transcript.md).
 
 ### TranscriptCanonicalMetadata
-There is always one — and only one — transcript amongst the transcripts for a Gene that is designated as canonical. The `TranscriptCanonicalMetadata` is an instance of [ValueSetMetadata](./feature_metadata.md):
+There is always one — and only one — transcript amongst the transcripts for a Gene that is designated as canonical. The `TranscriptCanonicalMetadata` is an instance of [ValueSetMetadata](./metadata.md):
 
 
 ```json
@@ -74,7 +75,7 @@ There is always one — and only one — transcript amongst the transcripts for
 _To be determined:_ whether the transcript canonical metadata will also need to include an `evidence` field.
 
 ### TranscriptManeMetadata
-`TranscriptManeMetadata` is an instance of [ValueSetMetadata](./feature_metadata.md).
+`TranscriptManeMetadata` is an instance of [ValueSetMetadata](./metadata.md).
 
 ```json
 {
@@ -94,7 +95,7 @@ _To be determined:_ whether the transcript canonical metadata will also need to 
 Notice that it has a custom `ncbi_transcript` field.
 
 ### TranscriptTSLMetadata
-`TranscriptTSLMetadata` is an instance of [ValueSetMetadata](./feature_metadata.md).
+`TranscriptTSLMetadata` is an instance of [ValueSetMetadata](./metadata.md).
 
 ```json
 {
@@ -108,7 +109,7 @@ Notice that it has a custom `ncbi_transcript` field.
 ```
 
 ### TranscriptApprisMetadata
-`TranscriptApprisMetadata` is an instance of [ValueSetMetadata](./feature_metadata.md).
+`TranscriptApprisMetadata` is an instance of [ValueSetMetadata](./metadata.md).
 
 ```json
 {
@@ -129,7 +130,7 @@ Notice that it has a custom `ncbi_transcript` field.
 Transcript metadata that is expected to be added in the future.
 
 ### TranscriptGencodePrimaryMetadata
-`TranscriptGencodePrimaryMetadata` is an instance of [ValueSetMetadata](./feature_metadata.md):
+`TranscriptGencodePrimaryMetadata` is an instance of [ValueSetMetadata](./metadata.md):
 
 
 ```json
@@ -145,7 +146,7 @@ Transcript metadata that is expected to be added in the future.
 _To be determined:_  whether the transcript gencode primary metadata will also include a `reasons` field containing reasons for inclusion of this transcript in the gencode primary category.
 
 ### TranscriptExonicOverlapSameStrandMetadata
-`TranscriptExonicOverlapSameStrandMetadata` is an instance of [ValueSetMetadata](./feature_metadata.md). Note the presence of the additional `associated_features` field.
+`TranscriptExonicOverlapSameStrandMetadata` is an instance of [ValueSetMetadata](./metadata.md). Note the presence of the additional `associated_features` field.
 
 ```json
 {

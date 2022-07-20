@@ -1,12 +1,12 @@
-# Relative Location
+# RelativeLocation
 
-The `Relative Location` data type describes the position of a Feature **relative to its immediate parent feature**. It has the same fields as does `Location`:
+The `RelativeLocation` data type describes the position of a [Feature](./feature.md) **relative to its immediate parent feature**.
 
 | Field  | Type      | Description |
 |------- |-----------|-------------|
-| start  | integer   | start coordinate
-| end    | integer   | end coordinate
-| length | integer   | number of nucleotides between start and end coordinates, inclusive
+| start  | integer   | Start coordinate
+| end    | integer   | End coordinate
+| length | integer   | Number of nucleotides between start and end coordinates, inclusive
 
 ## Rationale
 The purpose of the `Relative Location` data type is to supply the client with coordinates of a feature relative to its immediate parent to relieve the client of the need to calculate these positions by itself. The value of `Relative Location` becomes particularly noticeable for features on the reverse strand or on a circular chromosome overlapping the origin.
@@ -21,12 +21,12 @@ The purpose of the `Relative Location` data type is to supply the client with co
 
 ### Calculating Relative Location
 
-1. For feature on the forward strand (exon ENSE00003856928 within transcript ENST00000671466.1)
-- given that the transcript is on the forward strand
-- and transcript's genomic coordinates are: start 32315086 and end 32316527
-- and exon's genomic coordinates are start 32315086 and end 32315145,
+1. For `feature` on the forward strand (`exon` ENSE00003856928 within `transcript` ENST00000671466.1)
+- given that the `transcript` is on the forward `strand`
+- and `transcript`'s genomic coordinates are: start 32315086 and end 32316527
+- and `exon`'s genomic coordinates are start 32315086 and end 32315145,
 
-The exon's relative locaiton is:
+The `exon`'s relative locaiton is:
 
 `start = exon start - transcript start + 1`, i.e. `32315086 - 32315086 + 1`, i.e. `1`
 
@@ -48,7 +48,7 @@ The exon's relative locaiton is:
 - and the gene allele's genomic coordinates are: start 32400723 and end 32428311
 - and the transcript's genomic coordinates are: start 32401677 and end 32411606
 
-The transcript's relative location is:
+The `transcript`'s relative location is:
 
 `start = gene allele end - transcript end - 1`, i.e. `32428311 - 32411606 + 1`, i.e. `16706`
 
@@ -71,7 +71,7 @@ The transcript's relative location is:
 - and the gene allele's genomic coordinates are: start 5056183 and end 72
 - and the transcript's genomic coordinates are: start -959 and end 72
 
-The transcript's relative location is:
+The `transcript`'s relative location is:
 
 `start = gene allele end - transcript end + 1`, i.e. `72 - 72 + 1`, i.e. `1`
 

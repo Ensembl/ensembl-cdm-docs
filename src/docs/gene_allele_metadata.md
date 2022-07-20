@@ -10,14 +10,14 @@ A [GeneAllele](./gene_allele.md) has the following metadata associated with it:
 
 
 ### GeneAlleleNameMetadata
-`GeneAlleleName` metadata is an instance of [ExternalReferenceMetadata](./feature_metadata.md). Due to issues with data availability, the fields in `GeneAlleleNameMetadata` have to be nullable.
+`GeneAlleleName` metadata is an instance of [ExternalReferenceMetadata](./metadata.md). Due to issues with data availability, the fields in `GeneAlleleNameMetadata` have to be nullable.
 
 | Field          | Type                 | Description                                      |
 |----------------|----------------------|--------------------------------------------------|
 | accession_id   | string or null       | GeneAllele's identifier in an external database  |
 | value          | string or null       | Relevant information about the item              |
 | url            | string or null       | URL for accessing the item in another resource   |
-| source         | ExternalDB or null   | See ExternalDB                                   |
+| source         | ExternalDB or null   | See [ExternalDB](./external_db.md)                                   |
 
 
 ```json
@@ -37,26 +37,26 @@ A [GeneAllele](./gene_allele.md) has the following metadata associated with it:
 ```
 
 ### GeneAlleleFunctionMetadata
-`GeneAlleleFunctionMetadata` is an instance of [ExternalReferenceMetadata](./feature_metadata.md). The information about the allele's function is provided by Uniprot.
+`GeneAlleleFunctionMetadata` is an instance of [ExternalReferenceMetadata](./metadata.md). The information about the allele's function is provided by Uniprot.
 
 ```json
 {
   "function": {
-    "accession_id": "...",
-    "value": "...",
-    "url": "...",
+    "accession_id": "P78504"
+    "value": "JAG1_HUMAN",
+    "url": "https://www.uniprot.org/uniprotkb/P78504/entry",
     "source": {
-      "id": "...",
-      "name" : "...",
-      "url" : "...",
-      "description" : "..."
+      "id": "Uniprot",
+      "name" : "Uniprot entry",
+      "url" : "https://www.uniprot.org/",
+      "description" : "UniProt is the world’s leading high-quality, comprehensive and freely accessible resource of protein sequence and functional information. "
     }
   }
 }
 ```
 
 ### BiotypeMetadata
-`GeneAlleleBiotypeMetadata` is an instance of [ValueSetMetadata](./feature_metadata.md):
+`GeneAlleleBiotypeMetadata` is an instance of [ValueSetMetadata](./metadata.md):
 
 ```json
 {

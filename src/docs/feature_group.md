@@ -1,12 +1,12 @@
 # FeatureGroup
 
-The `FeatureGroup` data type corresponds to a group of closely linked genetic features.
+The `FeatureGroup` data type corresponds to a group of closely linked genetic [features](./feature.md).
 
 | Field               | Type              | Description
 |---------------------|-------------------|-----------------------------------------
-| name                | string            | The name provided by the assembly creator
+| name                | string            | The name provided by the [assembly](./assembly.md) creator
 | code                | string            | See Note below
-| features            | array of Feature  | Array of Features (see Feature) belongs to this FeatureGroup
+| features            | array of Feature  | [Features](./feature.md) which are logically grouped together in this `FeatureGroup` for the reason specified by the code.
 
 
 
@@ -14,8 +14,10 @@ The `FeatureGroup` data type corresponds to a group of closely linked genetic fe
 Code in FeatureGroup is an enum of strings with the following possible values:
 - `ComplexLocus`
 
-## Example
-```
+Other types of relationship/grouping can be added the list of possible codes above.
+
+## Examples
+```json
 {
   "name": "UGT1A",
   "code": "ComplexLocus",

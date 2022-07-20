@@ -14,7 +14,7 @@ The `Gene` data type contains the information to represent the concept of a Gene
 | type                  | string                                  | This is always `Gene`
 | gene_alleles          | array of [GeneAllele](./gene_allele.md) | Related Gene Alleles across Assemblies for the same species
 | species               | [Species](./species.md)                 | Species for the gene.   
-| metadata              | GeneMetadata                            | See [feature_metadata](./feature_metadata.md) and [gene_metadata](./gene_metadata.md)
+| metadata              | GeneMetadata                            | See [metadata](./metadata.md) and [gene_metadata](./gene_metadata.md)
 
 
 ## Notes
@@ -25,6 +25,7 @@ The `Gene` data type contains the information to represent the concept of a Gene
 ## Examples
 ```json
 {
+  "external_id": "HGNC:1101",
   "symbol": "BRCA2",
   "alternative_symbols": [
     "BRCC2",

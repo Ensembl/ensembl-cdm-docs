@@ -9,7 +9,7 @@ A [Gene](./gene.md) has the following metadata associated with it:
 
 
 ### GeneSymbolMetadata
-`GeneSymbolMetadata` is an instance of [ExternalReferenceMetadata](./feature_metadata.md).
+`GeneSymbolMetadata` is an instance of [ExternalReferenceMetadata](./metadata.md).
 
 | Field          | Type                 | Description                                     |
 |----------------|----------------------|-------------------------------------------------|
@@ -36,7 +36,7 @@ A [Gene](./gene.md) has the following metadata associated with it:
 ```
 
 ### GeneBiotypeMetadata
-`GeneBiotypeMetadata` is an instance of [ValueSetMetadata](./feature_metadata.md):
+`GeneBiotypeMetadata` is an instance of [ValueSetMetadata](./metadata.md):
 
 ```json
 {
