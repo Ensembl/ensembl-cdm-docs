@@ -16,7 +16,7 @@ The key concepts in the model can be broken into the following categories:-
 - Metadata
 
 ### Features and related concepts
-In the model, [Feature](./src/docs/feature.md) is defined as an abstract concept for modelling areas of interest in a genomic coordinate space.  Typically concrete representations of features have a stable_id for identification.
+In the model, [Feature](./src/docs/feature.md) is defined as an abstract concept for modelling areas of interest in a genomic coordinate space.  Typically concrete representations of features have a stable_id for identification.  The term stable_id refers to a publicly available identifier (e.g. ENST00000380152.8) assigned by a project or institute and can be considered to be unique within an Assembly.  
 
 ![features overview](./src/images/features_overview.png)
 
