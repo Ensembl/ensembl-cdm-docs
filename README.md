@@ -41,7 +41,7 @@ The transcription and translation event is captured in the [ProductGeneratingCon
 
 ### Localisation concepts, assemblies, species and organisms
 
-A Feature's location is described using [Slice](./src/docs/slice.md), which is the mechanism used to link together [Region](./src/docs/region.md) (a contig or chromosome), [Location](./src/docs/location.md) (coordinates and length) and [Strand](./src/docs/strand.md).  Sequence is obtained via Region and allows for integration with RefGet instances via the `checksum` attribute.  Sequence strings are permitted by the model, but discouraged. Region provides the link between an [Assembly](./src/docs/assembly.md) and its sequence.
+A Feature's location is described using [Slice](./src/docs/slice.md), which is the mechanism used to link together [Region](./src/docs/region.md) (a contig or chromosome), [Location](./src/docs/location.md) (coordinates and length) and [Strand](./src/docs/strand.md).   [Sequence](./src/docs/sequence.md) is obtained via Region and allows for integration with RefGet instances via the `checksum` attribute.  Sequence strings are permitted by the model, but discouraged. Region provides the link between an [Assembly](./src/docs/assembly.md) and its sequence.
 
 ![location overview](./src/images/location_and_assembly_overview.png)
 
@@ -49,7 +49,7 @@ A Feature's location is described using [Slice](./src/docs/slice.md), which is t
 
 
 ### External references
-
+˜
 [ExternalReference](./src/docs/external_reference.md) represents a reference to a database outside of Ensembl.
 
 ![ExternalReference overview](./src/images/external_references_overview.png)
