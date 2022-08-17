@@ -31,7 +31,7 @@ Features in the model are:
 - [CDS](./src/docs/cds.md)
 - [UTR](./src/docs/utr.md)
 
-[Products](./src/docs/product.md) ([Protein]((./src/docs/protein_product.md)) and [RNA](./src/docs/rna_product.md)) are included in the diagram of feature-like entities.  However, as they do not occupy the genomic coordinate space, they do not inherit from Feature.  RNA products are not currently available in Ensembl and so have not been fully modelled.  
+[Products](./src/docs/product.md) ([Protein](./src/docs/protein_product.md) and [RNA](./src/docs/rna_product.md)) are included in the diagram of feature-like entities.  However, as they do not occupy the genomic coordinate space, they do not inherit from Feature.  RNA products are not currently available in Ensembl and so have not been fully modelled.  
 
 The transcription and translation event is captured in the [ProductGeneratingContext](./src/docs/product_generating_context.md) (PGC).  The PGC describes the product it is making through the type field, and identifies the features and feature-like entities (gene, transcripts, phased exons, UTRs CDS and cDNA) involved in the process. It also links to the eventual product (if one exists).
 
