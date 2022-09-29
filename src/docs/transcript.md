@@ -16,6 +16,8 @@ The Transcript data type describes a operational unit of a gene. In a genomic co
 | product_generating_contexts | array of ProductGeneratingContext                   | see [ProductGeneratingContext](./product_generating_context.md)
 | metadata                    | TranscriptMetadata                                  | See [metadata](./metadata.md)
 | gene                        | Gene                                                | The parent [gene](./gene.md) of the transcript, see Gene
+| external_references         | array of ExternalReference                          | See [ExternalReference](./external_reference.md)
+
 
 ## Examples
 ```json
@@ -30,7 +32,8 @@ The Transcript data type describes a operational unit of a gene. In a genomic co
   "spliced_exons": [],
   "introns": [],
   "product_generating_contexts": [],
-  "metadata": { ... }
-  "gene": { ... }
+  "metadata": { ... },
+  "gene": { ... },
+  "external_references": []
 }
 ```

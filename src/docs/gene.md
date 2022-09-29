@@ -3,20 +3,21 @@
 The Gene data type contains the information to represents a locus, the genomic region where a gene is located. It will have at least one Transcript data type.
 `Gene` has the following fields:
 
-| Field                 | Type                | Description                         |
-|-----------------------|---------------------|-------------------------------------|
-| symbol                | string              | Short name
-| name                  | string              | Name of the gene from a known nomenclature such as HGNC
-| alternative_symbols   | array of string     | List of alternative symbols
-| alternative_names     | array of string     | List of alternative names
-| stable_id             | string              | A unique identifier for the gene
-| version               | integer             | Version of the gene
-| unversioned_stable_id | string              | Unversioned unique identifier for the gene
-| type                  | string              | This is always `Gene`
-| metadata              | GeneMetadata        | See [metadata](./metadata.md)
-| *sequence*            | *string*            | *Genomic sequence on the forward strand from the lowest 5' end coordinate to the highest 3' end coordinate*
-| slice                 | Slice               | [Slice](./slice.md) describing the coordinates of the gene
-| transcripts           | array of Transcript | List of [transcripts](./transcript.md)
+| Field                 | Type                          | Description                         |
+|-----------------------|-------------------------------|-------------------------------------|
+| symbol                | string                        | Short name
+| name                  | string                        | Name of the gene from a known nomenclature such as HGNC
+| alternative_symbols   | array of string               | List of alternative symbols
+| alternative_names     | array of string               | List of alternative names
+| stable_id             | string                        | A unique identifier for the gene
+| version               | integer                       | Version of the gene
+| unversioned_stable_id | string                        | Unversioned unique identifier for the gene
+| type                  | string                        | This is always `Gene`
+| metadata              | GeneMetadata                  | See [metadata](./metadata.md)
+| *sequence*            | *string*                      | *Genomic sequence on the forward strand from the lowest 5' end coordinate to the highest 3' end coordinate*         
+| slice                 | Slice                         | [Slice](./slice.md) describing the coordinates of the gene
+| transcripts           | array of Transcript           | List of [transcripts](./transcript.md)
+| external_references   | array of ExternalReference    | See [ExternalReference](./external_reference.md)
 
 ## Notes
 1. alternative_symbols and alternative_names can be empty lists
@@ -46,6 +47,7 @@ The Gene data type contains the information to represents a locus, the genomic r
   "type": "Gene",
   "metadata": {...},
   "slice": {},
-  "transcripts": []
+  "transcripts": [],
+  "external_references": []
 }
 ```
