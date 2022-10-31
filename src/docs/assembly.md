@@ -4,7 +4,7 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
 
 | Field             | Type            | Description
 |-------------------|-----------------|---------------------
-| id                | string          | The accession provided by the assembly creator
+| id                | string          | The id provided by the assembly creator
 | name              | string          | The name provided by the assembly creator
 | accession_id      | string          | Name provided by an accessioning body
 | accessioning_body | string          | The independent assigner of an identity to the assembly

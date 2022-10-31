@@ -1,6 +1,6 @@
 # LocationModifier
 
-The `LocationModifier` data type is used to whether or not a [feature](./feature.md) has a partial start or end, and comprises of the following fields
+The `LocationModifier` data type is used to describe whether or not a [feature](./feature.md) has a partial start or end, and comprises of the following fields
 
 | Field                     | Type                        | Description |
 |---------------------------|-----------------------------|-------------|

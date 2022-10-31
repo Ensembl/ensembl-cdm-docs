@@ -5,8 +5,8 @@ The Gene data type contains the information to represents a locus, the genomic r
 
 | Field                 | Type                | Description                         |
 |-----------------------|---------------------|-------------------------------------|
-| symbol                | string              | Short name
-| name                  | string              | Name of the gene from a known nomenclature such as HGNC
+| symbol                | string              | Symbol of the gene from a known nomenclature, such as HGNC
+| name                  | string              | Name of the gene from a known nomenclature, such as HGNC
 | alternative_symbols   | array of string     | List of alternative symbols
 | alternative_names     | array of string     | List of alternative names
 | stable_id             | string              | A unique identifier for the gene
