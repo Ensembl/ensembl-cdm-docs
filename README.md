@@ -16,7 +16,7 @@ The key concepts in the model can be broken into the following categories:-
 - Metadata
 
 ### Features and related concepts
-In the model, [Feature](./src/docs/feature.md) is defined as an abstract concept for modelling areas of interest in a genomic coordinate space.  Typically concrete representations of features have a stable_id for identification.
+In the model, [Feature](./src/docs/feature.md) is defined as an abstract concept for modelling areas of interest in a genomic coordinate space.  Typically concrete representations of features have a stable_id for identification.  The term stable_id refers to a publicly available identifier (e.g. ENST00000380152.8) assigned by a project or institute and can be considered to be unique within an Assembly.  
 
 ![features overview](./src/images/features_overview.png)
 
@@ -31,7 +31,7 @@ Features in the model are:
 - [CDS](./src/docs/cds.md)
 - [UTR](./src/docs/utr.md)
 
-[Products](./src/docs/product.md) ([Protein]((./src/docs/protein_product.md)) and [RNA](./src/docs/rna_product.md)) are included in the diagram of feature-like entities.  However, as they do not occupy the genomic coordinate space, they do not inherit from Feature.  RNA products are not currently available in Ensembl and so have not been fully modelled.  
+[Products](./src/docs/product.md) ([Protein](./src/docs/protein_product.md) and [RNA](./src/docs/rna_product.md)) are included in the diagram of feature-like entities.  However, as they do not occupy the genomic coordinate space, they do not inherit from Feature.  RNA products are not currently available in Ensembl and so have not been fully modelled.  
 
 The transcription and translation event is captured in the [ProductGeneratingContext](./src/docs/product_generating_context.md) (PGC).  The PGC describes the product it is making through the type field, and identifies the features and feature-like entities (gene, transcripts, phased exons, UTRs CDS and cDNA) involved in the process. It also links to the eventual product (if one exists).
 
@@ -41,7 +41,7 @@ The transcription and translation event is captured in the [ProductGeneratingCon
 
 ### Localisation concepts, assemblies, species and organisms
 
-A Feature's location is described using [Slice](./src/docs/slice.md), which is the mechanism used to link together [Region](./src/docs/region.md) (a contig or chromosome), [Location](./src/docs/location.md) (coordinates and length) and [Strand](./src/docs/strand.md).  Sequence is obtained via Region and allows for integration with RefGet instances via the `checksum` attribute.  Sequence strings are permitted by the model, but discouraged. Region provides the link between an [Assembly](./src/docs/assembly.md) and its sequence.
+A Feature's location is described using [Slice](./src/docs/slice.md), which is the mechanism used to link together [Region](./src/docs/region.md) (a contig or chromosome), [Location](./src/docs/location.md) (coordinates and length) and [Strand](./src/docs/strand.md).   [Sequence](./src/docs/sequence.md) is obtained via Region and allows for integration with RefGet instances via the `checksum` attribute.  Sequence strings are permitted by the model, but discouraged. Region provides the link between an [Assembly](./src/docs/assembly.md) and its sequence.
 
 ![location overview](./src/images/location_and_assembly_overview.png)
 
@@ -49,7 +49,7 @@ A Feature's location is described using [Slice](./src/docs/slice.md), which is t
 
 
 ### External references
-
+˜
 [ExternalReference](./src/docs/external_reference.md) represents a reference to a database outside of Ensembl.
 
 ![ExternalReference overview](./src/images/external_references_overview.png)
