@@ -45,7 +45,7 @@
       "release": null
     },
     "accession_id": "IPR002093",
-    "description": "The breast cancer type 2 susceptibility protein has a number of...",
+    "description": ""BRCA2_repeat"",
     "url": "https://www.ebi.ac.uk/interpro/entry/InterPro/IPR002093/"
   },
   "relative_location": {
