@@ -45,6 +45,7 @@
       "release": null
     },
     "accession_id": "IPR002093",
+    "description": "BRCA2_repeat",
     "url": "https://www.ebi.ac.uk/interpro/entry/InterPro/IPR002093/"
   },
   "relative_location": {
