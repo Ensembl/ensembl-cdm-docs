@@ -17,7 +17,10 @@ The Transcript data type describes a operational unit of a gene. In a genomic co
 | metadata                    | TranscriptMetadata                                  | See [metadata](./metadata.md)
 | gene                        | Gene                                                | The parent [gene](./gene.md) of the transcript, see Gene
 | external_references         | array of ExternalReference                          | See [ExternalReference](./external_reference.md)
+|sequence_edits | Array of SequenceEdit | See [SequenceEdit](./sequence_edit.md)
 
+## Notes
+1. `sequence_edits` in the context of a transcript can be used to describe patches made to the reference sequence
 
 ## Examples
 ```json
@@ -34,6 +37,7 @@ The Transcript data type describes a operational unit of a gene. In a genomic co
   "product_generating_contexts": [],
   "metadata": { ... },
   "gene": { ... },
-  "external_references": []
+  "external_references": [],
+  "sequence_edits":[]
 }
 ```
