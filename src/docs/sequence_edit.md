@@ -7,6 +7,7 @@ The `SequenceEdit` data type contains information about modifications which have
 | type              | string              | Description of the type of modification taking place. See notes below.
 | metadata          | various             | See [generic_metadata](./generic_metadata.md)
 | edit_level        | string              | The type of entity undergoing sequence modification
+| edit_level_id     | string or null      | The identifier of the entity which is a results of the modification
 | start             | integer             | The coordinate the modification starts at
 | end               | integer             | The coordinate the modification end at
 | new_sequence      | Sequence            | The modified sequence  
@@ -18,8 +19,11 @@ Type is a controlled vocabulary.  Acceptable options are:
 - insertion
 - deletion
 - modification
-- `editLevel` refers to the entity whose sequence has been modified.  In a `ProductGeneratingContext`, a `SequenceEdit` can refer to `protein` (the resulting `product`) or `cdna`
-
+- `edit_level` refers to the entity whose sequence has been modified.  In a `ProductGeneratingContext`, a `SequenceEdit` can refer to `protein` (the resulting `product`) or `transcript`
+- `edit_level_id` can be a stable identifier for a Transcript (identifing which transcript is being referred to in trans-splicing) or Protein.
+- `edit_level_id` should uniquely identify an entity within the context of a `ProductGeneratingContext`
+- To obtain the original sequence the inverse of the `SequenceEdit` should be applied to the sequence of the entity identified in the `SequenceEdit`
+  - If there are multiple `SequenceEdits`, to obtain the original sequence, the inverse operation of the "last" `SequenceEdit` needs to be done first.  The resulting sequence can then have the inverse operation of the next to last `SequenceEdit` applied to it and so on.
 
 ## Examples
 
@@ -27,9 +31,9 @@ Type is a controlled vocabulary.  Acceptable options are:
 ### Ribosomal +1 frameshift example
 
 ```
- |Start|AAC GAA AAU CTG UUC GCU
+ |Start|AAC GAA AAT CTG TTC GCT
  | AA  | N   E   N   L   F   A  
-A|Start|ACG AAA AUC UGU UCG CUU
+A|Start|ACG AAA ATC TGT TCG CTT
 -|Start|123 123 123 123 123 123
  | AA  | T   K   I   C   S   L   
  ```
@@ -50,7 +54,8 @@ A|Start|ACG AAA AUC UGU UCG CUU
         }
       }
     },
-    "edit_level": "cdna",
+    "edit_level": "transcript",
+    "edit_level_id": "ENST000001234.1",
   	"start": 1,
   	"end": 1,
   	"original_sequence" : {
@@ -83,9 +88,9 @@ A|Start|ACG AAA AUC UGU UCG CUU
 ### Ribosomal -1 frameshift example
 
 ```
-|Start|AAC GAA AAU CTG UUC GCU UCA ...
+|Start|AAC GAA AAT CTG TTC GCT TCA ...
 | AA  | N   E   N   L   F   A   S  ...                         
-|Start|AAC GAA AAU CUG UUC CGC UUC ...
+|Start|AAC GAA AAT CTG TTC CGC TTC ...
 | AA  | N   E   N   L   F   R   F  ...
  ```
 
@@ -105,7 +110,8 @@ A|Start|ACG AAA AUC UGU UCG CUU
         }
       }
     },
-    "edit_level": "cdna",
+    "edit_level": "transcript",
+    "edit_level_id": "ENST000001234.1",
   	"start": 16,
   	"end": 16,
   	"original_sequence" : {
@@ -140,7 +146,6 @@ A|Start|ACG AAA AUC UGU UCG CUU
 
 ```
 ATG ACC ATT ACC TGA ... TGA
-AUG ACC AUU ACC UGA ... UGA
  M   T   I   T   U  ...  *
                  ^
 ```
@@ -162,6 +167,7 @@ AUG ACC AUU ACC UGA ... UGA
       }
     },
     "edit_level": "protein",
+    "edit_level_id": "ENSP000001234.1",
   	"start": 5,
   	"end": 5,
   	"original_sequence" : {
@@ -218,6 +224,7 @@ Patched:  ATG ACT TAC GCT CGA CAT CCT ACT ...
       }
     },
     "edit_level": "transcript",
+    "edit_level_id": "ENST000001234.1",
   	"start": 4,
   	"end": 15,
   	"original_sequence" : {
