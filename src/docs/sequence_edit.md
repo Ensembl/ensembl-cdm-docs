@@ -229,10 +229,10 @@ Patched:  ATG ACT TAC GCT CGA CAT CCT ACT ...
   	"end": 15,
   	"original_sequence" : {
       "alphabet": {
-        "accession_id": "sequence_alphabet.aa",
-        "value": "aa",
-        "label": "AA",
-        "definition": "IUPAC notation for Amino Acids",
+        "accession_id": "sequence_alphabet.dna",
+        "value": "dna",
+        "label": "DNA",
+        "definition": "IUPAC notation for DNA sequence",
         "description": null
       },
       "checksum": "e8f2b6ffd9198uw3r9irp68afe8872da",
@@ -240,10 +240,10 @@ Patched:  ATG ACT TAC GCT CGA CAT CCT ACT ...
     },
     "new_sequence" : {
       "alphabet": {
-        "accession_id": "sequence_alphabet.aa",
-        "value": "aa",
-        "label": "AA",
-        "definition": "IUPAC notation for Amino Acids",
+        "accession_id": "sequence_alphabet.dna",
+        "value": "dna",
+        "label": "DNA",
+        "definition": "IUPAC notation for DNA sequence",
         "description": null
       },
       "checksum": "e8f2bersedtfugiet4e8872da",
