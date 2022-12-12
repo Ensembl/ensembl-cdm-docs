@@ -7,23 +7,21 @@ The `SequenceEdit` data type contains information about modifications which have
 | type              | string              | Description of the type of modification taking place. See notes below.
 | metadata          | various             | See [generic_metadata](./generic_metadata.md)
 | edit_level        | string              | The type of entity undergoing sequence modification
-| edit_level_id     | string or null      | The identifier of the entity which is a results of the modification
+| origin_id         | string or null      | The identifier of the entity whose sequence forms the origin / coordinate reference for the SequenceEdit
 | start             | integer             | The coordinate the modification starts at
 | end               | integer             | The coordinate the modification end at
-| new_sequence      | Sequence            | The modified sequence  
+| new_sequence      | [Sequence](./sequence.md)            | The modified sequence  
 | original_sequence | Sequence            | The original sequence
-|order              | integer             | The sequence the modifications take place in (i.e. 1, 2, 3 where 1 is the first and three is the last)
+| order             | integer             | The sequence the modifications take place in (i.e. 1, 2, 3 where 1 is the first and three is the last)
 
 ## Notes
 Type is a controlled vocabulary.  Acceptable options are:
 - insertion
 - deletion
 - modification
-- `edit_level` refers to the entity whose sequence has been modified.  In a `ProductGeneratingContext`, a `SequenceEdit` can refer to `protein` (the resulting `product`) or `transcript`
-- `edit_level_id` can be a stable identifier for a Transcript (identifing which transcript is being referred to in trans-splicing) or Protein.
+- `edit_level` refers to the entity whose sequence has been modified.  In a `ProductGeneratingContext`, a `SequenceEdit` can refer to `peptide` or `transcript`
+- `edit_level_id` can be a stable identifier for a Transcript (identifying which transcript is being referred to in trans-splicing) or Product.
 - `edit_level_id` should uniquely identify an entity within the context of a `ProductGeneratingContext`
-- To obtain the original sequence the inverse of the `SequenceEdit` should be applied to the sequence of the entity identified in the `SequenceEdit`
-  - If there are multiple `SequenceEdits`, to obtain the original sequence, the inverse operation of the "last" `SequenceEdit` needs to be done first.  The resulting sequence can then have the inverse operation of the next to last `SequenceEdit` applied to it and so on.
 
 ## Examples
 
@@ -40,48 +38,48 @@ A|Start|ACG AAA ATC TGT TCG CTT
 
 ```json
 {
-  	"type": "delete",
-  	"metadata": {
-      "ontology_term":
-      {
-        "accession_id": "SO:0001211",
-        "value": "plus_1_translational_frameshift",
-        "url": "http://www.sequenceontology.org/browser/current_release/term/SO:0001211",
-        "source": {
-          "name": "Sequence Ontology",
-          "url": "www.sequenceontology.org",
-          "description": "The Sequence Ontology..."
-        }
-      }
-    },
-    "edit_level": "transcript",
-    "edit_level_id": "ENST000001234.1",
+  "type": "deletion",
+  "metadata": {
+  	"ontology_term":
+     {
+     	"accession_id": "SO:0001211",
+     	"value": "plus_1_translational_frameshift",
+     	"url": "http://www.sequenceontology.org/browser/current_release/term/SO:0001211",
+     	"source": {
+        	"name": "Sequence Ontology",
+        	"url": "www.sequenceontology.org",
+        	"description": "The Sequence Ontology..."
+      	}
+ 			}
+		},
+  	"edit_level": "transcript",
+   	"origin_id": "ENST000001234.1",
   	"start": 1,
   	"end": 1,
-  	"original_sequence" : {
-      "alphabet": {
-        "accession_id": "sequence_alphabet.dna",
-        "value": "dna",
-        "label": "DNA",
-        "definition": "IUPAC notation for DNA sequence",
-        "description": null
-      },
-      "checksum": "05k9059b95b89459k0k5904j89j",
-      "sequence": "A"
-    },
-    "new_sequence" : {
-      "alphabet": {
-        "accession_id": "sequence_alphabet.dna",
-        "value": "dna",
-        "label": "DNA",
-        "definition": "IUPAC notation for DNA sequence",
-        "description": null
-      },
-      "checksum": "",
-      "sequence": ""
-    },
-	  "order": 1
-  }
+  	"original_sequence": {
+    	"alphabet": {
+        	"accession_id": "sequence_alphabet.dna",
+        	"value": "dna",
+        	"label": "DNA",
+        	"definition": "IUPAC notation for DNA sequence",
+        	"description": null
+      	},
+			"checksum": "05k9059b95b89459k0k5904j89j",
+     	"sequence": "A"
+    	},
+    	"new_sequence" : {
+      	"alphabet": {
+        	"accession_id": "sequence_alphabet.dna",
+        	"value": "dna",
+        	"label": "DNA",
+        	"definition": "IUPAC notation for DNA sequence",
+        	"description": null
+      		},
+      	"checksum": "",
+      	"sequence": ""
+    		},
+	  	"order": 1
+  	}
 
 ```
 
@@ -111,10 +109,10 @@ A|Start|ACG AAA ATC TGT TCG CTT
       }
     },
     "edit_level": "transcript",
-    "edit_level_id": "ENST000001234.1",
-  	"start": 16,
-  	"end": 16,
-  	"original_sequence" : {
+    "origin_id": "ENST000001234.1",
+    "start": 16,
+    "end": 16,
+    "original_sequence" : {
       "alphabet": {
         "accession_id": "sequence_alphabet.dna",
         "value": "dna",
@@ -167,7 +165,7 @@ ATG ACC ATT ACC TGA ... TGA
       }
     },
     "edit_level": "protein",
-    "edit_level_id": "ENSP000001234.1",
+    "origin_id": "ENSP000001234.1",
   	"start": 5,
   	"end": 5,
   	"original_sequence" : {
@@ -202,7 +200,7 @@ ATG ACC ATT ACC TGA ... TGA
 Note: A "Patch" `SequenceEdit` should occur outside of `ProductGeneratingContexts`
 
 ```
-Original: ATG ACC ATT ACC ATT CAT CCT ACT ...
+Original: ATG ACC ATT ACC ATT CAT CCT ACT ...  
 Patched:  ATG ACT TAC GCT CGA CAT CCT ACT ...
              |<------------->|             
 ```
@@ -223,17 +221,17 @@ Patched:  ATG ACT TAC GCT CGA CAT CCT ACT ...
         }
       }
     },
-    "edit_level": "transcript",
-    "edit_level_id": "ENST000001234.1",
+    "edit_level": "region",
+    "origin_id": "",
   	"start": 4,
   	"end": 15,
   	"original_sequence" : {
-      "alphabet": {
-        "accession_id": "sequence_alphabet.dna",
-        "value": "dna",
-        "label": "DNA",
-        "definition": "IUPAC notation for DNA sequence",
-        "description": null
+       "alphabet": {
+         "accession_id": "sequence_alphabet.dna",
+         "value": "dna",
+         "label": "DNA",
+         "definition": "IUPAC notation for DNA sequence",
+         "description": null
       },
       "checksum": "e8f2b6ffd9198uw3r9irp68afe8872da",
       "sequence": "ACC ATT ACC ATT"
