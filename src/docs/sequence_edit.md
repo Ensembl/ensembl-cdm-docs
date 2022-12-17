@@ -20,8 +20,8 @@ Type is a controlled vocabulary.  Acceptable options are:
 - deletion
 - modification
 - `edit_level` refers to the entity whose sequence has been modified.  In a `ProductGeneratingContext`, a `SequenceEdit` can refer to `peptide` or `transcript`
-- `edit_level_id` can be a stable identifier for a Transcript (identifying which transcript is being referred to in trans-splicing) or Product.
-- `edit_level_id` should uniquely identify an entity within the context of a `ProductGeneratingContext`
+- `origin_id` can be a stable identifier for a Transcript (identifying which transcript is being referred to in trans-splicing) or Product.
+- `orign_id` should uniquely identify an entity within the context of a `ProductGeneratingContext`
 
 ## Examples
 
@@ -32,7 +32,6 @@ Type is a controlled vocabulary.  Acceptable options are:
  |Start|AAC GAA AAT CTG TTC GCT
  | AA  | N   E   N   L   F   A  
 A|Start|ACG AAA ATC TGT TCG CTT
--|Start|123 123 123 123 123 123
  | AA  | T   K   I   C   S   L   
  ```
 
@@ -164,7 +163,7 @@ ATG ACC ATT ACC TGA ... TGA
         }
       }
     },
-    "edit_level": "protein",
+    "edit_level": "peptide",
     "origin_id": "ENSP000001234.1",
   	"start": 5,
   	"end": 5,
