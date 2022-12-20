@@ -27,7 +27,7 @@ Note that `Product-Generating Context` is not intended to represent alternative 
 1. The purpose of the `product_type` field in `Product-Generating Context` is to signal which values in other fields to expect. For example, only if the `product_type` is `protein` will the `cds` field contain the `CDS` data; in all other cases it will be `null`.
 2. To represent trans-splicing, a `product_generating_context` can be linked to multiple `transcript`s through `transcripts`.
 3. `phased_exon`s will be present for all `product_generating_context`s regardless of their product.
-4. `sequence_edits` can refer to either the product (`"edit_level":"protein"`) or the transcript(s) (`"edit_level":"cdna"`)
+4. `sequence_edits` can refer to either the product (`"edit_level":"peptide"`) or the transcript(s) (`"edit_level":"transcript"`)
 
 ## Examples
 
