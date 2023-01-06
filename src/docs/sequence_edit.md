@@ -56,8 +56,8 @@ Type is a controlled vocabulary.  Acceptable options are:
  },
  "edit_level": "transcript",
  "origin_id": "ENST000001234.1",
- "start": 1,
- "end": 1,
+ "start": 4,
+ "end": 4,
  "original_sequence": {
  	"alphabet": {
  		"accession_id": "sequence_alphabet.dna",
