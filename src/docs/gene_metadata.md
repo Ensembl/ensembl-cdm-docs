@@ -2,11 +2,11 @@
 
 A [Gene](./gene.md) has the following metadata associated with it:
 
-| Field          | Type                         |
-|----------------|------------------------------|
-| name           | GeneNameMetadata or null     |
-| function       | GeneFunctionMetadata or null |
-| biotype        | GeneBiotypeMetadata          |
+| Field          | Type                         														 |
+|----------------|-----------------------------------------------------------|
+| name           | GeneNameMetadata or PredictedGeneNameMetadata or null     |
+| function       | GeneFunctionMetadata or null 														 |
+| biotype        | GeneBiotypeMetadata            												   |
 
 
 ### GeneNameMetadata
@@ -35,6 +35,38 @@ Gene name metadata is an instance of [ExternalReferenceMetadata](./metadata.md).
   }
 }
 ```
+
+### PredictedGeneNameMetadata
+Predicted gene name metadata is an instance of [ExternalReferenceMetadata](./metadata.md). Due to issues with data availability, the fields in predicted gene name metadata have to be nullable (although at least one fields must be filled in).  Also note that this piece of metadata has `assignment_method` and `assignment_score` fields.
+
+| Field          				| Type                 				| Description                                   																	|
+|-----------------------|-----------------------------|---------------------------------------------------------------------------------|
+| accession_id   				| string or null      			  | item's identifier in an external database      																	|
+| value          				| string or null      			  | relevant information about the item            																	|
+| url            				| string or null      			  | url for accessing the item in another resource 																	|
+| source         				| ExternalDB or null  			  | see [ExternalDB](./external_db.md)             																	|
+| assignment_method    	| AssignmentMethod or null   	| See [AssignmentMethod](./assignment_method.md)																	|
+| assignment_score    	| float or null   					 	| A score (typically a percentage) representing the certainty of the assignment		|
+
+```json
+{
+  "name": {
+    "accession_id": null,
+    "value": "SLIT and NTRK like family member 6",
+    "url": null,
+    "source": null,
+		"assignment_method": {
+			"type": "ENSEMBL NN",
+    	"description": "Predicted using Ensembl NN method"
+		},
+		"assignment_score": 1.00
+  }
+}
+```
+
+
+NOTE: `name` has two available metadata options (and null).  In GraphQL it is expected that this will be implemented as union type.
+
 
 ### GeneFunctionMetadata
 Gene function metadata is an instance of XrefMetadata. The information about gene function is provided by Uniprot.

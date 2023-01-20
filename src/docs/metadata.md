@@ -10,8 +10,7 @@ All metadata items will have the following fields in common:
 |-----------------------|-----------------------------|----------------------------------------------------|
 | value        					| string                    	| The value of the piece of metadata   
 | accession_id 					| string 											| The identifier relating to the piece of metadata
-| assignment_method    	| AssignmentMethod or null   	| See [AssignmentMethod](./assignment_method.md)
-| assignment_score    	| float or null   					 	| A score (typically a percentage) representing the certainty of the assignment
+
 
 Metadata items tend to fall into one of two categories: metadata derived from an external reference (`ExternalReferenceMetadata`), and metadata derived from a [value set](./value_set.md) (`ValueSetMetadata`).
 
