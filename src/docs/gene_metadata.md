@@ -39,14 +39,14 @@ Gene name metadata is an instance of [ExternalReferenceMetadata](./metadata.md).
 ### PredictedGeneNameMetadata
 Predicted gene name metadata is an instance of [ExternalReferenceMetadata](./metadata.md). Due to issues with data availability, the fields in predicted gene name metadata have to be nullable (although at least one fields must be filled in).  Also note that this piece of metadata has `assignment_method` and `assignment_score` fields.
 
-| Field          				| Type                 				| Description                                   																	|
-|-----------------------|-----------------------------|---------------------------------------------------------------------------------|
-| accession_id   				| string or null      			  | item's identifier in an external database      																	|
-| value          				| string or null      			  | relevant information about the item            																	|
-| url            				| string or null      			  | url for accessing the item in another resource 																	|
-| source         				| ExternalDB or null  			  | see [ExternalDB](./external_db.md)             																	|
-| assignment_method    	| AssignmentMethod or null   	| See [AssignmentMethod](./assignment_method.md)																	|
-| assignment_score    	| float or null   					 	| A score (typically a percentage) representing the certainty of the assignment		|
+| Field          	| Type             		| Description                                   				  |
+|-----------------------|-------------------------------|---------------------------------------------------------------------------------|
+| accession_id   	| string or null      	      	| item's identifier in an external database      			          |
+| value          	| string or null      	      	| relevant information about the item   				    	  |
+| url            	| string or null      	      	| url for accessing the item in another resource 			   	  |
+| source         	| ExternalDB or null  	   	| see [ExternalDB](./external_db.md)      					  |
+| assignment_method    	| AssignmentMethod or null   	| See [AssignmentMethod](./assignment_method.md)				  |
+| assignment_score    	| float or null   		| A score (typically a percentage) representing the certainty of the assignment	  |
 
 ```json
 {
@@ -55,12 +55,12 @@ Predicted gene name metadata is an instance of [ExternalReferenceMetadata](./met
     "value": "SLIT and NTRK like family member 6",
     "url": null,
     "source": null,
-		"assignment_method": {
-			"type": "ENSEMBL NN",
+    "assignment_method": {
+ 	"type": "ENSEMBL NN",
     	"description": "Predicted using Ensembl NN method"
-		},
-		"assignment_score": 1.00
-  }
+	},
+    "assignment_score": 1.00
+ }
 }
 ```
 
