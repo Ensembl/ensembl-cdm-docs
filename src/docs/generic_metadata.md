@@ -3,6 +3,16 @@
 ### OntologyTermMetadata
 OntologyTermMetadata is common across different types of [features](./features.md) and also exists on non-features, such as [Region](./region.md). It is an instance of [ExternalReferenceMetadata](./metadata.md).
 
+
+| Field         	| Type                					| Description 																							 |
+|-----------------|-------------------------------|------------------------------------------------------------|
+| accession_id    | string              					| Accession ID of Ontology term
+| value           | string              					| Textual rpresentation of the Ontology term
+| url             | string              					| URL for accessing the item in another resource
+| source          | ExternalDB or null  					| See [ExternalDB](./external_db.md)
+| evidence_method | AssignmentMethod or null		  | Descrbes how the ontology term was assigned
+| evidence_source | Source or null							  | Source of the ontology term assignment 
+	
 ### Examples
 
 ```json
@@ -14,6 +24,17 @@ OntologyTermMetadata is common across different types of [features](./features.m
     "id": "...",
     "name": "Sequence Ontology",
     "url": "www.sequenceontology.org",
+    "description": "The Sequence Ontology..."
+  },
+
+  "evidence_method" :{
+    "type": "HDA",
+    "description": "High throughput direct assay"
+  },
+  "evidence_source": {
+    "id": "...",
+    "name": "UniProt",
+    "url": "www.uniprot.org",
     "description": "The Sequence Ontology..."
   }
 }
