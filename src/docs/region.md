@@ -31,7 +31,7 @@ The topology ValueSet contains the following possible values:
 ```json
 {
   "name": "13",
-  "code": :{
+  "code": {
     "accession_id": "region.chromosome",
     "value": "Chromosome",
     "label": "chromosome",
