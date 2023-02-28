@@ -5,6 +5,7 @@ The `Region` data type describes the coordinate system that contains [Features](
 | Field                 | Type                        | Description                                                                                                               |
 |-----------------------|-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | name                  | string                      | Region name                                                                                                               |
+| alternative_names     | Array of string             | List of other names the region may be known as                                                                            |
 | code                  | [ValueSet](./value_set.md)  | A ValueSet item containing information about the code of the region                                                       |
 | is_top_level          | boolean                     | Flag to highlight whether or not the region can be considered as Top Level or not                                         |
 | rank                  | int or null                 | The order of the region (resolves issues with alphanumeric character sorting)                                             |
@@ -21,16 +22,22 @@ The code ValueSet contains a description about different types of Region, includ
 - `chromosome`
 - `plasmid`
 - `scaffold`
+- `contig`
+
 
 ## Topology ValueSet
 The topology ValueSet contains the following possible values:
 - `linear`
 - `circular`
 
+## Region hierarchy 
+The region hierarchy is defined by the relationships a region has with other regions through `parents` and `children`.  These relationships should only be one level deep both ways; a region can link to it direct parents and its direct children, but not directly to its grandparents and grandchildren. For example, a contig could have multiple parents which are scaffolds and it could have one child which is a chromosome. 
+
 ## Examples
 ```json
 {
   "name": "13",
+  "alternative_names":["chr13"]
   "code": {
     "accession_id": "region.chromosome",
     "value": "Chromosome",
@@ -42,12 +49,12 @@ The topology ValueSet contains the following possible values:
     "accession_id": "topology.linear",
     "value": "Linear",
     "label": "linear",
-    "definition": "Linear toplogy",
+    "definition": "Linear topology",
     "description": "Linear topology"
   },
   "is_top_level": true,
   "rank": 13,
-  "parents": [ {...}],
+  "parents": [{...}],
   "children": [],
   "sequence": { ... },
   "assembly": { ... },
