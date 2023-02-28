@@ -29,7 +29,7 @@ A `ValueSetMetadata` item will have the following shape:
 | accession_id   | string                     | Item's identifier in a value sets glossary
 | value          | string                     | Value intended for programmatic use by the consumer
 | label          | string                     | A short, human-readable and display-friendly label
-| definition     | string                     | Succinct definition of the term
+| definition     | string or null             | Succinct definition of the term
 | description    | string or null             | Optional longer description that can contain nuances
 
 **Note**: apart from the fields listed in the table above, `ValueSetMetadata` items may also contain additional optional fields unique for each given kind of metadata. See [TranscriptManeMetadata](./transcript_metadata.md) or [GeneMetadata](./gene_metadata.md) for examples.

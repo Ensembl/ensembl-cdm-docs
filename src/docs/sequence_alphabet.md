@@ -6,7 +6,7 @@
 | accession_id | string         | Accession id in Ensembl database of [Value Sets](./value_set.md)
 | label        | string         | Short, pretty-printed label ready for display
 | value        | string         | A string intended for programmatic use by consumer
-| definition   | string         | Succinct definition of the term
+| definition   | string or null | Succinct definition of the term
 | description  | string or null | Optional longer description that can contain nuances
 
 ## Examples

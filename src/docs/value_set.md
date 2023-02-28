@@ -11,7 +11,7 @@ A `ValueSet` item should have the following fields:
 | accession_id | string         |
 | label        | string         |
 | value        | string         |
-| definition   | string         |
+| definition   | string or null |
 | description  | string or null |
 
 ### Notes
