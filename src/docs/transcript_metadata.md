@@ -2,15 +2,15 @@
 
 A [Transcript](./transcript.md) has the following metadata associated with it:
 
-| Field          | Type                                    								|
+| Field          | Type|
 |----------------|--------------------------------------------------------|
-| function       | TranscriptFunctionMetadata or null      								|
-| gencode_basic  | TranscriptGencodeBasicMetadata or null  								|
-| canonical      | TranscriptCanonicalMetadata             								|
-| mane           | TranscriptManeMetadata or null          								|
-| tsl            | TranscriptTSLMetadata                   								|
-| appris         | TranscriptApprisMetadata                								|
-| biotype        | TranscriptBiotypeMetadata               								|
+| function       | TranscriptFunctionMetadata or null                     |
+| gencode_basic  | TranscriptGencodeBasicMetadata or null                 |
+| canonical      | TranscriptCanonicalMetadata                            |
+| mane           | TranscriptManeMetadata or null                         |
+| tsl            | TranscriptTSLMetadata                                  |
+| appris         | TranscriptApprisMetadata                               |
+| biotype        | TranscriptBiotypeMetadata                              |
 | ontology_terms | Array of [OntologyTermMetadata](./generic_metadata.md) |
 
 
