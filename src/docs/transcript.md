@@ -11,7 +11,7 @@ The Transcript data type describes a operational unit of a gene. In a genomic co
 | unversioned_stable_id       | string                                              | Unversioned unique identifier for the transcript
 | type                        | string                                              | The value is always `Transcript`
 | slice                       | Slice                                               | [Slice](./slice.md) describing the coordinates of the transcript
-| spliced_exons               | array of SplicedExon                                | The ordered list of [exons](./exon.md) of the transcript
+| spliced_exons               | array of [SplicedExon](./spliced_exon.md)           | The ordered list of [exons](./exon.md) of the transcript
 | introns                     | array of Intron                                     | The ordered list of [introns](./intron.md) of the transcript
 | product_generating_contexts | array of ProductGeneratingContext                   | see [ProductGeneratingContext](./product_generating_context.md)
 | metadata                    | TranscriptMetadata                                  | See [metadata](./metadata.md)
