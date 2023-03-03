@@ -5,7 +5,7 @@ The `Region` data type describes the coordinate system that contains [Features](
 | Field                 | Type                        | Description                                                                                                               |
 |-----------------------|-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | name                  | string                      | Region name                                                                                                               |
-| alternative_names     | Array of string             | List of other names the region may be known as                                                                            |
+| alternative_names     | Array of string             | List of other names or synonyms the region may be known as                                                                            |
 | code                  | [ValueSet](./value_set.md)  | A ValueSet item containing information about the code of the region                                                       |
 | is_top_level          | boolean                     | Flag to highlight whether or not the region can be considered as Top Level or not                                         |
 | rank                  | int or null                 | The order of the region (resolves issues with alphanumeric character sorting)                                             |
