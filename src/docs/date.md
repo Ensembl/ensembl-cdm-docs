@@ -3,5 +3,5 @@
 | Field          | Type            | Description             |
 |----------------|-----------------|-------------------------|
 | day            | int             |                         |
-| month          | month           |                         |
-| year           | year            |                         |
+| month          | int             |                         |
+| year           | int             |                         |
