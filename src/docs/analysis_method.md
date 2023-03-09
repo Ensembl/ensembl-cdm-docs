@@ -1,5 +1,5 @@
 # AnalysisMethod
-Analysis method is to group relavant items for running a program
+Analysis method is to group relevant items for running a program
 
 | Field             | Type                | Description
 |-------------------|---------------------|---------------------
