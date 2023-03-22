@@ -6,7 +6,7 @@ The `Region` data type describes the coordinate system that contains [Features](
 |-----------------------|-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | accession_id          | string                      | INSDC identifier for the region                                                                                           |
 | display_name          | string                      | Commonly used name for region (e.g. 1, 2, 3, X, Y etc.)                                                                   |
-| synonyms              | Array of string             | List of other externally identifiable synonyms the region may be known as                                                                |
+| synonyms              | Array of string             | List of other externally identifiable synonyms the region may be known as                                                 |
 | code                  | [ValueSet](./value_set.md)  | A ValueSet item containing information about the code of the region                                                       |
 | is_top_level          | boolean                     | Flag to highlight whether or not the region can be considered as Top Level or not                                         |
 | rank                  | int or null                 | The order of the region (resolves issues with alphanumeric character sorting)                                             |
