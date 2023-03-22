@@ -2,8 +2,8 @@
 
 | Field          | Type            | Description             |
 |----------------|-----------------|-------------------------|
-| authors        | array of string | Authors of publication             |
-| year           | Date            |  Year published (can be changed to string if Date is an overkill)         |
+| authors        | array of string | Authors of publication  |            |
+| year           | string          |                         |
 | pmid           | ExternalDB      |  PubMed citation        | 
 | pmcid          | ExternalDB      |  EuropePMC citation     |
 | doi            | ExternalDB      |  DOI citation           |
