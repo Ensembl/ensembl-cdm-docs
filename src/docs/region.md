@@ -5,14 +5,14 @@ The `Region` data type describes the coordinate system that contains [Features](
 | Field                 | Type                        | Description                                                                                                               |
 |-----------------------|-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | accession_id          | string                      | INSDC identifier for the region                                                                                           |
-| name                  | string                      | Commonly used name for region (e.g. 1, 2, 3, X, Y etc.)                                                                   |
-| synonyms              | Array of string             | List of other names or synonyms the region may be known as                                                                |
+| display_name          | string                      | Commonly used name for region (e.g. 1, 2, 3, X, Y etc.)                                                                   |
+| synonyms              | Array of string             | List of other externally identifiable synonyms the region may be known as                                                                |
 | code                  | [ValueSet](./value_set.md)  | A ValueSet item containing information about the code of the region                                                       |
 | is_top_level          | boolean                     | Flag to highlight whether or not the region can be considered as Top Level or not                                         |
 | rank                  | int or null                 | The order of the region (resolves issues with alphanumeric character sorting)                                             |
 | topology              | ValueSet                    | A ValueSet item describing the topology of the region - see below                                                         |
-| assembled_from        | Array of Region             | A list of the Regions which were used to generate the Region (these will typically be Regions smaller than the Region)    |
-| assembled_to          | Array of Region             | A list of the Regions which the Region has been incorporated into (these will typically be larger than the Region)        |
+| made_from             | Array of Region             | A list of the Regions which were used to generate the Region (these will typically be Regions smaller than the Region)    |
+| part_of               | Array of Region             | A list of the Regions which the Region has been incorporated into (these will typically be larger than the Region)        |
 | sequence              | Sequence                    | See [Sequence](./sequence.md)                                                                                             |
 | assembly              | Assembly                    | See [Assembly](./assembly.md)                                                                                             |
 | length                | integer                     | Length of the region, in nucleotides                                                                                      |
@@ -32,14 +32,14 @@ The topology ValueSet contains the following possible values:
 - `circular`
 
 ## Region hierarchy 
-The region hierarchy is defined by the relationships a region has with other regions through `assembled_from` and `assembled_to`.  These relationships should only be one level deep both ways; a region can link to it direct "parents" and its direct "children", but not directly to its "grandparents" and "grandchildren". For example, a scaffold could be assembled from multiple contigs and be assembled into one chromosome - there is no direct link from the chromosome to the contigs. 
+The region hierarchy is defined by the relationships a region has with other regions through `made_from` and `part_of`.  These relationships should only be one level deep both ways; a region can link to it direct "parents" and its direct "children", but not directly to its "grandparents" and "grandchildren". For example, a scaffold could be assembled from multiple contigs and be assembled into one chromosome - there is no direct link from the chromosome to the contigs. 
 
 ## Examples
 ```json
 {
   "accession_id": "CM000675.2",
-  "name": "13",
-  "synonyms": ["13", "chr13", "NC_000001.11", "CM000675"],
+  "display_name": "13",
+  "synonyms": ["NC_000001.11", "CM000675"],
   "code": {
     "accession_id": "region.chromosome",
     "value": "Chromosome",
@@ -56,8 +56,8 @@ The region hierarchy is defined by the relationships a region has with other reg
   },
   "is_top_level": true,
   "rank": 13,
-  "assembles_to": [{...}],
-  "assembled_from": [],
+  "made_from": [{...}],
+  "part_of": [],
   "sequence": { ... },
   "assembly": { ... },
   "length": 114364328,
@@ -95,17 +95,6 @@ The region hierarchy is defined by the relationships a region has with other reg
           "name": "RefSeq",
           "url": "https://refseq.org",
           "description": "RefSeq"
-        }
-      },
-      {
-        "accession_id": "CM000675.2",
-        "value": "13",
-        "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.40_GRCh38.p14/GCF_000001405.40_GRCh38.p14_assembly_report.txt",
-        "source": {
-          "id": "GenBank",
-          "name": "GenBank",
-          "url": "https://GenBank.org",
-          "description": "GenBank"
         }
       }
     ]
