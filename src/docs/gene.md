@@ -27,6 +27,9 @@ The `Gene` data type contains the information to represent the concept of a Gene
 {
   "external_id": "HGNC:1101",
   "symbol": "BRCA2",
+  "stable_id": "....1",
+  "version": 1,
+  "unversioned_stable_id": "...",
   "alternative_symbols": [
     "BRCC2",
     "FACD",
