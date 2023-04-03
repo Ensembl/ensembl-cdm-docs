@@ -5,7 +5,7 @@ The `Region` data type describes the coordinate system that contains [Features](
 | Field                 | Type                        | Description                                                                                                               |
 |-----------------------|-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | accession_id          | string                      | INSDC identifier for the region                                                                                           |
-| display_name          | string                      | Commonly used name for region (e.g. 1, 2, 3, X, Y etc.)                                                                   |
+| name                  | string                      | Commonly used name for region (e.g. 1, 2, 3, X, Y etc.)                                                                   |
 | synonyms              | Array of string             | List of other externally identifiable synonyms the region may be known as                                                 |
 | code                  | [ValueSet](./value_set.md)  | A ValueSet item containing information about the code of the region                                                       |
 | is_top_level          | boolean                     | Flag to highlight whether or not the region can be considered as Top Level or not                                         |
@@ -31,15 +31,25 @@ The topology ValueSet contains the following possible values:
 - `linear`
 - `circular`
 
-## Region hierarchy 
-The region hierarchy is defined by the relationships a region has with other regions through `made_from` and `part_of`.  These relationships should only be one level deep both ways; a region can link to it direct "parents" and its direct "children", but not directly to its "grandparents" and "grandchildren". For example, a scaffold could be assembled from multiple contigs and be assembled into one chromosome - there is no direct link from the chromosome to the contigs. 
+
+## Synonyms
+`synonyms` for a region cover alternative means of reference including accession IDs (both versioned and unversioned) and other commonly used names (such as "3" and "chr5").  It should be noted that the latter tend not to have a specific identifiable source and as such do not have accession IDs in their `external_reference` metadata.
+
+## Region hierarchy
+The region hierarchy is defined by the relationships a region has with other regions through `made_from` and `part_of`.  These relationships should only be one level deep both ways; a region can link to it direct "parents" and its direct "children", but not directly to its "grandparents" and "grandchildren". For example, a scaffold could be assembled from multiple contigs and be assembled into one chromosome - there is no direct link from the chromosome to the contigs.  
+
+## Assembly
+Each `region` will only link to one `assembly`.
+
+## Rank
+Based on the order within the karyotype Chromosome 1 = 1, X = 23, Y = 24 (in Human for example).
 
 ## Examples
 ```json
 {
   "accession_id": "CM000675.2",
-  "display_name": "13",
-  "synonyms": ["NC_000001.11", "CM000675"],
+  "name": "13",
+  "synonyms": ["13", "chr13","NC_000013.11", "CM000675", "NC_000013"],
   "code": {
     "accession_id": "region.chromosome",
     "value": "Chromosome",
@@ -56,10 +66,10 @@ The region hierarchy is defined by the relationships a region has with other reg
   },
   "is_top_level": true,
   "rank": 13,
-  "made_from": [{...}],
+  "made_from": [{...}], 
   "part_of": [],
   "sequence": { ... },
-  "assembly": { ... },
+  "assembly": { ... }, 
   "length": 114364328,
   "metadata": {
     "ontology_terms": [
@@ -72,9 +82,44 @@ The region hierarchy is defined by the relationships a region has with other reg
           "url": "www.sequenceontology.org",
           "description": "The Sequence Ontology..."
         }
-      }
+      }, 
+      {...}
     ],
+ 
     "synonyms": [
+      {        
+      "accession" : null,
+        "value": "13",
+        "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.40_GRCh38.p14/GCA_000001405.40_GRCh38.p14_assembly_report.txt", 
+        "source": {
+          "id": "GenBank",
+          "name": "GenBank",
+          "url": "https://GenBank.org",
+          "description": "GenBank"
+        }
+      },
+      {
+        "accession" : null,
+        "value": "chr13",
+        "url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.40_GRCh38.p14/GCA_000001405.40_GRCh38.p14_assembly_report.txt",
+        "source": {
+          "id": "GenBank",
+          "name": "GenBank",
+          "url": "https://GenBank.org",
+          "description": "GenBank"
+        }
+      } ,
+      {
+        "accession_id": "CM000675.2",
+        "value": "CM000675",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/CM000675.2",
+        "source": {
+          "id": "INSDC",
+          "name": "INSDC",
+          "url": "https://insdc.org",
+          "description": "INSDC"
+        }
+      },
       {
         "accession_id": "CM000675.2",
         "value": "CM000675.2",
@@ -89,11 +134,22 @@ The region hierarchy is defined by the relationships a region has with other reg
       {
         "accession_id": "NC_000013.11",
         "value": "NC_000013.11",
-        "url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_000013",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_000013.11",
         "source": {
           "id": "RefSeq",
           "name": "RefSeq",
           "url": "https://refseq.org",
+          "description": "RefSeq"
+        }
+      },
+      {
+        "accession_id": "NC_000013.11",
+        "value": "NC_000013",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_000013.11", 
+        "source": {
+          "id": "NCBI",
+          "name": "NCBI",
+          "url": "www.ncbi.nlm.nih.gov",
           "description": "RefSeq"
         }
       }
