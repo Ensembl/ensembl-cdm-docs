@@ -15,11 +15,16 @@ Using https://www.ebi.ac.uk/ena/browser/text-search?query=Canis%20lupus%20famili
         "species": {},
         "groups": [
             {
-            "code": "dog_breeds",
-            "type": "breeds",
-            "name": "Dog breeds",
-            "is_reference_organism": "false",
-            "organisms": []
+                "code": "dog_breeds",
+                "type": "breeds",
+                "name": "Dog breeds",
+                "is_reference_organism": "false",
+            },
+            {
+                "code": "companion_animals",
+                "type": "division",
+                "name": "Companion animals",
+                "is_reference_organism": "false",
             }
         ],
         "assemblies" : [
@@ -219,11 +224,16 @@ Using https://www.ebi.ac.uk/ena/browser/text-search?query=Canis%20lupus%20famili
             "species": {},
             "groups": [
                 {
-                "code": "dog_breeds",
-                "type": "breeds",
-                "name": "Dog breeds",
-                "is_reference_organism": "false",
-                "organisms": []
+                    "code": "dog_breeds",
+                    "type": "breeds",
+                    "name": "Dog breeds",
+                    "is_reference_organism": "false",
+                },
+                {
+                    "code": "companion_animals",
+                    "type": "division",
+                    "name": "Companion animals",
+                    "is_reference_organism": "false",
                 }
             ],
             "assemblies" : [
