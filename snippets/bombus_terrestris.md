@@ -35,7 +35,7 @@ Using https://www.ebi.ac.uk/ena/browser/view/SAMEA7520487?show=related-records
             {
                 "id": "6da5d92c-f674-4876-bc40-f700f59ed489", 
                 "name": "iyBomTerr1.1",
-                "accession_id": "GCA_910591885.1", //versioned 
+                "accession_id": "GCA_910591885.1",  
                 "accessioning_body": "ENA",
                 "organism": { },
                 "default": false,
