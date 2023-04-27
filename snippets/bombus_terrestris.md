@@ -72,7 +72,6 @@ Using https://www.ebi.ac.uk/ena/browser/view/SAMEA7520487?show=related-records
                                 "description": null
                             },
                             "checksum": "1205ad8ae0c9d9ef3ebf66de5285cd96",
-                            "sequence": null
                         },
                         "assembly": {  }, 
                         "length": 18372659,

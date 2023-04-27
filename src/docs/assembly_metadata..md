@@ -4,7 +4,7 @@ An [Assembly](./assembly.md) has the following metadata associated with it:
 
 | Field          | Type                                                 |
 |----------------|------------------------------------------------------|
-| samples        | Array of RegionSampleMetadata                        |
+| samples        | Array of AssemblySampleMetadata                        |
 
  
 ### AssemblySampleMetadata
@@ -13,7 +13,7 @@ Assembly sample metadata is a list of [ExternalReferenceMetadata](./metadata.md)
 | Field          | Type                 | Description                                       |
 |----------------|----------------------|---------------------------------------------------|
 | accession_id   | string               | Sample's identifier in an external database       |
-| value          | string or null       | nme of the sample                                 |
+| value          | string or null       | name of the sample                                 |
 | url            | string or null       | url for accessing the item in another resource    |
 | source         | ExternalDB or null   | see [ExternalDB](./external_db.md)                |
 
