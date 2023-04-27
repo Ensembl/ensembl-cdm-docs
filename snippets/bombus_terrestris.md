@@ -11,7 +11,8 @@ Using https://www.ebi.ac.uk/ena/browser/view/SAMEA7520487?show=related-records
         {
         "scientific_name": "Bombus terrestris",
         "scientific_parlance_name": "buff-tailed bumblebee",
-        "id": "Bombus terrestris (buff-tailed bumblebee) 1",
+        "tolid": "iyBomTerr1", 
+        "id" : "c2c77798-5818-49e9-ac12-c6176627599f", 
         "species": {},
         "groups": [
             {
@@ -19,17 +20,26 @@ Using https://www.ebi.ac.uk/ena/browser/view/SAMEA7520487?show=related-records
             "type": "division",
             "name": "Garden Insects",
             "is_reference_organism": "false",
+            "metadata": {
+                "grouping_method": {
+                    "accession_id": "grouping_method.consortium",
+                    "value": "consortium",
+                    "label": "Consortium",
+                    "definition": "Consortium defined",
+                    "description": "This grouping was defined by a consortium"
+                    }
+                }   
             }
         ],
         "assemblies" : [
             {
-                "id": "GCA_910591885.1",
+                "id": "6da5d92c-f674-4876-bc40-f700f59ed489", 
                 "name": "iyBomTerr1.1",
-                "accession_id": "GCA_910591885",
+                "accession_id": "GCA_910591885.1", //versioned 
                 "accessioning_body": "ENA",
                 "organism": { },
                 "default": false,
-                "tolid": "iyBomTerr1",
+                "tolid": "iyBomTerr1.1",
                 "regions": [
                     {
                         "accession_id": "OU342921.1",
@@ -106,47 +116,38 @@ Using https://www.ebi.ac.uk/ena/browser/view/SAMEA7520487?show=related-records
                     }
                 }]
             },
-
-
-
-
             {
-                "id": "GCA_910591885.2",
+                "id": "9899f7aa-966b-4de1-953d-cd2ccc5fe86f",
                 "name": "iyBomTerr1.2",
                 "accession_id": "GCA_910591885",
                 "accessioning_body": "ENA",
                 "organism": { },
                 "default": true,
-                "tolid": "iyBomTerr1",
+                "tolid": "iyBomTerr1.2",
                 "regions": [
                     {  } 
                 ]
-            }
-
-
+            },
             {
-                "id": "GCA_910592195.1",
+                "id": "05648378-81d8-4b62-8bb5-20751b2185ef",
                 "name": "iyBomTerr1.1 alternate haplotype",
                 "accession_id": "GCA_910592195",
                 "accessioning_body": "ENA",
                 "organism": { },
                 "default": false,
-                "tolid": "iyBomTerr1",
+                "tolid": "iyBomTerr1.1",
                 "regions": [
                     {  } 
                 ]
-            }
-
-
-
+            },
             {
-                "id": "GCA_910592195.2",
+                "id": "bcb88ab8-1652-44f5-8bd4-8689951eada7",
                 "name": "iyBomTerr1.2 alternate haplotype",
                 "accession_id": "GCA_910592195",
                 "accessioning_body": "ENA",
                 "organism": { },
                 "default": false,
-                "tolid": "iyBomTerr1",
+                "tolid": "iyBomTerr1.2",
                 "regions": [
                     {  } 
                 ]

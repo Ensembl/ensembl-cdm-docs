@@ -11,25 +11,28 @@ Using https://www.ebi.ac.uk/ena/browser/text-search?query=Canis%20lupus%20famili
         {
         "scientific_name": "Canis lupus familiaris",
         "scientific_parlance_name": "dog",
-        "id": "Canis lupus familiaris - Basenji 1",
+        "id": "7a5beff4-a6fc-4335-a5d4-d69dc0b5deff",
+        "tolid" : "", 
         "species": {},
         "groups": [
             {
                 "code": "dog_breeds",
                 "type": "breeds",
                 "name": "Dog breeds",
+                "metadata" : {...},
                 "is_reference_organism": "false",
             },
             {
                 "code": "companion_animals",
                 "type": "division",
                 "name": "Companion animals",
+                "metadata" : {...},
                 "is_reference_organism": "false",
             }
         ],
         "assemblies" : [
             {
-                "id": "GCA_013276365.1",
+                "id": "e7f43a72-b161-47fd-a7d9-d9cada99332b",
                 "name": "UNSW_CanFamBas_1.0",
                 "accession_id": "GCA_013276365.1",
                 "accessioning_body": "ENA",
@@ -112,12 +115,8 @@ Using https://www.ebi.ac.uk/ena/browser/text-search?query=Canis%20lupus%20famili
                     }
                 }]
             },
-
-
-
-
             {
-                "id": "GCA_013276365.2",
+                "id": "72352525-19b3-4719-b069-266fb9254f7b",
                 "name": "UNSW_CanFamBas_1.2",
                 "accession_id": "GCA_013276365.2",
                 "accessioning_body": "ENA",
@@ -203,42 +202,32 @@ Using https://www.ebi.ac.uk/ena/browser/text-search?query=Canis%20lupus%20famili
             } ] 
         },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        {
+       {
             "scientific_name": "Canis lupus familiaris",
             "scientific_parlance_name": "dog",
-            "id": "Canis lupus familiaris - Boxer 1",
+            "id": "5e3c3338-fd8e-4a64-bedf-2a1452f9a4f6",
+            "tolid" : "",
             "species": {},
             "groups": [
                 {
                     "code": "dog_breeds",
                     "type": "breeds",
                     "name": "Dog breeds",
-                    "is_reference_organism": "false",
+                    "metadata" : {...},
+                    "is_reference_organism": false,
                 },
                 {
                     "code": "companion_animals",
-                    "type": "division",
+                    "type": "population",
                     "name": "Companion animals",
-                    "is_reference_organism": "false",
+                    "metadata" : {...},
+                    "is_reference_organism": false,
+                    "metadata" : []
                 }
             ],
             "assemblies" : [
                 {
-                    "id": "GCA_000002285.1",
+                    "id": "ce686d27-b4ad-4128-a74e-1aba388882f9",
                     "name": "CanFam2.0",
                     "accession_id": "GCA_000002285.1",
                     "accessioning_body": "ENA",
@@ -320,13 +309,9 @@ Using https://www.ebi.ac.uk/ena/browser/text-search?query=Canis%20lupus%20famili
                             ]
                         }
                     }]
-                },
-    
-    
-    
-    
+                },    
                 {
-                    "id": "GCA_000002285.4",
+                    "id": "ff5c7c95-ce8a-4df9-b411-a837c68df466",
                     "name": "Dog10K_Boxer_Tasha",
                     "accession_id": "GCA_000002285.4",
                     "accessioning_body": "ENA",
