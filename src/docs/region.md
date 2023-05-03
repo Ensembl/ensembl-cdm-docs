@@ -42,7 +42,10 @@ The region hierarchy is defined by the relationships a region has with other reg
 Each `region` will only link to one `assembly`.
 
 ## Rank
-Based on the order within the karyotype Chromosome 1 = 1, X = 23, Y = 24 (in Human for example).
+Based on the order within the karyotype Chromosome 1 = 1, X = 23, Y = 24 (in Human for example).  
+
+## Ordering
+To ensure regions are returned in a specific order, it is suggested that implementations of this model extend it with an additional field to capture an "order". This has not been included in the model as it is not essential for describing a region and may be implementation specific.  
 
 ## Examples
 ```json
