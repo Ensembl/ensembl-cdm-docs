@@ -5,7 +5,6 @@ The `Sequence` data type describes a contiguous set of nucleic acid or amino aci
 |-----------|------------------------------------------------|-------------|
 | alphabet  | [SequenceAlphabet](./sequence_alphabet.md)     | Alphabet with which the sequence is encoded
 | checksum  | string                                         | A checksum digest derived from the underlying sequence held in value
-| sequence  | string or null                                 | Contains the string representing the biological sequence.
 
 
 ## Notes
@@ -27,8 +26,7 @@ The `Sequence` data type describes a contiguous set of nucleic acid or amino aci
     "definition": "IUPAC notation for DNA sequence",
     "description": null
   },
-  "checksum": "e8f2b6ffd919c3cd209cb68afe8872da",
-  "sequence": "ACGGATCGACAGTAGTTAGA"
+  "checksum": "e8f2b6ffd919c3cd209cb68afe8872da"
 }
 ```
 
@@ -42,5 +40,5 @@ The `Sequence` data type describes a contiguous set of nucleic acid or amino aci
     "description": null
   },
   "checksum": "e8f2b6ffd919c3cd209cb68afe8872da",
-  "sequence": null
+  "sequence": "ACGGATCGACAGTAGTTAGA"
 }
