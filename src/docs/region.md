@@ -54,7 +54,7 @@ To ensure regions are returned in a specific order, it is suggested that impleme
   "accession_id": "CM000675.2",
   "name": "13",
   "synonyms": ["13", "chr13","NC_000013.11", "CM000675", "NC_000013"],
-  "code": {
+  "system": {
     "accession_id": "region.chromosome",
     "value": "Chromosome",
     "label": "chromosome",
@@ -70,6 +70,7 @@ To ensure regions are returned in a specific order, it is suggested that impleme
   },
   "is_top_level": true,
   "rank": 13,
+  "genetic_code" : 1,
   "made_from": [{...}], 
   "part_of": [],
   "sequence": { ... },
