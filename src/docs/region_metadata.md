@@ -2,10 +2,11 @@
 
 A [Region](./region.md) has the following metadata associated with it:
 
-| Field          | Type                                                     |
-|----------------|----------------------------------------------------------|
-| synonyms       | Array of RegionSynonymMetadata                           |
-| ontology_terms | Array of [OntologyTermMetadata](./generic_metadata.md)   |
+| Field                     | Type                                                      |
+|---------------------------|-----------------------------------------------------------|
+| synonyms                  | Array of RegionSynonymMetadata                            |
+| ontology_terms            | Array of [OntologyTermMetadata](./generic_metadata.md)    |
+| biological_locations      | Array of [BiologicalLocation](./generic_metadata.md)      |
  
 
 ### RegionSynonymMetadata
@@ -27,10 +28,9 @@ Region synonym metadata is an instance of [ExternalReferenceMetadata](./metadata
     "source": {
         "id": "INSDC",
         "name": "INSDC",
-        "url": "https://insdc.org",
+        "url": "https://insdc.org", 
         "description": "INSDC"
     }
 }
 
 ```
-

@@ -7,7 +7,8 @@ The `Region` data type describes the coordinate system that contains [Features](
 | accession_id          | string                      | INSDC identifier for the region                                                                                           |
 | name                  | string                      | Commonly used name for region (e.g. 1, 2, 3, X, Y etc.)                                                                   |
 | synonyms              | Array of string             | List of other externally identifiable synonyms the region may be known as                                                 |
-| code                  | [ValueSet](./value_set.md)  | A ValueSet item containing information about the code of the region                                                       |
+| system                | [ValueSet](./value_set.md)  | A ValueSet item containing information about the code of the region                                                       |
+| genetic_code          | integer                     | Genetic code based on the [NCBI's list of genetic codes](https://www.ncbi.nlm.nih.gov/Taxonomy/taxonomyhome.html/index.cgi?chapter=cgencodes)
 | is_top_level          | boolean                     | Flag to highlight whether or not the region can be considered as Top Level or not                                         |
 | rank                  | int or null                 | The order of the region (resolves issues with alphanumeric character sorting)                                             |
 | topology              | ValueSet                    | A ValueSet item describing the topology of the region - see below                                                         |
@@ -154,6 +155,20 @@ To ensure regions are returned in a specific order, it is suggested that impleme
           "name": "NCBI",
           "url": "www.ncbi.nlm.nih.gov",
           "description": "RefSeq"
+        }
+      }
+    ],
+
+    "biological_locations" : [
+      {
+        "accession_id": "SO:0000628",
+        "value": "chromosomal_structural_element",
+        "url": "http://sequenceontology.org/browser/current_release/term/SO:0000628",
+        "source": {
+            "id": "SO",
+            "name": "Sequence ontology",
+            "url": "sequenceontology.org",
+            "description": "The Sequence Ontology is a set of terms and relationships used to describe the features and attributes of biological sequence."
         }
       }
     ]
