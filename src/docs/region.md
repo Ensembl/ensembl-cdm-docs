@@ -54,13 +54,16 @@ To ensure regions are returned in a specific order, it is suggested that impleme
   "accession_id": "CM000675.2",
   "name": "13",
   "synonyms": ["13", "chr13","NC_000013.11", "CM000675", "NC_000013"],
-  "system": {
+  "coordinate_system": {
     "accession_id": "region.chromosome",
     "value": "Chromosome",
     "label": "chromosome",
     "definition": "Chromosome",
     "description": "Structural unit composed of a nucleic acid molecule which controls its own replication through the interaction of specific proteins at one or more origins of replication."
   },
+  "genetic_code" : 1,
+  "is_top_level": true,
+  "rank": 13,
   "topology":{
     "accession_id": "topology.linear",
     "value": "Linear",
@@ -68,9 +71,6 @@ To ensure regions are returned in a specific order, it is suggested that impleme
     "definition": "Linear topology",
     "description": "Linear topology"
   },
-  "is_top_level": true,
-  "rank": 13,
-  "genetic_code" : 1,
   "made_from": [{...}], 
   "part_of": [],
   "sequence": { ... },
