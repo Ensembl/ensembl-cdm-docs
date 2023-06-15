@@ -2,16 +2,18 @@
 
 The `Assembly` data type corresponds to an assembled sequence comprised of aligned reads
 
-| Field             | Type            | Description
-|-------------------|-----------------|---------------------
-| id                | string          | A unique identifier for the assembly (UUID)
-| name              | string          | The name provided by the assembly creator
-| accession_id      | string          | Name provided by an accessioning body
-| accessioning_body | string          | The independent assigner of an identity to the assembly
-| organism          | Organism        | The [organism](./organism.md) entity to which many assemblies may belong
-| regions           | array of Region | see [Region](./region.md)
-| default           | boolean         | The "best" assembly for the organism, for when the user does not want to choose
-| tolid             | string or null  | [Tree of Life identifier](https://id.tol.sanger.ac.uk/) (NB: This will be versioned)
+| Field             | Type              | Description
+|-------------------|-------------------|--------------------------------------------------------------------------------------
+| id                | string            | A unique identifier for the assembly (UUID)
+| name              | string            | The name provided by the assembly creator
+| accession_id      | string            | Name provided by an accessioning body
+| accessioning_body | string            | The independent assigner of an identity to the assembly
+| organism          | Organism          | The [organism](./organism.md) entity to which many assemblies may belong
+| regions           | array of Region   | see [Region](./region.md)
+| default           | boolean           | The "best" assembly for the organism, for when the user does not want to choose
+| tolid             | string or null    | [Tree of Life identifier](https://id.tol.sanger.ac.uk/) (NB: This will be versioned)
+| metadata          | AssemblyMetadata  | See [metadata](./metadata.md) and [assembly metadata](./assembly_metadata.md)   
+
 
 ## Notes
 1. Not all assemblies have yet been recognised by accessioning bodies like INSDC, so the accession_id and accessioning_body may be null
@@ -27,7 +29,8 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
   "organism": { ... },
   "regions": [ ... ],
   "default": true,
-  "tolid": null
+  "tolid": null,
+  "metadata": {...}
 }
 ```
 
@@ -40,6 +43,7 @@ The `Assembly` data type corresponds to an assembled sequence comprised of align
   "organism": { ... },
   "regions": [ ... ],
   "default": true,
-  "tolid": "aRanTem1.1"
+  "tolid": "aRanTem1.1",
+  "metadata": {...}
 }
 ```
