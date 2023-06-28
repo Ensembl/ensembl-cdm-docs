@@ -15,7 +15,7 @@ Region synonym metadata is an instance of [ExternalReferenceMetadata](./metadata
 | Field          | Type                 | Description                                       |
 |----------------|----------------------|---------------------------------------------------|
 | accession_id   | string or null       | item's identifier in an external database         |
-| value          | string or null       | relevant information about the item               |
+| value          | string               | relevant information about the item               |
 | url            | string or null       | url for accessing the item in another resource    |
 | source         | ExternalDB or null   | see [ExternalDB](./external_db.md)                |
 
