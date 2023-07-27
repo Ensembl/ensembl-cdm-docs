@@ -122,8 +122,8 @@ Type is a controlled vocabulary.  Acceptable options are:
  		"definition": "IUPAC notation for DNA sequence",
  		"description": null
  		},
- 	"checksum": "5j84068658kv9403486b9309usocongi",
- 	"sequence": "G"
+ 	"checksum": "",
+ 	"sequence": ""
  	},
  "new_sequence" :{
  	"alphabet": {
