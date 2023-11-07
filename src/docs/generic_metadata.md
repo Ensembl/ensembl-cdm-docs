@@ -18,3 +18,22 @@ OntologyTermMetadata is common across different types of [features](./features.m
   }
 }
 ```
+
+
+### BiologicalLocation
+Biological Location metadata is an instance of [ExternalReferenceMetadata](./metadata.md).
+
+```json
+ {
+    "accession_id": "SO:00001552",
+    "value": "plasmid",
+    "url": "http://sequenceontology.org/browser/current_release/term/SO:00001552",
+    "source": {
+        "id": "SO",
+        "name": "Sequence ontology",
+        "url": "sequenceontology.org",
+        "description": "The Sequence Ontology is a set of terms and relationships used to describe the features and attributes of biological sequence."
+    }
+}
+
+```
