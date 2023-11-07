@@ -2,22 +2,23 @@
 
 A [Gene](./gene.md) has the following metadata associated with it:
 
-| Field          | Type                         |
-|----------------|------------------------------|
-| name           | GeneNameMetadata or null     |
-| function       | GeneFunctionMetadata or null |
-| biotype        | GeneBiotypeMetadata          |
+| Field          | Type|
+|----------------|--------------------------------------------------------|
+| name           | GeneNameMetadata or null                               |
+| function       | GeneFunctionMetadata or null                           |
+| biotype        | GeneBiotypeMetadata                                    |
+| ontology_terms | Array of [OntologyTermMetadata](./generic_metadata.md) |
 
 
 ### GeneNameMetadata
 Gene name metadata is an instance of [ExternalReferenceMetadata](./metadata.md). Due to issues with data availability, the fields in gene name metadata have to be nullable (although at least one fields must be filled in).
 
-| Field          | Type                 | Description                                   |
-|----------------|----------------------|-----------------------------------------------|
-| accession_id   | string or null       | item's identifier in an external database     |
-| value          | string or null       | relevant information about the item           |
-| url            | string or null       | url for accessing the item in another resource|
-| source         | ExternalDB or null   | see [ExternalDB](./external_db.md)                                |
+| Field          | Type                 | Description                                     |
+|----------------|----------------------|-------------------------------------------------|
+| accession_id   | string or null       | item's identifier in an external database       |
+| value          | string or null       | relevant information about the item             |
+| url            | string or null       | url for accessing the item in another resource  |
+| source         | ExternalDB or null   | see [ExternalDB](./external_db.md)              |
 
 
 ```json
@@ -69,3 +70,6 @@ Gene biotype metadata is an instance of [ValueSetMetadata](./metadata.md):
   }
 }
 ```
+
+### OntologyTermMetadata
+This is a generic piece of metadata applicaplable to many different entities, and so is not prefixed with "Gene".  There may also be multiple onotology terms associated with a Gene and so this is presented as an array.
