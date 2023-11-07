@@ -10,6 +10,7 @@ The `OrganismGroup` data type contains information relating to the groups an [or
 | name                      | string                              | Name of the species group     
 | organisms                 | array of [Organism](./organism.md)  | An array of related `organisms` belonging to the group
 | is_reference_organism     | Boolean                             | Indicates that the `Organism` is the reference for a particular `OrganismGroup`
+| metadata                  | Metadata                            | See [Metadata](./organism_group_metadata.md)
 
 Note: The field `is_reference_organism` is only present if the `OrganismGroup` is accessed from an `Organism` (and therefore identifies that `Organism` as being one of the references for the group).  
 
@@ -34,14 +35,16 @@ Note: The field `is_reference_organism` is only present if the `OrganismGroup` i
     "type": "breed",
     "name": "Hereford",
     "is_reference_organism": "true",
-    "organisms": [...]
+    "organisms": [...],
+    "metadata" : {...}
   },
   {
     "code": "farmed_animals",
     "type": "population",
     "name": "Farmed Animals",
     "is_reference_organism": "false",
-    "organisms": [...]
+    "organisms": [...],
+     "metadata" : {...}
   }],
   "assemblies" : [...]
  }
@@ -68,7 +71,8 @@ Note: The field `is_reference_organism` is only present if the `OrganismGroup` i
             "alternative_names": ["bovine", "cow", "dairy cow", "domestic cattle", "domestic cow"],
             "taxon_id": 9913
          }},
-        {...}]
+        {...}],
+     "metadata" : {...}
   }
 
 ```

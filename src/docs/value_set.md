@@ -74,8 +74,8 @@ Transcripts in the MANE Plus Clinical set are additional transcripts per locus n
 ```json
 {
   "accession_id": "mane.plus_clinical",
-  "value": "MANE Plus Clinical",
-  "label": "plus_clinical",
+  "label": "MANE Plus Clinical",
+  "value": "plus_clinical",
   "definition": "The MANE Plus Clinical set",
   "description": "Transcripts in the MANE Plus Clinical set are additional
   transcripts per locus..."

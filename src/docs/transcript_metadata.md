@@ -2,15 +2,17 @@
 
 A [Transcript](./transcript.md) has the following metadata associated with it:
 
-| Field          | Type                                    |
-|----------------|-----------------------------------------|
-| function       | TranscriptFunctionMetadata or null      |
-| gencode_basic  | TranscriptGencodeBasicMetadata or null  |
-| canonical      | TranscriptCanonicalMetadata             |
-| mane           | TranscriptManeMetadata or null          |
-| tsl            | TranscriptTSLMetadata                   |
-| appris         | TranscriptApprisMetadata                |
-| biotype        | TranscriptBiotypeMetadata               |
+| Field          | Type|
+|----------------|--------------------------------------------------------|
+| function       | TranscriptFunctionMetadata or null                     |
+| gencode_basic  | TranscriptGencodeBasicMetadata or null                 |
+| canonical      | TranscriptCanonicalMetadata                            |
+| mane           | TranscriptManeMetadata or null                         |
+| tsl            | TranscriptTSLMetadata                                  |
+| appris         | TranscriptApprisMetadata                               |
+| biotype        | TranscriptBiotypeMetadata                              |
+| ontology_terms | Array of [OntologyTermMetadata](./generic_metadata.md) |
+
 
 ### TranscriptFunctionMetadata
 Like gene function metadata, transcript function metadata is an instance of [XrefMetadata](./metadata.md). The information about gene function is provided by Uniprot.
@@ -131,6 +133,11 @@ Transcript APPRIS metadata is an instance of ValueSetMetadata.
   }
 }
  ```
+ 
+ 
+### OntologyTermMetadata
+This is a generic piece of metadata applicaplable to many different entities, and so is not prefixed with "Transcript".  There may also be multiple onotology terms associated with a Transcript and so this is presented as an array.
+
 
 ===
 

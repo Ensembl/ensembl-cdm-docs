@@ -13,8 +13,13 @@ It consists of the following fields:
 | groups                    | array of [OrganismGroup](./organism_group.md)               | An array of `OrganismGroups` to provide additional information about the `organism`
 | assemblies                | array of [Assembly](./assembly.md)                          | An array of `Assemblies` for the `Organism`
 | is_reference_organism     | Boolean                                                     | Indicates that the `organism` is the reference for a particular `OrganismGroup`
+| tolid                     | string or null                                              | Tree of Life Identifier (ToLID) for the organism
 
 Note: The field `is_reference_organism` is only present if `Organism` is accessed from an `OrganismGroup`.  If the `Organism` is referenced directly, this field will not be present.
+
+
+### Notes:
+- `id` will be a UUID
 
 
 ## Examples
@@ -25,7 +30,7 @@ Note: The field `is_reference_organism` is only present if `Organism` is accesse
 {
   "scientific_name": "Bos taurus",
   "scientific_parlance_name": "cow",
-  "id": "Bos Taurus (bos_taurus)",
+  "id": "37d98713-f25a-4f21-8d2c-0b67fbf5e110",
   "species": {
     "scientific_name": "Bos taurus",
     "ncbi_common_name": "cattle",
@@ -33,21 +38,22 @@ Note: The field `is_reference_organism` is only present if `Organism` is accesse
     "taxon_id": 9913
   },
  "groups": [
- {
-    "code": "hereford_breed",
-    "type": "breed",
-    "name": "Hereford",
-    "is_reference_organism": "true",
-    "organisms": [...]
-  },
   {
-    "code": "farmed_animals",
-    "type": "population",
-    "name": "Farmed Animals",
-    "is_reference_organism": "false",
-    "organisms": [...]
-  }],
-  "assemblies" : [...]
+      "code": "hereford_breed",
+      "type": "breed",
+      "name": "Hereford",
+      "is_reference_organism": "true",
+      "organisms": [...]
+    },
+    {
+      "code": "farmed_animals",
+      "type": "population",
+      "name": "Farmed Animals",
+      "is_reference_organism": "false",
+      "organisms": [...]
+    }],
+  "assemblies" : [...],
+  "tolid" : "mBosTau1"
  }
 ```
 
@@ -62,9 +68,10 @@ Note: The field `is_reference_organism` is only present if `Organism` is accesse
         {
           "scientific_name": "Bos taurus",
           "scientific_parlance_name": "cow",
-          "id": "Bos Taurus (bos_taurus)",
+          "id": "827e1fef-74a1-4e9f-ba5a-655f914104d8",
           "groups": [...],
           "assemblies" : [...],
+          "tolid" : "mBosTau1",
           "is_reference_organism": "true",
           "species": {
             "scientific_name": "Bos taurus",
@@ -84,7 +91,7 @@ Note: The field `is_reference_organism` is only present if `Organism` is accesse
 {
   "scientific_name": "Escherichia coli str. K-12 substr. MG1655",
   "scientific_parlance_name": "E. coli K-12",
-  "id": "E. coli (str. K-12 substr. MG1655)",
+  "id": "b30cfcbc-2ff3-494d-8474-a38e59f1ce74",
   "species": {
     "scientific_name": "Escherichia coli str. K-12 substr. MG1655",
     "ncbi_common_name": null,
@@ -92,7 +99,7 @@ Note: The field `is_reference_organism` is only present if `Organism` is accesse
     "taxon_id": 511145
   },
   "groups" : [...],
-  "assemblies" : [...]
+  "assemblies" : [...],
 }
 ```
 
@@ -102,7 +109,7 @@ Note: The field `is_reference_organism` is only present if `Organism` is accesse
 {
   "scientific_name": "Pieris rapae",
   "scientific_parlance_name": null,
-  "id": "Pieris rapae",
+  "id": "acc1e46c-21cb-4827-a064-5d717a3e6a89",
   "species": {
     "scientific_name": "Pieris rapae",
     "ncbi_common_name": "cabbage white",
@@ -110,7 +117,9 @@ Note: The field `is_reference_organism` is only present if `Organism` is accesse
     "taxon_id": 64459
   },
   "groups" : [...],
-  "assemblies" : [...]
+  "assemblies" : [...],
+  "tolid" : "ilPieRapa1"
+
 }
 ```
 
@@ -120,7 +129,7 @@ Note: The field `is_reference_organism` is only present if `Organism` is accesse
 {
   "scientific_name": "Trypanosoma rangeli SC58",
   "scientific_parlance_name": null,
-  "id": "Trypanosoma rangeli (SC58)"
+  "id": "8c95ec4c-12d7-4c1d-959a-f164311b7967"
   "species": {
     "scientific_name": "Trypanosoma rangeli SC58",
     "ncbi_common_name": null,

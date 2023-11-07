@@ -7,6 +7,7 @@ A [Gene](./gene.md) has the following metadata associated with it:
 | name           | GeneNameMetadata or PredictedGeneNameMetadata or null      |
 | function       | GeneFunctionMetadata or null                               |
 | biotype        | GeneBiotypeMetadata                                        |
+| ontology_terms | Array of [OntologyTermMetadata](./generic_metadata.md)     |
 
 
 ### GeneNameMetadata
@@ -95,3 +96,5 @@ Gene biotype metadata is an instance of [ValueSetMetadata](./metadata.md):
   }
 }
 ```
+### OntologyTermMetadata
+This is a generic piece of metadata applicaplable to many different entities, and so is not prefixed with "Gene".  There may also be multiple onotology terms associated with a Gene and so this is presented as an array.
