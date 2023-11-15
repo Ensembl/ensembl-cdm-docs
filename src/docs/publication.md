@@ -14,11 +14,7 @@
 ```json
 {
    "authors": ["Farragher TM", "Plant D, Flynn E"],
-   "year": {
-      "day": null,
-      "month": null,
-      "year": 2007,
-   },
+   "year": "2007",
    "pmid": {
       "id": "18035074",
       "name": null,
