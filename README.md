@@ -35,23 +35,27 @@ The transcription and translation event is captured in the [ProductGeneratingCon
 [PhasedExons](./src/docs/phased_exon.md) in PGCs allow for identifiable exons to be present in multiple PGCs with additional phase information.
 [SplicedExons](./src/docs/spliced_exons) describe the location of identifiable exons in one or more transcripts.
 
-[Products](./src/docs/product.md) ([Protein](./src/docs/protein_product.md) and [RNA](./src/docs/rna_product.md)) are included in the diagram of feature-like entities.  However, as they do not occupy the genomic coordinate space, they do not inherit from Feature.  RNA products are not currently available in Ensembl and so have not been fully modelled.  
+[Products](./src/docs/product.md) ([Protein](./src/docs/protein_product.md) and [RNA](./src/docs/rna_product.md)) are included in this Feature section as they are "Feature-like" in many ways.  However, as they do not occupy the genomic coordinate space, they do not inherit from Feature.  RNA products are not currently available in Ensembl and so have not been fully modelled.  
 
 <img src="./src/images/CDM-product.png" width="670px">
 
 
-#### Localisation concepts, assemblies, species and organisms
+#### Sequence, localisation concepts, assemblies, species and organisms
 
-A Feature's location is described using [Slice](./src/docs/slice.md), which is the mechanism used to link together [Region](./src/docs/region.md) (a contig or chromosome), [Location](./src/docs/location.md) (coordinates and length) and [Strand](./src/docs/strand.md).   [Sequence](./src/docs/sequence.md) is obtained via Region and allows for integration with [RefGet](https://github.com/ga4gh/large-scale-genomics-wiki/blob/master/refget.md) instances via the `checksum` attribute.  Sequence strings are permitted by the model, but discouraged. Region provides the link between an [Assembly](./src/docs/assembly.md) and its sequence.
+Sequence information for Features and "Feature-like" entities is managed in two different ways.
 
-[Species](./src/docs/species.md) and [Organism](./src/docs/organism.md) are the entities involved in specifying the source of the assembly. Species provides the taxonomic detail (e.g Ornithorhynchus anatinu or Triticum aestivum), while Organism provides finer grain information about to individual or cultivar(e.g Glennie orv Jagger).  This granularity is provided through [OrganismGroup](./src/docs/organism_group.md), a concept shared with the Metadata Schema.
+Features with genomic locations have a [Slice](./src/docs/slice.md).  Slice is the mechanism used to link together [Region](./src/docs/region.md) (a contig or chromosome), [Location](./src/docs/location.md) (coordinates and length) and [Strand](./src/docs/strand.md).   [Sequence](./src/docs/sequence.md) is obtained via Region and allows for integration with [RefGet](https://github.com/ga4gh/large-scale-genomics-wiki/blob/master/refget.md) instances via the `checksum` attribute.  Region provides the link between an [Assembly](./src/docs/assembly.md) and its sequence.
+
+For "Feature-like" entities which have a sequence but do not have a slice or genomic location (e.g. cDNA, [Product](./src/docs/product.md) etc.) the Sequence object is associated with them directly.
+
+[Species](./src/docs/species.md) and [Organism](./src/docs/organism.md) are the entities involved in specifying the source of the assembly. Species provides the taxonomic detail (e.g Triticum aestivum), while Organism provides more granular information about an individual or cultivar (e.g Jagger (wheat cultivar)).  This granularity is provided through [OrganismGroup](./src/docs/organism_group.md), a concept shared with the Metadata Schema.
 
 <img src="./src/images/CDM-localisation.png" width="670px">
 
 
 
 ### External references
-˜
+
 [ExternalReference](./src/docs/external_reference.md) represents a reference to a database outside of Ensembl.
 
 <img src="./src/images/CDM-externalreference.png" width="670px">
@@ -91,12 +95,10 @@ The development of the model has been conducted by a group of staff from the Ens
 - Software & API development
 
 
-The model has been developed iteratively over a number of months and this work has been influenced by the Ensembl website redevelopment.  The diagram below shows how the requirements of the website have fed into the prioritisation of supporting projects, which in turn have driven the CDM development.  
+The model has been developed iteratively over a number of months and this work has been influenced by the Ensembl website redevelopment.  The requirements from the website and related services have been fed into the CDM group's regular meetings where they have been discussed, designed, documented and reviewed.
 
-<img src="./src/images/CDM_development_overview.png" width="670px">
+The CDM has been used as the basis for our new API development.  This ensures that the concepts used are well understood and this will reduce divergence, creating a common nomenclature for key ideas across the project.
 
+### Versioning
 
-Within the group, the iterative process has continued.  Github pull requests have been used extensively to ensure all design decisions have had appropriate oversight and approval from group members.
-
-
-<img src="./src/images/CDM_group_process.png" width="670px">
+The CDM used semantic versioning.  This is managed through Git tags. 
