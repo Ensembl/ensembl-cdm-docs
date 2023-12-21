@@ -44,9 +44,11 @@ The transcription and translation event is captured in the [ProductGeneratingCon
 
 Sequence information for Features and "Feature-like" entities is managed in two different ways.
 
-Features with genomic locations have a [Slice](./src/docs/slice.md).  Slice is the mechanism used to link together [Region](./src/docs/region.md) (a contig or chromosome), [Location](./src/docs/location.md) (coordinates and length) and [Strand](./src/docs/strand.md).   [Sequence](./src/docs/sequence.md) is obtained via Region and allows for integration with [RefGet](https://github.com/ga4gh/large-scale-genomics-wiki/blob/master/refget.md) instances via the `checksum` attribute.  Region provides the link between an [Assembly](./src/docs/assembly.md) and its sequence.
+Features with genomic locations have a [Slice](./src/docs/slice.md).  Slice is the mechanism used to link together [Region](./src/docs/region.md) (a contig or chromosome), [Location](./src/docs/location.md) (coordinates and length) and [Strand](./src/docs/strand.md).   [Sequence](./src/docs/sequence.md) is obtained via Region. 
 
 For "Feature-like" entities which have a sequence but do not have a slice or genomic location (e.g. cDNA, [Product](./src/docs/product.md) etc.) the Sequence object is associated with them directly.
+
+Sequence allows for integration with [RefGet](https://github.com/ga4gh/large-scale-genomics-wiki/blob/master/refget.md) instances via the `checksum` attribute.  Region provides the link between an [Assembly](./src/docs/assembly.md) and its sequence.
 
 [Species](./src/docs/species.md) and [Organism](./src/docs/organism.md) are the entities involved in specifying the source of the assembly. Species provides the taxonomic detail (e.g Triticum aestivum), while Organism provides more granular information about an individual or cultivar (e.g Jagger (wheat cultivar)).  This granularity is provided through [OrganismGroup](./src/docs/organism_group.md), a concept shared with the Metadata Schema.
 
@@ -101,4 +103,4 @@ The CDM has been used as the basis for our new API development.  This ensures th
 
 ### Versioning
 
-The CDM used semantic versioning.  This is managed through Git tags. 
+The CDM uses semantic versioning.  This is managed through Git tags. 
