@@ -1,9 +1,10 @@
 # AssignmentMethod
 The `AssignmentMethod` data type describes the method by which an [external reference](./external_reference.md) was assigned to an item.
 
-| Field           | Type           | Description                                                    |
-|-----------------|----------------|----------------------------------------------------------------|
+| Field           | Type           | Description                                                        |
+|-----------------|----------------|--------------------------------------------------------------------|
 | type            | string         | A member of a short list of keywords
+| name            | string or null | Name of the assignment method (software package or algorithm used)
 | description     | string or null | Brief human-readable explanation
 | method_version  | string or null | Optional version of the software / algorithm used in assignment
 
@@ -27,6 +28,7 @@ The `AssignmentMethod` data type describes the method by which an [external refe
 ```json
 {
     "type": "DIRECT",
+    "name": null,
     "description": "A reference made by an external resource of annotation to an Ensembl feature that Ensembl imports without modification",
     "version": null
 }
@@ -34,8 +36,9 @@ The `AssignmentMethod` data type describes the method by which an [external refe
 
 ```json
 {
-    "type": "ENSEMBL NN",
-    "description": "Predicted using Ensembl NN method",
+    "type": "ENSEMBL_NN",
+    "name": "Ensembl Gene assignment NN",
+    "description": "Predicted using Ensembl Gene assignment NN method",
     "version": "1.0.2"
 
 }

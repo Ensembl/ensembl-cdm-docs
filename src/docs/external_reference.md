@@ -27,6 +27,7 @@ The `External Reference` data type represents a reference to a database outside 
       "description": null,
       "assignment_method": {
         "type": "DIRECT",
+        "name": null,
         "description": "A reference made by an external resource of annotation to an Ensembl feature that Ensembl imports without modification",
         "version": null
 
@@ -51,6 +52,7 @@ The `External Reference` data type represents a reference to a database outside 
       "description": null,
       "assignment_method": {
         "type": "COORDINATE_OVERLAP",
+        "name": null,
         "description": "A reference inferred from annotation of the same locus as a feature in Ensembl. Mostly relevant when comparing annotation between assemblies with different sequences than Ensembl for the same species",
         "version": null
 
