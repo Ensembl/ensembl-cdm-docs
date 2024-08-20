@@ -36,9 +36,9 @@ The `AssignmentMethod` data type describes the method by which an [external refe
 
 ```json
 {
-    "type": "ENSEMBL_NN",
-    "name": "Ensembl Gene assignment NN",
-    "description": "Predicted using Ensembl Gene assignment NN method",
+    "type": "ENSEMBL_ML",
+    "name": "Ensembl Machine Learning Gene Name assignment",
+    "description": "Predicted using Ensembl Machine Learning Gene Name assignment method",
     "version": "1.0.2"
 
 }
