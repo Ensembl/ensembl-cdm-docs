@@ -21,7 +21,7 @@ The `AssignmentMethod` data type describes the method by which an [external refe
   - `PROJECTION`
   - `SEQUENCE_MATCH`
   - `UNMAPPED`
-  - `ENSEMBL_NN`
+  - `ENSEMBL_ML`
 
 
 ## Examples
