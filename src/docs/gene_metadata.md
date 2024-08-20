@@ -51,7 +51,7 @@ Predicted gene name metadata is unlike [ExternalReferenceMetadata](./metadata.md
   "name": {
     "value": "SLIT and NTRK like family member 6",
     "assignment_method": {
-      "type": "ENSEMBL_NN",
+      "type": "ENSEMBL_ML",
       "name": "Ensembl Gene assignment NN",
       "description": "Predicted using Ensembl Gene assignment NN method",
       "version": "1.0.2"
