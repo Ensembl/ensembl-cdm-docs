@@ -64,9 +64,9 @@ For gene name assignment via a machine learning algorithm
     },
     "assignment_method": {
       "type": "ENSEMBL_ML",
-      "name": "Ensembl Gene assignment NN",
-      "description": "Predicted using Ensembl Gene assignment NN method",
-      "version": "1.0.2"
+      "name": "Ensembl Machine Learning Gene Name assignment",
+      "description": "Predicted using Ensembl Machine Learning Gene Name assignment method",
+      "version": "VERT_NN_1"
     },
     "assignment_score": 1.0
   }
