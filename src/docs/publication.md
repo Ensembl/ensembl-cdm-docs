@@ -4,8 +4,8 @@
 |----------------|-----------------|-------------------------|
 | authors        | array of string | Authors of publication  |            
 | year           | string          |         YYYY            |
-| pmid           | ExternalDB      |  PubMed citation        | 
-| pmcid          | ExternalDB      |  EuropePMC citation     |
+| pubmed_id           | ExternalDB      |  PubMed citation        | 
+| pmc_id          | ExternalDB      |  EuropePMC citation     |
 | doi            | ExternalDB      |  DOI citation           |
 | ucsc_id        | ExteralDB       |  UCSC citation          |
 
@@ -15,25 +15,25 @@
 {
    "authors": ["Farragher TM", "Plant D, Flynn E"],
    "year": "2007",
-   "pmid": {
+   "pubmed_id": {
       "id": "18035074",
-      "name": null,
+      "name": "Association of polymorphisms in platelet and hemostasis system genes with acute myocardial infarction",
       "description": null,
-      "url": null,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18035074/",
       "release": null
     } ,
-   "pmcid": {
+   "pmc_id": {
       "id": "PMC4031914",
-      "name": null,
+      "name": "Association of polymorphisms in platelet and hemostasis system genes with acute myocardial infarction",
       "description": null,
-      "url": null,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4031914/",
       "release": null
     },
    "doi": {
       "id": "10.1016/j.ahj.2007.05.021",
-      "name": null,
+      "name": "Association of polymorphisms in platelet and hemostasis system genes with acute myocardial infarction",
       "description": null,
-      "url": null,
+      "url": "https://doi.org/10.1016/j.ahj.2007.05.021",
       "release": null
    },
    "ucsc_id": {
