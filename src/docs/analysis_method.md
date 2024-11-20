@@ -5,7 +5,7 @@ Analysis method is to group relevant items for running a program
 |-------------------|---------------------|---------------------
 | tool              | string              | Program name eg PolyPhen-2
 | version           | string              | Version of program
-| qualifier         | array of string or []      | Mode of use/ type of result eg HumVar or HumDiv for Polyhen-2, raw or PRED style for CADD
+| qualifier         | array of string or []  | Mode of use/type of result eg HumVar or HumDiv for Polyhen-2, raw or PHRED style for CADD
 | reference_data    | array of ExternalDB | Reference data used in running the tool
 
 ## Example
