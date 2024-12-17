@@ -5,15 +5,26 @@ Analysis method is to group relevant items for running a program
 |-------------------|---------------------|---------------------
 | tool              | string              | Program name eg PolyPhen-2
 | version           | string              | Version of program
-| qualifier         | array of string or []  | Mode of use/type of result eg HumVar or HumDiv for Polyhen-2, raw or PHRED style for CADD
+| qualifier         | AnalysisMethodQuailifer | Additional data for using the tool
 | reference_data    | array of ExternalDB | Reference data used in running the tool
+
+# AnalysisMethodQuailifer 
+Analysis method qualifier include the type of result and the mode of running a program
+| Field             | Type                | Description
+|-------------------|---------------------|---------------------
+| result_type       | string  or null           | Type of result
+| mode              | array of string or []      | Mode of use, eg HumVar or HumDiv for Polyhen-2, raw or PHRED style for CADD
+
 
 ## Example
 ```json
 {
 "tool": "PolyPhen-2",
 "version": "2.2.3",
-"qualifier": "HumVar",
+"qualifier": 
+    {
+    "mode": ["HumVar"]
+    }
 "reference_data": [
     {
     "id": "Uniref90",
@@ -36,7 +47,10 @@ Analysis method is to group relevant items for running a program
         "analysis_method": {       
                     "tool": "SpliceAI",  
                     "version":  "1.3.1",
-                    "qualifier": ["delta score acceptor loss", "masked scores"],
+                    "qualifier": {
+                        "result_type": "delta score acceptor loss", 
+                        "mode": ["masked scores"]
+                    }
                     "reference_data": 
                     {
                     "id": "Ensembl_GENCODE_v24_canonical",
@@ -52,7 +66,10 @@ Analysis method is to group relevant items for running a program
         "analysis_method": { 
             "tool": "SpliceAI",      
             "version": "1.3.1",  
-            "qualifier": ["position acceptor loss", "raw scores"],    
+            "qualifier": {
+                        "result_type": "position acceptor loss", 
+                        "mode": ["masked scores"]
+                    }  
             "reference_data": 
                 {
                 "id": "Ensembl_GENCODE_v24_canonical",

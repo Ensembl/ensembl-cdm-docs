@@ -4,18 +4,15 @@
 |----------------|-----------------|-------------------------|
 | authors        | array of string | Authors of publication  |            
 | year           | string          |         YYYY            |
-| pubmed_id      | ExternalReference      |  PubMed citation        | 
-| pmc_id         | ExternalReference      |  EuropePMC citation     |
-| doi            | ExternalReference      |  DOI citation           |
-| ucsc_id        | ExteralReference       |  UCSC citation          |
-
-
+| doi_id         | string          | DOI id
+| publication_references  | array of ExternalReference or []| Pubmed, PMC, UCSC citations  
 ## Examples
 ```json
 {
    "authors": ["Farragher TM", "Plant D, Flynn E"],
    "year": "2007",
-   "pubmed_id": {
+   "doi": "10.1016/j.ahj.2007.05.021",
+   "publication_references": [{
       "accession_id": "18035074",
       "name": "Association of polymorphisms in platelet and hemostasis system genes with acute myocardial infarction",
       "description": null,
@@ -27,8 +24,8 @@
          "url": "https://pubmed.ncbi.nlm.nih.gov",
          "release": "",
       }
-    } ,
-   "pmc_id": {
+   },
+   {
       "accession_id": "PMC4031914",
       "name": "Association of polymorphisms in platelet and hemostasis system genes with acute myocardial infarction",
       "description": null,
@@ -40,8 +37,8 @@
          "url": "https://pmc.ncbi.nlm.nih.gov",
          "release": "",
       }
-    },
-   "doi": {
+   },
+   {
       "accession_id": "10.1016/j.ahj.2007.05.021",
       "name": "Association of polymorphisms in platelet and hemostasis system genes with acute myocardial infarction",
       "description": null,
@@ -54,7 +51,7 @@
          "release": "",
       }
    },
-   "ucsc_id": {
+   {
       "accession_id": "ELSS0002870307005753",
       "name": "Association of polymorphisms in platelet and hemostasis system genes with acute myocardial infarction",
       "description": null,
@@ -67,5 +64,6 @@
          "release": "",
       }
    }
+   ]
 }
 ```
