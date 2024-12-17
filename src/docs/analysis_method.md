@@ -5,10 +5,10 @@ Analysis method is to group relevant items for running a program
 |-------------------|---------------------|---------------------
 | tool              | string              | Program name eg PolyPhen-2
 | version           | string              | Version of program
-| qualifier         | AnalysisMethodQuailifer | Additional data for using the tool
+| qualifier         | AnalysisMethodQualifier | Additional data for using the tool
 | reference_data    | array of ExternalDB | Reference data used in running the tool
 
-# AnalysisMethodQuailifer 
+# AnalysisMethodQualifier 
 Analysis method qualifier include the type of result and the mode of running a program
 | Field             | Type                | Description
 |-------------------|---------------------|---------------------
