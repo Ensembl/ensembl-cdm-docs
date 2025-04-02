@@ -9,11 +9,11 @@ Analysis method is to group relevant items for running a program
 | reference_data    | array of ExternalDB or [] | Reference data used in running the tool
 
 # AnalysisMethodQualifier 
-Analysis method qualifier include the type of result and the mode of running a program
+Analysis method qualifier include the type of result and the modes of running a program
 | Field             | Type                | Description
 |-------------------|---------------------|---------------------
 | result_type       | string  or null           | Type of result
-| mode              | array of string or []      | Mode of use, eg HumVar or HumDiv for Polyhen-2, raw or PHRED style for CADD
+| modes              | array of string or []      | Modes of use, eg HumVar or HumDiv for Polyhen-2, raw or PHRED style for CADD
 
 
 ## Example
@@ -23,7 +23,7 @@ Analysis method qualifier include the type of result and the mode of running a p
 "version": "2.2.3",
 "qualifier": 
     {
-    "mode": ["HumVar"]
+    "modes": ["HumVar"]
     }
 "reference_data": [
     {
@@ -49,7 +49,7 @@ Analysis method qualifier include the type of result and the mode of running a p
                     "version":  "1.3.1",
                     "qualifier": {
                         "result_type": "delta score acceptor loss", 
-                        "mode": ["masked scores"]
+                        "modes": ["masked scores"]
                     }
                     "reference_data": 
                     {
@@ -68,7 +68,7 @@ Analysis method qualifier include the type of result and the mode of running a p
             "version": "1.3.1",  
             "qualifier": {
                         "result_type": "position acceptor loss", 
-                        "mode": ["masked scores"]
+                        "modes": ["masked scores"]
                     }  
             "reference_data": 
                 {
