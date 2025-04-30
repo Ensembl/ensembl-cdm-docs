@@ -19,21 +19,22 @@ Analysis method qualifier include the type of result and the modes of running a 
 ## Example
 ```json
 {
-"tool": "PolyPhen-2",
-"version": "2.2.3",
-"qualifier": 
-    {
-    "modes": ["HumVar"]
-    }
-"reference_data": [
-    {
-    "id": "Uniref90",
-    "name": "Uniref90",
-    "description": null,
-    "url": null,
-    "release": null
-    }
-]
+    "tool": "PolyPhen-2",
+    "version": "2.2.3",
+    "qualifier": {
+        "modes": [
+            "HumVar"
+        ]
+    },
+    "reference_data": [
+        {
+            "id": "Uniref90",
+            "name": "Uniref90",
+            "description": null,
+            "url": null,
+            "release": null
+        }
+    ]
 }
 ``` 
 
@@ -43,46 +44,45 @@ Analysis method qualifier include the type of result and the modes of running a 
 {
     "prediction_results": [
         {
-        "score": 0.83,
-        "analysis_method": {       
-                    "tool": "SpliceAI",  
-                    "version":  "1.3.1",
-                    "qualifier": {
-                        "result_type": "delta score acceptor loss", 
-                        "modes": ["masked scores"]
-                    }
-                    "reference_data": 
-                    {
+            "score": 0.83,
+            "analysis_method": {
+                "tool": "SpliceAI",
+                "version": "1.3.1",
+                "qualifier": {
+                    "result_type": "delta score acceptor loss",
+                    "modes": [
+                        "masked scores"
+                    ]
+                },
+                "reference_data": {
                     "id": "Ensembl_GENCODE_v24_canonical",
                     "name": "Ensembl GENCODE v24 canonical",
                     "description": null,
                     "url": null,
                     "release": null
-                    }
-                    }
+                }
+            }
         },
         {
-        "score": 43,
-        "analysis_method": { 
-            "tool": "SpliceAI",      
-            "version": "1.3.1",  
-            "qualifier": {
-                        "result_type": "position acceptor loss", 
-                        "modes": ["masked scores"]
-                    }  
-            "reference_data": 
-                {
-                "id": "Ensembl_GENCODE_v24_canonical",
-                "name": "Ensembl GENCODE v24 canonical",
-                "description": null,
-                "url": null,
-                "release": null
+            "score": 43,
+            "analysis_method": {
+                "tool": "SpliceAI",
+                "version": "1.3.1",
+                "qualifier": {
+                    "result_type": "position acceptor loss",
+                    "modes": [
+                        "masked scores"
+                    ]
+                },
+                "reference_data": {
+                    "id": "Ensembl_GENCODE_v24_canonical",
+                    "name": "Ensembl GENCODE v24 canonical",
+                    "description": null,
+                    "url": null,
+                    "release": null
                 }
-        }
+            }
         }
     ]
-
 }
-
-
 ```
