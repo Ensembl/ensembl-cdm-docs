@@ -18,6 +18,7 @@
       "Southwick A",
    ],
    "year": "2007",
+   "title": "Association of polymorphisms in platelet and hemostasis system genes with acute myocardial infarction",
    "doi": "10.1016/j.ahj.2007.05.021",
    "publication_references": [
       {
