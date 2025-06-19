@@ -16,6 +16,12 @@
       "Wang H", 
       "Itakura H", 
       "Southwick A",
+      "Myers RM", 
+      "Iribarren C", 
+      "Fortmann SP", 
+      "Go AS", 
+      "Quertermous T", 
+      "Hlatky MA"
    ],
    "year": "2007",
    "title": "Association of polymorphisms in platelet and hemostasis system genes with acute myocardial infarction",
