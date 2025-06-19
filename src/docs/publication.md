@@ -4,7 +4,7 @@
 |----------------|-----------------|-------------------------|
 | authors        | array of string | Authors of publication  |            
 | year           | string          |         YYYY            |
-| doi_id         | string          | DOI id
+| doi_id         | string or null        | DOI id
 | publication_references  | array of ExternalReference or []| Pubmed, PMC, UCSC citations
 
 ## Examples
@@ -15,7 +15,7 @@
       "Plant D, Flynn E"
    ],
    "year": "2007",
-   "doi": "10.1016/j.ahj.2007.05.021",
+   "doi_id": "10.1016/j.ahj.2007.05.021",
    "publication_references": [
       {
          "accession_id": "18035074",
