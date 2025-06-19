@@ -4,18 +4,21 @@
 |----------------|-----------------|-------------------------|
 | authors        | array of string | Authors of publication  |            
 | year           | string          |         YYYY            |
-| doi_id         | string or null        | DOI id
+| title          | string          | Title of publication    |
+| doi            | string or null        | DOI
 | publication_references  | array of ExternalReference or []| Pubmed, PMC, UCSC citations
 
 ## Examples
 ```json
 {
    "authors": [
-      "Farragher TM",
-      "Plant D, Flynn E"
+      "Knowles JW", 
+      "Wang H", 
+      "Itakura H", 
+      "Southwick A",
    ],
    "year": "2007",
-   "doi_id": "10.1016/j.ahj.2007.05.021",
+   "doi": "10.1016/j.ahj.2007.05.021",
    "publication_references": [
       {
          "accession_id": "18035074",
