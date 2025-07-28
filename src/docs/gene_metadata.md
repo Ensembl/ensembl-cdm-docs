@@ -103,7 +103,7 @@ Gene biotype metadata is an instance of [ValueSetMetadata](./metadata.md):
     "value": "protein_coding",
     "label": "Protein coding",
     "definition": "Gene loci with at least one protein coding transcript.",
-    "description": "???"
+    "description": "..."
   }
 }
 ```

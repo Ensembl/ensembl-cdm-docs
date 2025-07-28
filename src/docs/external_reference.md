@@ -27,7 +27,10 @@ The `External Reference` data type represents a reference to a database outside 
       "description": null,
       "assignment_method": {
         "type": "DIRECT",
-        "description": "A reference made by an external resource of annotation to an Ensembl feature that Ensembl imports without modification"
+        "name": null,
+        "description": "A reference made by an external resource of annotation to an Ensembl feature that Ensembl imports without modification",
+        "version": null
+
       },
       "url": "https://www.ncbi.nlm.nih.gov/protein/NM_001374244",
       "source": {
@@ -49,7 +52,10 @@ The `External Reference` data type represents a reference to a database outside 
       "description": null,
       "assignment_method": {
         "type": "COORDINATE_OVERLAP",
-        "description": "A reference inferred from annotation of the same locus as a feature in Ensembl. Mostly relevant when comparing annotation between assemblies with different sequences than Ensembl for the same species"
+        "name": null,
+        "description": "A reference inferred from annotation of the same locus as a feature in Ensembl. Mostly relevant when comparing annotation between assemblies with different sequences than Ensembl for the same species",
+        "version": null
+
       },
       "url": null,
       "source": {

@@ -40,6 +40,5 @@ The `AssignmentMethod` data type describes the method by which an [external refe
     "name": "Ensembl Machine Learning Gene Name assignment",
     "description": "Predicted using Ensembl Machine Learning Gene Name assignment method",
     "version": "VERT_NN_1"
-
 }
 ```
