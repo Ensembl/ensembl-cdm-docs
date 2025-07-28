@@ -1,4 +1,5 @@
 # Publication
+Data type describing publications citing variations and other genomic features
 
 | Field          | Type            | Description             |
 |----------------|-----------------|-------------------------|
