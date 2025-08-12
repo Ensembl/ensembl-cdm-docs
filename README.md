@@ -1,7 +1,7 @@
 # Ensembl Core Data Model (CDM)
 
 ## Introduction
-The Ensembl Core Data Model (CDM) describes how the central concepts of Ensembl (Features, genomic locations, external references, metadata etc.) are presented through APIs and services to internal (e.g the new Ensembl website) and external clients (e.g those who interact with Ensembl APIs). The model will aid Ensembl in future development efforts, being compatible with known strategic directions, including Pangenomes.
+The Ensembl Core Data Model (CDM) describes how the central concepts of Ensembl (Features (such as genes and transcripts), genomic locations, external references, metadata etc.) are presented through APIs and services to internal (e.g the new Ensembl website) and external clients (e.g those who interact with Ensembl APIs). The model will aid Ensembl in future development efforts, being compatible with known strategic directions, including pan-genomes.
 
 ## Key concepts
 
@@ -14,7 +14,7 @@ The key concepts in the model can be broken into the following categories:-
 ### Features and localisation
 
 #### Features
-In the model, [Feature](./src/docs/feature.md) is defined as an abstract concept for modelling areas of interest in a genomic coordinate space.  Typically concrete representations of features have a stable_id for identification.  The term stable_id refers to a publicly available identifier (e.g. ENST00000380152.8) assigned by a project or institute and can be considered to be unique within an Assembly.  
+In the model, [Feature](./src/docs/feature.md) is defined as an abstract concept for modelling areas of interest in a genomic coordinate space.  Typically concrete representations of features have a stable_id for identification.  The term stable_id refers to a publicly available identifier (e.g. ENST00000380152.8) assigned by a project or institute and can be considered to be unique within an [Assembly](./src/docs/assembly.md) .  
 
 Features in the model are:
 - [Gene](./src/docs/gene.md)
@@ -69,12 +69,12 @@ Sequence allows for integration with [RefGet](https://github.com/ga4gh/large-sca
 
 
 CDM separates Metadata into two types:
-- ExternalReferenceMetadata
-- ValueSetMetadata
+- [ExternalReferenceMetadata](./src/docs/external_reference.md) 
+- [ValueSetMetadata](./src/docs/value_set.md)
 
 #### ExternalReferenceMetadata
 
-ExternalReferenceMetadata is metadata which comes from a source external to Ensembl.  An example of this would be the `name` of a Gene, which could come from VGNC.
+ExternalReferenceMetadata is metadata which comes from a source external to Ensembl.  An example of this would be the `name` of a Gene, which could come from [VGNC](https://vertebrate.genenames.org/).
 
 
 
@@ -104,3 +104,7 @@ The CDM has been used as the basis for our new API development.  This ensures th
 ### Versioning
 
 The CDM uses semantic versioning.  This is managed through Git tags. 
+
+### Issues
+
+Issues with the CDM are tracked using Github issues.  Alternatively, the Ensembl team can be contacted using the "contact us" link.

@@ -6,7 +6,7 @@ The `Region` data type describes the coordinate system that contains [Features](
 |-----------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | accession_id          | string                      | INSDC identifier for the region                                                                                                               |
 | name                  | string                      | Commonly used name for region (e.g. 1, 2, 3, X, Y etc.)                                                                                       |
-| synonyms              | Array of string             | List of synonyms the region may be known as (including `name`)                                                                                |
+| synonyms              | Array of RegionSynonymMetadata             | List of synonyms the region may be known as (including `name`)                                                                                |
 | coordinate_system     | [ValueSet](./value_set.md)  | A ValueSet item containing information about the coordinate_system (e.g chromosome, contig) of the region                                     |
 | genetic_code          | integer                     | Genetic code based on the [NCBI's list of genetic codes](https://www.ncbi.nlm.nih.gov/Taxonomy/taxonomyhome.html/index.cgi?chapter=cgencodes) |
 | is_top_level          | boolean                     | Flag to explicitly mark a selected subset of regions as "top Level"                                                                           |
