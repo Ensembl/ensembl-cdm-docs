@@ -107,4 +107,8 @@ The CDM uses semantic versioning.  This is managed through Git tags.
 
 ### Issues
 
-Issues with the CDM are tracked using Github issues.  Alternatively, the Ensembl team can be contacted using the "contact us" link.
+Issues with the CDM are tracked using Github issues.  
+
+### Contact us
+
+The Ensembl team can be contacted using the "contact us" link on the Ensembl [website](https://beta.ensembl.org) if there are any questions relating to the model.
