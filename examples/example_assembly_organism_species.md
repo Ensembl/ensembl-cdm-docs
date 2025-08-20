@@ -1,4 +1,6 @@
-Using https://www.ebi.ac.uk/ena/browser/view/SAMEA7520487?show=related-records
+# Example of model (species, organism and assembly)
+
+A worked example of the model demonstrating the relationship between [Species](./species.md), [Organism](./organism.md) and [Assembly](./assembly.md).  This example starts with the species Bombus terrestris and includes its associated organism and assembly.
 
 ```json
 
@@ -9,24 +11,25 @@ Using https://www.ebi.ac.uk/ena/browser/view/SAMEA7520487?show=related-records
     "taxon_id": 30195,
     "organisms": [
         {
-        "scientific_name": "Bombus terrestris",
-        "scientific_parlance_name": "buff-tailed bumblebee",
-        "tolid": "iyBomTerr1", 
-        "id" : "c2c77798-5818-49e9-ac12-c6176627599f", 
-        "species": {},
-        "groups": [
+            "scientific_name": "Bombus terrestris",
+            "scientific_parlance_name": "buff-tailed bumblebee",
+            "tolid": "iyBomTerr1", 
+            "id" : "c2c77798-5818-49e9-ac12-c6176627599f", 
+            "species": {...},
+            "groups": [
             {
-            "code": "garden_insects",
-            "type": "division",
-            "name": "Garden Insects",
-            "is_reference_organism": "false",
-            "metadata": {
-                "grouping_method": {
-                    "accession_id": "grouping_method.consortium",
-                    "value": "consortium",
-                    "label": "Consortium",
-                    "definition": "Consortium defined",
-                    "description": "This grouping was defined by a consortium"
+                "code": "insects",
+                "type": "division",
+                "name": "Insects",
+                "is_reference_organism": "false",
+                "organisms": [...],
+                "metadata": {
+                    "grouping_method": {
+                        "accession_id": "grouping_method.consortium",
+                        "value": "consortium",
+                        "label": "Consortium",
+                        "definition": "Consortium defined",
+                        "description": "This grouping was defined by a consortium"
                     }
                 }   
             }
@@ -37,7 +40,7 @@ Using https://www.ebi.ac.uk/ena/browser/view/SAMEA7520487?show=related-records
                 "name": "iyBomTerr1.1",
                 "accession_id": "GCA_910591885.1",  
                 "accessioning_body": "ENA",
-                "organism": { },
+                "organism": {...},
                 "default": false,
                 "tolid": "iyBomTerr1.1",
                 "regions": [
@@ -45,13 +48,16 @@ Using https://www.ebi.ac.uk/ena/browser/view/SAMEA7520487?show=related-records
                         "accession_id": "OU342921.1",
                         "name": "1",
                         "synonyms": ["1", "OU342921"],
-                        "code": {
+                        "coordinate_system": {
                             "accession_id": "region.chromosome",
                             "value": "Chromosome",
                             "label": "chromosome",
                             "definition": "Chromosome",
                             "description": "Structural unit composed of a nucleic acid molecule which controls its own replication through the interaction of specific proteins at one or more origins of replication."
                         },
+                        "genetic_code": 1,
+                        "is_top_level": true,
+                        "rank": 1,
                         "topology":{
                             "accession_id": "topology.linear",
                             "value": "Linear",
@@ -59,8 +65,6 @@ Using https://www.ebi.ac.uk/ena/browser/view/SAMEA7520487?show=related-records
                             "definition": "Linear topology",
                             "description": "Linear topology"
                         },
-                        "is_top_level": true,
-                        "rank": 1,
                         "made_from": [], 
                         "part_of": [],
                         "sequence": {
@@ -73,10 +77,10 @@ Using https://www.ebi.ac.uk/ena/browser/view/SAMEA7520487?show=related-records
                             },
                             "checksum": "1205ad8ae0c9d9ef3ebf66de5285cd96",
                         },
-                        "assembly": {  }, 
+                        "assembly": {...}, 
                         "length": 18372659,
                         "metadata": {
-                            "ontology_terms": [
+                        "ontology_terms": [
                             {
                                 "accession_id": "SO:0000340",
                                 "value": "chromosome",
@@ -87,7 +91,7 @@ Using https://www.ebi.ac.uk/ena/browser/view/SAMEA7520487?show=related-records
                                     "description": "The Sequence Ontology..."
                                 }
                             }
-                            ],
+                        ],
                         "synonyms": [
                             {        
                                 "accession" : "OU342921.1",
@@ -113,45 +117,30 @@ Using https://www.ebi.ac.uk/ena/browser/view/SAMEA7520487?show=related-records
                             }
                         ]
                     }
-                }]
+                    }
+                ]
             },
             {
                 "id": "9899f7aa-966b-4de1-953d-cd2ccc5fe86f",
                 "name": "iyBomTerr1.2",
-                "accession_id": "GCA_910591885",
+                "accession_id": "GCA_910591885.2",
                 "accessioning_body": "ENA",
                 "organism": { },
                 "default": true,
                 "tolid": "iyBomTerr1.2",
-                "regions": [
-                    {  } 
-                ]
-            },
-            {
-                "id": "05648378-81d8-4b62-8bb5-20751b2185ef",
-                "name": "iyBomTerr1.1 alternate haplotype",
-                "accession_id": "GCA_910592195",
-                "accessioning_body": "ENA",
-                "organism": { },
-                "default": false,
-                "tolid": "iyBomTerr1.1",
-                "regions": [
-                    {  } 
-                ]
+                "regions": [ {...} ]
             },
             {
                 "id": "bcb88ab8-1652-44f5-8bd4-8689951eada7",
                 "name": "iyBomTerr1.2 alternate haplotype",
-                "accession_id": "GCA_910592195",
+                "accession_id": "GCA_9105921952",
                 "accessioning_body": "ENA",
                 "organism": { },
                 "default": false,
                 "tolid": "iyBomTerr1.2",
-                "regions": [
-                    {  } 
-                ]
-            } ] 
-        }
-    ]
+                "regions": [ {...} ]
+            } 
+        ] 
+    }]
 }
 ```
