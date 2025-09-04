@@ -6,7 +6,7 @@ The `CDS` (**c**o**d**ing **s**equence) data type represents the region of a [cD
 | start            | integer | Genomic start coordinate (1-based)
 | end              | integer | Genomic end coordinate (1-based, inclusive)
 | relative_start   | integer | Start coordinate (1-based) relative to the beginning (5'-end) of the [Transcript](./transcript.md)
-| relative_end     | integer | End coordinate relative to `Transcript`'s start (1-based, inclusive)
+| relative_end     | integer | End coordinate (1-based, inclusive) relative to the beginning (5'-end) of the [Transcript](./transcript.md)
 | nucleotide_length| integer | Total number of nucleotides comprising the `CDS`
 | protein_length   | integer | Number of amino acids in the protein encoded by the `CDS`
 | sequence         | Sequence| See [Sequence](./sequence.md)
