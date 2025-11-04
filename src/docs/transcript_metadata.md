@@ -5,7 +5,7 @@ A [Transcript](./transcript.md) has the following metadata associated with it:
 | Field          | Type|
 |----------------|--------------------------------------------------------|
 | function       | TranscriptFunctionMetadata or null                     |
-| gencode_basic  | TranscriptGencodeBasicMetadata or null                 |
+| gencode_sets   | Array of TranscriptGencodeSetMetadata                  |
 | canonical      | TranscriptCanonicalMetadata                            |
 | mane           | TranscriptManeMetadata or null                         |
 | tsl            | TranscriptTSLMetadata                                  |
@@ -47,21 +47,33 @@ Like gene biotype metadata, transcript biotype metadata is an instance of [Value
 }
 ```
 
-### TranscriptGencodeBasicMetadata
-Transcript gencode basic metadata is an instance of ValueSetMetadata:
+### TranscriptGencodeSetMetadata
+Transcript gencode metadata is an instance of ValueSetMetadata.  They are used to describe the Gecode sets transcripts belong to:
 
 
 ```json
 {
-  "gencode_basic": {
+  "gencode_set": {
     "accession_id": "gencode_basic.true",
     "value": "true",
     "label": "GENCODE Basic",
     "definition": "Gene loci with at least one protein coding transcript.",
-    "description": "???"
+    "description": "..."
   }
 }
+
+{
+  "gencode_set": {
+    "accession_id": "gencode_primary.true",
+    "value": "true",
+    "label": "GENCODE Primary",
+    "definition": "...",
+    "description": "..."
+  }
+}
+
 ```
+
 
 Note: transcript gencode basic metadata is only applicable for human and mouse transcripts.
 
@@ -143,22 +155,6 @@ This is a generic piece of metadata applicaplable to many different entities, an
 
 ## Prospective transcript metadata
 Transcript metadata that is expected to be added in the future.
-
-### TranscriptGencodePrimaryMetadata
-Transcript gencode primary metadata is an instance of ValueSetMetadata:
-
-
-```json
-{
-    "gencode_primary": {
-      "accession_id": "gencode_primary.true",
-      "value": "true",
-      "label": "GENCODE Primary",
-      "definition": "Gene loci with at least one protein coding transcript.",
-      "description": "???",
-    },
-}
-```
 
 _To be determined:_  whether the transcript gencode primary metadata will also include a `reasons` field containing reasons for inclusion of this transcript in the gencode primary category.
 
