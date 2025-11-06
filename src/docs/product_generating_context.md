@@ -13,6 +13,7 @@ The `Product-Generating Context` data type contains information about the specif
 | product       | Product             | A protein or RNA product, see [Product](./product.md) and [ProteinProduct](./protein_product.md)
 | phased_exons  | Array of PhasedExon | See [PhasedExon](./phased_exon.md)
 | transcripts   | Array of Transcript | See [Transcript](./transcript.md)
+|sequence_edits | Array of SequenceEdit | See [SequenceEdit](./sequence_edit.md)
 
 ## ProductType
 `ProductType` is an enum of strings from a controlled vocabulary, such as `protein`, or `miRNA`.
@@ -26,6 +27,7 @@ Note that `Product-Generating Context` is not intended to represent alternative 
 1. The purpose of the `product_type` field in `Product-Generating Context` is to signal which values in other fields to expect. For example, only if the `product_type` is `protein` will the `cds` field contain the `CDS` data; in all other cases it will be `null`.
 2. To represent trans-splicing, a `product_generating_context` can be linked to multiple `transcript`s through `transcripts`.
 3. `phased_exon`s will be present for all `product_generating_context`s regardless of their product.
+4. `sequence_edits` can refer to either the product (`"edit_level":"peptide"`) or the transcript(s) (`"edit_level":"transcript"`)
 
 ## Examples
 
@@ -47,7 +49,8 @@ Note that `Product-Generating Context` is not intended to represent alternative 
   ],
   "transcripts": [
     { ... }
-  ]
+  ],
+  "sequence_edits":[]
 }
 ```
 
@@ -69,6 +72,7 @@ The `cds`, `5_prime_utr`, and `3_prime_utr` fields will be null.
   ],
   "transcripts": [
     { ... }
-  ]
+  ],
+  "sequence_edits":[]
 }
 ```
