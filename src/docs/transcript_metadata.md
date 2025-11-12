@@ -48,7 +48,7 @@ Like gene biotype metadata, transcript biotype metadata is an instance of [Value
 ```
 
 ### TranscriptGencodeSetMetadata
-Transcript gencode metadata is an instance of ValueSetMetadata.  They are used to describe the Gecode sets transcripts belong to:
+Transcript gencode metadata is an instance of ValueSetMetadata.  They are used to describe the Gencode sets transcripts belong to:
 
 
 ```json
