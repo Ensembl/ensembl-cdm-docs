@@ -2,16 +2,18 @@
 
 A [Transcript](./transcript.md) has the following metadata associated with it:
 
-| Field          | Type|
-|----------------|--------------------------------------------------------|
-| function       | TranscriptFunctionMetadata or null                     |
-| gencode_sets   | Array of TranscriptGencodeSetMetadata                  |
-| canonical      | TranscriptCanonicalMetadata                            |
-| mane           | TranscriptManeMetadata or null                         |
-| tsl            | TranscriptTSLMetadata                                  |
-| appris         | TranscriptApprisMetadata                               |
-| biotype        | TranscriptBiotypeMetadata                              |
-| ontology_terms | Array of [OntologyTermMetadata](./generic_metadata.md) |
+| Field                   | Type                                                   |
+|-------------------------|--------------------------------------------------------|
+| function                | TranscriptFunctionMetadata or null                     |
+| gencode_basic           | TranscriptGencodeBasicMetadata or null                 |
+| gencode_primary         | TranscriptGencodePrimaryMetadata or null               |
+| gencode_comprehensive   | TranscriptGencodeComprehensiveMetadata or null         |
+| canonical               | TranscriptCanonicalMetadata                            |
+| mane                    | TranscriptManeMetadata or null                         |
+| tsl                     | TranscriptTSLMetadata                                  |
+| appris                  | TranscriptApprisMetadata                               |
+| biotype                 | TranscriptBiotypeMetadata                              |
+| ontology_terms          | Array of [OntologyTermMetadata](./generic_metadata.md) |
 
 
 ### TranscriptFunctionMetadata
@@ -47,23 +49,26 @@ Like gene biotype metadata, transcript biotype metadata is an instance of [Value
 }
 ```
 
-### TranscriptGencodeSetMetadata
-Transcript gencode metadata is an instance of ValueSetMetadata.  They are used to describe the Gencode sets transcripts belong to:
-
+### TranscriptGencodeBasicMetadata
+Transcript gencode basic metadata is an instance of ValueSetMetadata:
 
 ```json
 {
-  "gencode_set": {
+  "gencode_basic": {
     "accession_id": "gencode_basic.true",
     "value": "true",
     "label": "GENCODE Basic",
-    "definition": "Gene loci with at least one protein coding transcript.",
+    "definition": "...",
     "description": "..."
   }
 }
+```
+### TranscriptGencodePrimaryMetadata
+Transcript gencode primary metadata is an instance of ValueSetMetadata:
 
+```json
 {
-  "gencode_set": {
+  "gencode_primary": {
     "accession_id": "gencode_primary.true",
     "value": "true",
     "label": "GENCODE Primary",
@@ -71,11 +76,24 @@ Transcript gencode metadata is an instance of ValueSetMetadata.  They are used t
     "description": "..."
   }
 }
-
 ```
 
+### TranscriptGencodeComprehensiveMetadata
+Transcript gencode comprehensive metadata is an instance of ValueSetMetadata:
 
-Note: transcript gencode basic metadata is only applicable for human and mouse transcripts.
+```json
+{
+  "gencode_comprehensive": {
+    "accession_id": "gencode_comprehensive.true",
+    "value": "true",
+    "label": "GENCODE Comprehensive",
+    "definition": "...",
+    "description": "..."
+  }
+}
+```
+
+Note: transcript gencode basic, primary and comprehensive metadata are currently only applicable for human and mouse transcripts.
 
 ### TranscriptCanonicalMetadata
 There is always one — and only one — transcript among gene transcripts that is designated as canonical. The transcript canonical metadata is an instance of ValueSetMetadata:
