@@ -49,8 +49,8 @@ Like gene biotype metadata, transcript biotype metadata is an instance of [Value
 }
 ```
 
-### TranscriptGencodeBasicMetadata
-Transcript gencode basic metadata is an instance of ValueSetMetadata:
+### TranscriptGencodeMetadata
+TranscriptGencodeBasicMetadata, TranscriptGencodePrimaryMetadata and TranscriptGencodeComprehensiveMetadata are all instances of ValueSetMetadata:
 
 ```json
 {
@@ -62,11 +62,7 @@ Transcript gencode basic metadata is an instance of ValueSetMetadata:
     "description": "..."
   }
 }
-```
-### TranscriptGencodePrimaryMetadata
-Transcript gencode primary metadata is an instance of ValueSetMetadata:
 
-```json
 {
   "gencode_primary": {
     "accession_id": "gencode_primary.true",
@@ -76,12 +72,7 @@ Transcript gencode primary metadata is an instance of ValueSetMetadata:
     "description": "..."
   }
 }
-```
 
-### TranscriptGencodeComprehensiveMetadata
-Transcript gencode comprehensive metadata is an instance of ValueSetMetadata:
-
-```json
 {
   "gencode_comprehensive": {
     "accession_id": "gencode_comprehensive.true",
