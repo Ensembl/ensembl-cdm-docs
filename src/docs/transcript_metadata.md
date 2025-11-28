@@ -5,9 +5,9 @@ A [Transcript](./transcript.md) has the following metadata associated with it:
 | Field                   | Type                                                   |
 |-------------------------|--------------------------------------------------------|
 | function                | TranscriptFunctionMetadata or null                     |
-| gencode_basic           | TranscriptGencodeBasicMetadata or null                 |
-| gencode_primary         | TranscriptGencodePrimaryMetadata or null               |
-| gencode_comprehensive   | TranscriptGencodeComprehensiveMetadata or null         |
+| gencode_basic           | TranscriptGencodeMetadata or null                      |
+| gencode_primary         | TranscriptGencodeMetadata or null                      |
+| gencode_comprehensive   | TranscriptGencodeMetadata or null                      |
 | canonical               | TranscriptCanonicalMetadata                            |
 | mane                    | TranscriptManeMetadata or null                         |
 | tsl                     | TranscriptTSLMetadata                                  |
