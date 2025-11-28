@@ -50,7 +50,7 @@ Like gene biotype metadata, transcript biotype metadata is an instance of [Value
 ```
 
 ### TranscriptGencodeMetadata
-TranscriptGencodeBasicMetadata, TranscriptGencodePrimaryMetadata and TranscriptGencodeComprehensiveMetadata are all instances of ValueSetMetadata:
+TranscriptGencodeMetadata is an instance of ValueSetMetadata:
 
 ```json
 {
