@@ -2,16 +2,18 @@
 
 A [Transcript](./transcript.md) has the following metadata associated with it:
 
-| Field          | Type|
-|----------------|--------------------------------------------------------|
-| function       | TranscriptFunctionMetadata or null                     |
-| gencode_basic  | TranscriptGencodeBasicMetadata or null                 |
-| canonical      | TranscriptCanonicalMetadata                            |
-| mane           | TranscriptManeMetadata or null                         |
-| tsl            | TranscriptTSLMetadata                                  |
-| appris         | TranscriptApprisMetadata                               |
-| biotype        | TranscriptBiotypeMetadata                              |
-| ontology_terms | Array of [OntologyTermMetadata](./generic_metadata.md) |
+| Field                   | Type                                                   |
+|-------------------------|--------------------------------------------------------|
+| function                | TranscriptFunctionMetadata or null                     |
+| gencode_basic           | TranscriptGencodeMetadata or null                      |
+| gencode_primary         | TranscriptGencodeMetadata or null                      |
+| gencode_comprehensive   | TranscriptGencodeMetadata or null                      |
+| canonical               | TranscriptCanonicalMetadata                            |
+| mane                    | TranscriptManeMetadata or null                         |
+| tsl                     | TranscriptTSLMetadata                                  |
+| appris                  | TranscriptApprisMetadata                               |
+| biotype                 | TranscriptBiotypeMetadata                              |
+| ontology_terms          | Array of [OntologyTermMetadata](./generic_metadata.md) |
 
 
 ### TranscriptFunctionMetadata
@@ -47,9 +49,8 @@ Like gene biotype metadata, transcript biotype metadata is an instance of [Value
 }
 ```
 
-### TranscriptGencodeBasicMetadata
-Transcript gencode basic metadata is an instance of ValueSetMetadata:
-
+### TranscriptGencodeMetadata
+TranscriptGencodeMetadata is an instance of ValueSetMetadata:
 
 ```json
 {
@@ -57,13 +58,33 @@ Transcript gencode basic metadata is an instance of ValueSetMetadata:
     "accession_id": "gencode_basic.true",
     "value": "true",
     "label": "GENCODE Basic",
-    "definition": "Gene loci with at least one protein coding transcript.",
-    "description": "???"
+    "definition": "...",
+    "description": "..."
+  }
+}
+
+{
+  "gencode_primary": {
+    "accession_id": "gencode_primary.true",
+    "value": "true",
+    "label": "GENCODE Primary",
+    "definition": "...",
+    "description": "..."
+  }
+}
+
+{
+  "gencode_comprehensive": {
+    "accession_id": "gencode_comprehensive.true",
+    "value": "true",
+    "label": "GENCODE Comprehensive",
+    "definition": "...",
+    "description": "..."
   }
 }
 ```
 
-Note: transcript gencode basic metadata is only applicable for human and mouse transcripts.
+Note: transcript gencode basic, primary and comprehensive metadata are currently only applicable for human and mouse transcripts.
 
 ### TranscriptCanonicalMetadata
 There is always one — and only one — transcript among gene transcripts that is designated as canonical. The transcript canonical metadata is an instance of ValueSetMetadata:
@@ -143,22 +164,6 @@ This is a generic piece of metadata applicaplable to many different entities, an
 
 ## Prospective transcript metadata
 Transcript metadata that is expected to be added in the future.
-
-### TranscriptGencodePrimaryMetadata
-Transcript gencode primary metadata is an instance of ValueSetMetadata:
-
-
-```json
-{
-    "gencode_primary": {
-      "accession_id": "gencode_primary.true",
-      "value": "true",
-      "label": "GENCODE Primary",
-      "definition": "Gene loci with at least one protein coding transcript.",
-      "description": "???",
-    },
-}
-```
 
 _To be determined:_  whether the transcript gencode primary metadata will also include a `reasons` field containing reasons for inclusion of this transcript in the gencode primary category.
 
