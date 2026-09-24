@@ -14,7 +14,7 @@ The Transcript data type describes a operational unit of a gene. In a genomic co
 | spliced_exons               | array of [SplicedExon](./spliced_exon.md)           | The ordered list of [exons](./exon.md) of the transcript
 | introns                     | array of Intron                                     | The ordered list of [introns](./intron.md) of the transcript
 | product_generating_contexts | array of ProductGeneratingContext                   | see [ProductGeneratingContext](./product_generating_context.md)
-| metadata                    | TranscriptMetadata                                  | See [metadata](./metadata.md)
+| metadata                    | [TranscriptMetadata](./transcript_metadata.md)      | See [transcript metadata](./transcript_metadata.md)
 | gene                        | Gene                                                | The parent [gene](./gene.md) of the transcript, see Gene
 | external_references         | array of ExternalReference                          | See [ExternalReference](./external_reference.md)
 
