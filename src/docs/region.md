@@ -10,12 +10,14 @@ The `Region` data type describes the coordinate system that contains [Features](
 | coordinate_system     | [ValueSet](./value_set.md)  | A ValueSet item containing information about the coordinate_system (e.g chromosome, contig) of the region                                     |
 | genetic_code          | integer                     | Genetic code based on the [NCBI's list of genetic codes](https://www.ncbi.nlm.nih.gov/Taxonomy/taxonomyhome.html/index.cgi?chapter=cgencodes) |
 | is_top_level          | boolean                     | Flag to explicitly mark a selected subset of regions as "top Level"                                                                           |
-| rank                  | int or null                 | The order of the region (resolves issues with alphanumeric character sorting)                                                                 |
+| rank                  | integer or null             | The order of the region (resolves issues with alphanumeric character sorting)                                                                 |
 | topology              | ValueSet                    | A ValueSet item describing the topology of the region - see below                                                                             |
 | made_from             | Array of Region             | A list of the Regions which were used to generate the Region (these will typically be Regions smaller than the Region)                        |
 | part_of               | Array of Region             | A list of the Regions which the Region has been incorporated into (these will typically be larger than the Region)                            |
 | sequence              | Sequence                    | See [Sequence](./sequence.md)                                                                                                                 |
 | assembly              | Assembly                    | See [Assembly](./assembly.md)                                                                                                                 |
+| chromosome_group      | string or null              | Name of the group of evolutionarily related chromosome regions                                                                                |
+| subassembly           | Subassembly or null         | See [Subassembly](./subassembly.md)                                                                                                           |
 | length                | integer                     | Length of the region, in nucleotides                                                                                                          |
 | metadata              | Metadata                    | See [Metadata](./region_metadata.md)                                                                                                          |
 
@@ -41,6 +43,12 @@ The region hierarchy is defined by the relationships a region has with other reg
 
 ## Assembly
 Each `region` will only link to one `assembly`.
+
+## Chromosome group
+Only applicable to *chromosome* `regions`, `null` for all the other types. Equal to `name` for monoploid (`ploidy=1`) and diploid (`ploidy=2`) `assemblies`. For polyploids (`ploidy>2`), equal to `name` minus the `subassembly` component, e.g. in bread wheat, chromosomes `1A`, `1B` and `1D` will all have `chromosome_group=1` whilst each chromosome will link to its own `subassembly`, i.e. `A`, `B` and `D` respectively.
+
+## Subassembly
+Only *chromosome* `regions` can link to one `subassembly`. Other `regions` will have `null` for this field.
 
 ## Rank
 Based on the order within the karyotype Chromosome 1 = 1, X = 23, Y = 24 (in Human for example).  
@@ -75,6 +83,8 @@ To ensure regions are returned in a specific order, it is suggested that impleme
   "part_of": [],
   "sequence": { ... },
   "assembly": { ... }, 
+  "chromosome_group": "13",
+  "subassembly": { ... },
   "length": 114364328,
   "metadata": {
     "ontology_terms": [
@@ -174,5 +184,38 @@ To ensure regions are returned in a specific order, it is suggested that impleme
       }
     ]
   }
+}
+```
+
+```json
+{
+  "accession_id": "NC_057801.1",
+  "name": "3B",
+  "synonyms": ["3B", "Chr3B", "NC_057801", "CM031185.1", "CM031185"],
+  "coordinate_system": {
+    "accession_id": "region.chromosome",
+    "value": "Chromosome",
+    "label": "chromosome",
+    "definition": "Chromosome",
+    "description": "Structural unit composed of a nucleic acid molecule which controls its own replication through the interaction of specific proteins at one or more origins of replication."
+  },
+  "genetic_code" : 1,
+  "is_top_level": true,
+  "rank": 8,
+  "topology": {
+    "accession_id": "topology.linear",
+    "value": "Linear",
+    "label": "linear",
+    "definition": "Linear topology",
+    "description": "Linear topology"
+  },
+  "made_from": [{...}],
+  "part_of": [],
+  "sequence": { ... },
+  "assembly": { ... },
+  "chromosome_group": "3",
+  "subassembly": { ... },
+  "length": 851934019,
+  "metadata": { ... }
 }
 ```
