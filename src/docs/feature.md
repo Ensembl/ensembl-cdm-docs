@@ -11,6 +11,7 @@ Feature is an abstract representation which other feature-like entities (e.g. Ge
 | metadata              | various               | See [metadata](./metadata.md)
 | slice                 | Slice or null         | Slice describing the coordinates of the feature, if present
 | feature_groups        | array of FeatureGroup | see FeatureGroup
+| exceptions            | array of ValueSet     | Array of ValueSets representing exceptions (e.g. trans-splicing)
 
 ## Notes
 1. Features can implement a method `sequence` as a shortcut to obtain the sequence.
